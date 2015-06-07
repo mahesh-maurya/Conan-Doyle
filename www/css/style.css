@@ -1,0 +1,88 @@
+
+@font-face {
+    font-family: selig;
+    src: url("../fonts/Lato-Bold.ttf");
+    font-weight: 600
+}
+@font-face {
+    font-family: selig;
+    src: url(../fonts/Lato-Light.ttf);
+    font-weight: 100
+}
+@font-face {
+    font-family: selig;
+    src: url(../fonts/Lato-Regular.ttf);
+    font-weight: 300
+}
+a,
+a:hover {
+    text-decoration: none
+}
+.login-set {
+  margin-top: 10%;
+  text-align: center;
+}
+/*
+.login-set img {
+    width: 200px;
+    height: 200px;
+}
+*/
+.list.login-user .item-input {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+}
+.list.login-user i {
+    font-size: 20px;
+    color: #7a7a7a;
+    margin: 0px 15px 0px 8px;
+}
+
+.pull-right{
+float: right;
+}
+p.login-forget.pull-right {
+    padding: 8px 30px;
+    font-family: 'lato';
+    font-weight: 300;
+    color: #909090;
+}
+.list.login-user  input {
+    color: #030303;
+}
+.login-content {
+  margin-top: 18%;
+}
+.login-user input[type="text"], input[type="password"] {
+  color: #212121;
+  padding-top: 6px;
+  font-family: 'lato';
+  font-weight: 300;
+  font-size: 14px;
+}
+.btn-set button {
+    font-family: 'lato';
+    font-weight: 300;
+    text-transform: capitalize;
+    min-height: 52px;
+}
+.sign span {
+    color: #909090;
+    font-family: 'lato';
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.sign span a {
+    color: #000;
+    margin: 10px;
+}
+.signin.footer {
+    margin-top: 100px;
+}
+.login-content:-webkit-placeholder{
+color:#212121;
+}
+.sign.text-center {
+    margin: 16px auto;
+}
