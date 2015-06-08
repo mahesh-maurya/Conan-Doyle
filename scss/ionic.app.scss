@@ -15,157 +15,16 @@ $royal:                           #886aea !default;
 $dark:                            #444 !default;
 */
 
+$positive:                        #9C27B0 !default;
+$calm:                            #03A9F4 !default;
+$stable:                          #727272 !default;
+
+$base-color:                      #212121 !default;
+
+$font-family-sans-serif:          "Lato", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif !default;
+$font-family-light-sans-serif:    "Lato", "HelveticaNeue-Light", "Roboto-Light", "Segoe UI-Light", sans-serif-light !default;
+
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path:"../lib/ionic/fonts" !default;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
- .chintan {
-    color: aqua;
-}
-/* Empty. Add your own CSS if you like */
-
-@font-face {
-    font-family: selig;
-    src: url("../fonts/Lato-Bold.ttf");
-    font-weight: 600
-}
-@font-face {
-    font-family: selig;
-    src: url(../fonts/Lato-Light.ttf);
-    font-weight: 100
-}
-@font-face {
-    font-family: selig;
-    src: url(../fonts/Lato-Regular.ttf);
-    font-weight: 300
-}
-a,
-a:hover {
-    text-decoration: none
-}
-.login-set {
-    margin-top: 10%;
-    text-align: center;
-}
-/*
-.login-set img {
-    width: 200px;
-    height: 200px;
-}
-*/
-
-.list.login-user .item-input {
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 8px;
-}
-.list.login-user i {
-    font-size: 26px;
-    color: #7a7a7a;
-    margin: 0px 15px 0px 8px;
-}
-.pull-right {
-    float: right;
-}
-p.login-forget.pull-right {
-    padding: 8px 30px;
-    font-family: 'lato';
-    font-weight: 300;
-    color: #909090;
-}
-.list.login-user input {
-    color: #030303;
-}
-.login-content {
-    margin-top: 18%;
-}
-.login-user input[type="text"] {
-    color: #212121;
-    padding: 4px 0px 0px 3px;
-    font-family: 'lato';
-    font-weight: 300;
-    font-size: 14px;
-}
-.login-user input[type="password"] {
-    color: #212121;
-    font-family: 'lato';
-    font-weight: 300;
-    font-size: 14px;
-    padding: 4px 0px 0px 3px;
-}
-.login-user input[type="email"] {
-    color: #212121;
-    font-family: 'lato';
-    font-weight: 300;
-    font-size: 14px;
-    padding: 4px 0px 0px 0px;
-}
-.login-user input[type="date"] {
-    color: #212121;
-    font-family: 'lato';
-    font-weight: 300;
-    font-size: 14px;
-    padding: 4px 0px 0px 0px;
-}
-.btn-set button {
-    font-family: 'lato';
-    font-weight: 300;
-    text-transform: capitalize;
-    min-height: 52px;
-}
-.sign span {
-    color: #909090;
-    font-family: 'lato';
-    font-weight: 300;
-    font-size: 14px;
-}
-.sign span a {
-    color: #000;
-    margin: 10px;
-}
-.signin.footer {
-    margin-top: 120px;
-}
-.login.footer {
-    margin-top: 100px;
-}
-.login-content:-webkit-placeholder {
-    color: #212121;
-}
-.sign.text-center {
-    margin: 16px auto;
-}
-.sign-set img {
-    height: 215px;
-    width: 100%;
-    display: block;
-    max-width: 100%;
-    /* height: auto; */
-}
-.clip-polygon {
-    background: url(../img/sign-back.png) no-repeat center center;
-    /* -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 93%, 118% 90%, -11% 86%, 140% 73%, 0% 178%); */
-    -moz-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 60%, 0% 75%);
-    -ms-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 60%, 0% 75%);
-    -o-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 60%, 0% 75%);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 60%, 0% 75%);
-    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
-    background-size: cover;
-    height: 215px;
-}
-.bar.bar-header.dark-green {
-    background: transparent;
-}
-input::-webkit-input-placeholder {
-    color: #212121;
-}
-h1.title.back-arrow i {
-    float: left;
-    color: #fff;
-    font-size: 36px;
-}
-h1.sign-up {
-  font-family: 'lato';
-  color: #fff;
-  font-weight: 300;
-  padding: 80px 22px;
-}
