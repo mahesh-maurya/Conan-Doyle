@@ -15,16 +15,11 @@ $royal:                           #886aea !default;
 $dark:                            #444 !default;
 */
 
-$positive:                        #9C27B0 !default;
-$calm:                            #03A9F4 !default;
-$stable:                          #727272 !default;
-
-$base-color:                      #212121 !default;
-
-$font-family-sans-serif:          "Lato", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif !default;
-$font-family-light-sans-serif:    "Lato", "HelveticaNeue-Light", "Roboto-Light", "Segoe UI-Light", sans-serif-light !default;
 
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path:"../lib/ionic/fonts" !default;
 // Include all of Ionic
+
+@import "www/lib/selig/scss/selig.scss";
+
 @import "www/lib/ionic/scss/ionic";
