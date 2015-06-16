@@ -28,6 +28,7 @@ $sign-bg-image:                url('../img/sign-back.png') no-repeat center cent
 $contact-bg-image:             url('../img/component/contact.png') no-repeat center center;
 $setting-bg-image:             url('../img/component/setting.png') no-repeat center center;
 $gallery-bg-image:             url('../img/component/gallery.png') no-repeat center center;
+$about-bg-image:             url('../img/component/about.png') no-repeat center center;
 
 $bar-stable-bg:                   transparent !default;
 
@@ -194,6 +195,16 @@ p.login-forget.pull-right {
 }
 .gallery-set {
     background: $gallery-bg-image;
+    -moz-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
+    -ms-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
+    -o-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
+    background-size: cover;
+    height: 215px;
+}
+.about-set {
+    background: $about-bg-image;
     -moz-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
     -ms-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
     -o-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
@@ -391,4 +402,46 @@ li.gender-li span {
 figure.image-set figcaption {
   text-align: center;
   color: $icon-color;
+}
+
+.about-us h3 {
+    font-weight: 300;
+    text-transform: capitalize;
+    color:$base-color;
+}
+.about-us p {
+    font-size: $texts-font-size;
+    font-weight: $lato-font-weight;
+}
+.about-us {
+    padding: 13px;
+}
+.know-more {
+    text-align: center;
+    margin-top: 35px;
+}
+
+a.know-btn {
+    border: 1px solid $positive;
+   border-radius: 16px;
+  padding: 6px 16px;
+    background: $positive;
+    color:$light;
+    font-weight: $lato-font-weight;
+}
+.know-content {
+    margin-top: 20px;
+      text-align: left;
+}
+
+.showmore {
+    height:200px !important;
+}
+.addanimation {
+    overflow: hidden;
+    -webkit-transition:all 1s;
+    -ms-transition:all 1s;
+    -moz-transition:all 1s;
+    -o-transition:all 1s;
+    height:0px;
 }

@@ -77,6 +77,24 @@ angular.module('starter', ['ionic', 'starter.controllers','wu.masonry'])
                 }
             }
         })
+      .state('app.about', {
+            url: "/about",
+            views: {
+                'menuContent': {
+                    templateUrl: "templates/about.html",
+                    controller: 'AboutCtrl'
+                }
+            }
+        })
+      .state('app.faq', {
+            url: "/faq",
+            views: {
+                'menuContent': {
+                    templateUrl: "templates/faq.html",
+                    controller: 'FaqCtrl'
+                }
+            }
+        })
   ;
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/user-login');
