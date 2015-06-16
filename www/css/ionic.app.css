@@ -151,6 +151,16 @@ p.login-forget.pull-right {
   background-size: cover;
   height: 215px; }
 
+.gallery-set {
+  background: url('../img/component/gallery.png') no-repeat center center;
+  -moz-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
+  -ms-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
+  -o-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
+  background-size: cover;
+  height: 215px; }
+
 .bar.bar-header.dark-green {
   background: transparent; }
 
@@ -308,6 +318,23 @@ li.gender-li span {
 
 .item-input.first-label {
   border: 0px; }
+
+.gallery-pos {
+  margin: 0px !important; }
+
+.image-set img {
+  height: 100px;
+  overflow: hidden;
+  display: block; }
+
+.image-scroll {
+  background: #F6F4F4;
+  margin-bottom: 5px;
+  border-radius: 5px; }
+
+figure.image-set figcaption {
+  text-align: center;
+  color: #7a7a7a; }
 
 /*!
   Ionicons, v2.0.1

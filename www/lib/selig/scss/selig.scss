@@ -27,6 +27,7 @@ $sign-bg-image:                url('../img/sign-back.png') no-repeat center cent
 
 $contact-bg-image:             url('../img/component/contact.png') no-repeat center center;
 $setting-bg-image:             url('../img/component/setting.png') no-repeat center center;
+$gallery-bg-image:             url('../img/component/gallery.png') no-repeat center center;
 
 $bar-stable-bg:                   transparent !default;
 
@@ -183,6 +184,16 @@ p.login-forget.pull-right {
 }
 .setting-set {
     background: $setting-bg-image;
+    -moz-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
+    -ms-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
+    -o-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
+    background-size: cover;
+    height: 215px;
+}
+.gallery-set {
+    background: $gallery-bg-image;
     -moz-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
     -ms-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
     -o-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
@@ -362,4 +373,22 @@ li.gender-li span {
 }
 .item-input.first-label {
     border: 0px;
+}
+.gallery-pos {
+    margin: 0px !important;
+}
+.image-set img {
+    height: 100px;
+    overflow: hidden;
+    display: block;
+}
+.image-scroll {
+    background: #F6F4F4;
+    margin-bottom: 5px;
+    border-radius: 5px;
+ 
+}
+figure.image-set figcaption {
+  text-align: center;
+  color: $icon-color;
 }
