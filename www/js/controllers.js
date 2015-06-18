@@ -51,81 +51,81 @@ angular.module('starter.controllers', [])
         //            ******** end *******
  $scope.populars = [{
             imagename: "Lower Kintaganban River",
-            imgpath: "img/blog/work/work-popular.png"
+            imgpath: "img/blog/work/work-popular.jpg"
         }, {
             imagename: "fringilla blandit ligula",
-            imgpath: "img/blog/travel/travel-popular.png"
+            imgpath: "img/blog/travel/travel-popular.jpg"
         }, {
             imagename: "Nulla hendrerit ",
-            imgpath: "img/blog/fashion/fashion-popular.png"
+            imgpath: "img/blog/fashion/fashion-popular.jpg"
         }, {
             imagename: "Lorem ipsum dolor",
-            imgpath: "img/blog/art/art-popular.png"
+            imgpath: "img/blog/art/art-popular.jpg"
         }, {
             imagename: "Fusce nisl nisl",
-            imgpath: "img/blog/food/food-popular.png"
+            imgpath: "img/blog/food/food-popular.jpg"
         }, {
-            imagename: "Nam aliquet",
-            imgpath: "img/blog/business/business-popular.png"
+            imagename: "Nam aliquejpg",
+            imgpath: "img/blog/business/business-popular.jpg"
         }, {
             imagename: "suscipit sit amet ",
-            imgpath: "img/blog/nature/nature-popular.png"
+            imgpath: "img/blog/nature/nature-popular.jpg"
         }, {
             imagename: "Donec quis",
-            imgpath: "img/blog/sports/sports-popular.png"
+            imgpath: "img/blog/sports/sports-popular.jpg"
         }, {
             imagename: "Etiam euismod",
-            imgpath: "img/blog/Miscellaneous/misc-popular.png"
+            imgpath: "img/blog/Miscellaneous/misc-popular.jpg"
         }];
  $scope.latests = [{
             imagename: "Lower Kintaganban River",
-            imgpath: "img/blog/work/work-latest.png"
+            imgpath: "img/blog/work/work-latest.jpg"
         }, {
             imagename: "fringilla blandit ligula",
-            imgpath: "img/blog/travel/travel-latest.png"
+            imgpath: "img/blog/travel/travel-latest.jpg"
         }, {
             imagename: "Nulla hendrerit ",
-            imgpath: "img/blog/fashion/fashion-latest.png"
+            imgpath: "img/blog/fashion/fashion-latest.jpg"
         }, {
             imagename: "Lorem ipsum dolor",
-            imgpath: "img/blog/art/art-latest.png"
+            imgpath: "img/blog/art/art-latest.jpg"
         }, {
             imagename: "Fusce nisl nisl",
-            imgpath: "img/blog/food/food-latest.png"
+            imgpath: "img/blog/food/food-latest.jpg"
         }, {
             imagename: "suscipit sit amet ",
-            imgpath: "img/blog/nature/nature-latest.png"
+            imgpath: "img/blog/nature/nature-latest.jpg"
         }, {
             imagename: "Donec quis",
-            imgpath: "img/blog/sports/sports-latest.png"
+            imgpath: "img/blog/sports/sports-latest.jpg"
         }, {
             imagename: "Etiam euismod",
-            imgpath: "img/blog/Miscellaneous/misc-latest.png"
+            imgpath: "img/blog/Miscellaneous/misc-latest.jpg"
         }];
 $scope.featureds = [{
             imagename: "Lower Kintaganban River",
-            imgpath: "img/blog/work/work-featured.png"
+            imgpath: "img/blog/work/work-featured.jpg"
         }, {
             imagename: "fringilla blandit ligula",
-            imgpath: "img/blog/travel/travel-featured.png"
+            imgpath: "img/blog/travel/travel-featured.jpg"
         }, {
             imagename: "Nulla hendrerit ",
-            imgpath: "img/blog/fashion/fashion-featured.png"
+            imgpath: "img/blog/fashion/fashion-featured.jpg"
         }, {
             imagename: "Lorem ipsum dolor",
-            imgpath: "img/blog/art/art-featured.png"
+            imgpath: "img/blog/art/art-featured.jpg"
         }, {
             imagename: "Fusce nisl nisl",
-            imgpath: "img/blog/food/food-featured.png"
+            imgpath: "img/blog/food/food-featured.jpg"
         }, {
             imagename: "suscipit sit amet ",
-            imgpath: "img/blog/nature/nature-featured.png"
+            imgpath: "img/blog/nature/nature-featured.jpg"
         }, {
             imagename: "Donec quis",
-            imgpath: "img/blog/sports/sports-featured.png"
+            imgpath: "img/blog/sports/sports-featured.jpg"
         }, {
             imagename: "Etiam euismod",
-            imgpath: "img/blog/Miscellaneous/misc-featured.png"
+            imgpath: "img/blog/Miscellaneous/misc-featured.jpg"
         }];
 
 
@@ -229,22 +229,22 @@ $scope.featureds = [{
             imagename: "People",
             imgpath: "img/gallery/images.jpg"
         }, {
-            imagename: "People",
+            imagename: "Travel",
             imgpath: "img/gallery/people1.jpg"
         }, {
             imagename: "Nature",
             imgpath: "img/gallery/nature1.jpg"
         }, {
-            imagename: "Nature",
+            imagename: "Art",
             imgpath: "img/gallery/nature2.jpg"
         }, {
-            imagename: "People",
+            imagename: "Miscellaneous",
             imgpath: "img/gallery/people2.jpg"
         }, {
-            imagename: "Nature",
+            imagename: "Travel",
             imgpath: "img/gallery/nature3.jpg"
         }, {
-            imagename: "People",
+            imagename: "Fashion",
             imgpath: "img/gallery/people3.jpg"
         }, {
             imagename: "people",
@@ -253,20 +253,20 @@ $scope.featureds = [{
             imagename: "Nature",
             imgpath: "img/gallery/nature4.jpg"
         }, {
-            imagename: "People",
+            imagename: "Art",
             imgpath: "img/gallery/nature6.jpg"
         }, {
-            imagename: "People",
+            imagename: "Busniess",
             imgpath: "img/gallery/nature5.jpg"
         }, {
-            imagename: "Nature",
+            imagename: "Art",
             imgpath: "img/gallery/nature7.jpg"
         }, {
-            imagename: "People",
+            imagename: "Travel",
             imgpath: "img/gallery/nature8.jpg"
         }, {
             imagename: "Nature",
-            imgpath: "img/gallery/nature9.jpg"
+            imgpath: "img/gallery/nature10.jpg"
         }];
 
 
