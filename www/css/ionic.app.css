@@ -234,7 +234,7 @@ h2.title-c {
   border: none;
   background-image: url('../img/side-menu.png');
   background-position: bottom;
-  background-size: 100% 1px;
+  background-size: 100% 0px !important;
   background-repeat: no-repeat; }
 
 i.icon.side-menu-i {
