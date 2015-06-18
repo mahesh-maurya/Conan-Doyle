@@ -226,6 +226,13 @@ h2.title-c {
 .has-header {
   top: 157px; }
 
+.bars {
+  border: none;
+  background-image: url('../img/side-menu.png');
+  background-position: bottom;
+  background-size: 100% 0px;
+  background-repeat: no-repeat; }
+
 i.icon.side-menu-i {
   font-size: 22px !important; }
 

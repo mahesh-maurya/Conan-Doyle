@@ -278,13 +278,13 @@ h2.title-c {
   top: 157px;
 }
 
-//.bar {
-//  border: none;
-//   background-image: $background-menu; 
-//  background-position: bottom;
-//  background-size: 100% 1px;
-//  background-repeat: no-repeat;
-//}
+.bars {
+  border: none;
+   background-image: $background-menu; 
+  background-position: bottom;
+  background-size: 100% 0px;
+  background-repeat: no-repeat;
+}
 i.icon.side-menu-i {
     font-size: 22px !important;
 }
