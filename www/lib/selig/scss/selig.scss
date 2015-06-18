@@ -277,17 +277,14 @@ h2.title-c {
 .has-header {
   top: 157px;
 }
-.bar-header.has-tabs-top {
-  border-bottom-width: 1px !important;
-  background-image: none;
-}
-.bar {
-  border: none;
-   background-image: $background-menu; 
-  background-position: bottom;
-  background-size: 100% 0px !important;
-  background-repeat: no-repeat;
-}
+
+//.bar {
+//  border: none;
+//   background-image: $background-menu; 
+//  background-position: bottom;
+//  background-size: 100% 1px;
+//  background-repeat: no-repeat;
+//}
 i.icon.side-menu-i {
     font-size: 22px !important;
 }
