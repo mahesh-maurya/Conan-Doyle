@@ -84,6 +84,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'wu.masonry'])
                 }
             }
         })
+      .state('app.gallery-category', {
+            url: "/gallery-category",
+            views: {
+                'menuContent': {
+                    templateUrl: "templates/gallery-category.html",
+                    controller: 'GallerycategoryCtrl'
+                }
+            }
+        })
         .state('app.about', {
             url: "/about",
             views: {

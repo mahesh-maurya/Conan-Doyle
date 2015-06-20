@@ -21,7 +21,7 @@ $texts-font-size:                 14px !default;
 
 $input-padding:                   4px 0px 0px 3px !default;
 
-$button-stable-border:            #9C27B0 !default;
+$button-stable-border:            transparent !default;
 
 $background-menu:              url('../img/side-menu.png');
 
@@ -432,10 +432,13 @@ li.gender-li span {
 .gallery-pos {
     margin: 0px !important;
 }
+.set-image {
+    position: relative;
+}
 .image-set img {
-    height: 100px;
-    overflow: hidden;
-    display: block;
+     height: 100%;
+  text-align: center;
+  width: 100%;
 }
 .image-scroll {
     background: #F6F4F4;

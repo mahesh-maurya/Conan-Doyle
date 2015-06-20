@@ -224,6 +224,30 @@ $scope.featureds = [{
         };
     })
     .controller('SettingCtrl', function($scope, $stateParams) {})
+    .controller('GallerycategoryCtrl', function($scope, $stateParams) {
+$scope.gallery = [{
+            imagename: "People",
+            imgpath: "img/gallery/images.jpg"
+        }, {
+            imagename: "Travel",
+            imgpath: "img/gallery/people1.jpg"
+        }, {
+            imagename: "Nature",
+            imgpath: "img/gallery/nature6.jpg"
+        }, {
+            imagename: "Art",
+            imgpath: "img/gallery/nature2.jpg"
+        }, {
+            imagename: "Miscellaneous",
+            imgpath: "img/gallery/people2.jpg"
+        }, {
+            imagename: "Fashion",
+            imgpath: "img/gallery/people3.jpg"
+        }, {
+            imagename: "Busniess",
+            imgpath: "img/gallery/nature5.jpg"
+        }];
+})
     .controller('GalleryCtrl', function($scope, $stateParams) {
         $scope.gallery = [{
             imagename: "People",
@@ -233,7 +257,7 @@ $scope.featureds = [{
             imgpath: "img/gallery/people1.jpg"
         }, {
             imagename: "Nature",
-            imgpath: "img/gallery/nature1.jpg"
+            imgpath: "img/gallery/nature6.jpg"
         }, {
             imagename: "Art",
             imgpath: "img/gallery/nature2.jpg"
