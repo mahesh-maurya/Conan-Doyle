@@ -137,17 +137,12 @@ angular.module('starter.controllers', [])
         $scope.showDetails = "dontshow";
         $scope.moredetails = "Read More";
         $scope.showmores = function(index) {
-            console.log(index)
-            $scope.ind = index;
-            console.log("show more clicked");
-            if ($scope.showDetails == "showmores") {
-                $scope.showDetails = "dontshow";
-                $scope.moredetails = "Read More";
-            } else {
-                $scope.showDetails = "showmores";
-                $scope.moredetails = "Hide";
-            }
-
+            console.log(index);
+            var newheight=$(".animationfaq"+index).height();
+            console.log(newheight);
+            $(".faqhead").height(0);
+            $(".faqhead"+index).height(newheight+10);
+            
         };
         $scope.faq = [{
             id: 0,
@@ -192,12 +187,16 @@ angular.module('starter.controllers', [])
         $scope.showDetails = "dontshow";
         $scope.moredetails = "Read More";
         $scope.showmore = function() {
+            var newheight=$(".moretext").height();
+            console.log(newheight);
             console.log("show more clicked");
             if ($scope.showDetails == "showmore") {
                 $scope.showDetails = "dontshow";
+                $(".addanimation").height(0);
                 $scope.moredetails = "Read More";
             } else {
                 $scope.showDetails = "showmore";
+                $(".addanimation").height(newheight);
                 $scope.moredetails = "Hide";
             }
 
