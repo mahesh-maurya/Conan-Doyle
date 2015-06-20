@@ -98,10 +98,16 @@ p.login-forget.pull-right {
       @extend .input-tag;
     padding: $input-padding;
    }
-
+img.img-responsive {
+    max-width: 100%;
+}
 .login-user input[type="password"] {
    @extend .input-tag;
-    padding: 4px 0px 0px 6px;
+    padding: 4px 0px 0px 3px;
+}
+.profile-user input[type="password"] {
+   @extend .input-tag;
+   padding: 4px 0px 0px 6px;
 }
 
 .login-user input[type="email"] {
@@ -149,6 +155,7 @@ p.login-forget.pull-right {
 
 .login-content:-webkit-placeholder {
     color: $input-color-placeholder;
+    font-size: 13px;
 }
 
 .sign.text-center {
@@ -439,6 +446,7 @@ li.gender-li span {
 figure.image-set figcaption {
   text-align: center;
   color: $icon-color;
+      text-transform: capitalize;
 }
 
 .about-us h3 {
