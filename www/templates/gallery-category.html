@@ -8,55 +8,14 @@
             </div>
         </div>
         <div class="gallery-img ">
-            <div class="row">
-                <div class="col col-50" ng-click="openModal($index);">
-
+            <div class="row" ng-repeat="pro in fashions | inSlicesOf:2">
+               
+                <div class="col col-50" ng-click="openModal(fashions.indexOf(fashion));" ng-repeat="fashion in pro" >
                     <figure class="image-set">
-                        <img ng-src="img/gallery/fashion/fashion1.jpg" class="full-image">
-                      
+                        <img ng-src="{{fashion.imgpath}}" class="full-image">
+
                     </figure>
-
                 </div>
-    <div class="col col-50" ng-click="openModal($index);">
-
-                    <figure class="image-set">
-                        <img ng-src="img/gallery/fashion/fashion2.jpg" class="full-image">
-                      
-                    </figure>
-
-                </div>
-
-            </div>
-        <div class="row">
-                <div class="col col-50" ng-click="openModal($index);">
-
-                    <figure class="image-set">
-                        <img ng-src="img/gallery/fashion/fashion3.jpg" class="full-image">
-                      
-                    </figure>
-
-                </div>
-    <div class="col col-50" ng-click="openModal($index);">
-
-                    <figure class="image-set">
-                        <img ng-src="img/gallery/fashion/fashion4.jpg" class="full-image">
-                      
-                    </figure>
-
-                </div>
-
-            </div>
-                    <div class="row">
-                <div class="col col-50" ng-click="openModal($index);">
-
-                    <figure class="image-set">
-                        <img ng-src="img/gallery/fashion/fashion5.jpg" class="full-image">
-                      
-                    </figure>
-
-                </div>
-
-
             </div>
         </div>
 
