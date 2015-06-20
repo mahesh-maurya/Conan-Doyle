@@ -3,16 +3,54 @@
         <div class="gallery-set">
 
             <div class="map-set">
-                <h2 class="title-c">Gallery</h2>
+                <h2 class="title-c">People</h2>
 
             </div>
         </div>
         <div class="gallery-img ">
-            <div class="row" ng-repeat="pro in gallery | inSlicesOf:2">
-                <div class="col col-50" ng-click="openModal($index);" ng-repeat="gal in pro">
+            <div class="row">
+                <div class="col col-50" ng-click="openModal($index);">
 
                     <figure class="image-set">
-                        <img ng-src="{{gal.imgpath}}" class="full-image">
+                        <img ng-src="img/gallery/fashion/fashion1.jpg" class="full-image">
+                      
+                    </figure>
+
+                </div>
+    <div class="col col-50" ng-click="openModal($index);">
+
+                    <figure class="image-set">
+                        <img ng-src="img/gallery/fashion/fashion2.jpg" class="full-image">
+                      
+                    </figure>
+
+                </div>
+
+            </div>
+        <div class="row">
+                <div class="col col-50" ng-click="openModal($index);">
+
+                    <figure class="image-set">
+                        <img ng-src="img/gallery/fashion/fashion3.jpg" class="full-image">
+                      
+                    </figure>
+
+                </div>
+    <div class="col col-50" ng-click="openModal($index);">
+
+                    <figure class="image-set">
+                        <img ng-src="img/gallery/fashion/fashion4.jpg" class="full-image">
+                      
+                    </figure>
+
+                </div>
+
+            </div>
+                    <div class="row">
+                <div class="col col-50" ng-click="openModal($index);">
+
+                    <figure class="image-set">
+                        <img ng-src="img/gallery/fashion/fashion5.jpg" class="full-image">
                       
                     </figure>
 
@@ -20,7 +58,6 @@
 
 
             </div>
-
         </div>
 
     </ion-content>

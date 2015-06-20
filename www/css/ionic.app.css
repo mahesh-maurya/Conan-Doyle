@@ -168,6 +168,16 @@ img.img-responsive {
   background-size: cover;
   height: 215px; }
 
+.gallery2-set {
+  background: url('../img/component/gallery2.png') no-repeat center center;
+  -moz-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
+  -ms-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
+  -o-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
+  background-size: cover;
+  height: 215px; }
+
 .about-set {
   background: url('../img/component/about.png') no-repeat center center;
   -moz-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
