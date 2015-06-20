@@ -15,7 +15,7 @@ $assertive:                       #ef473a !default;
 $royal:                           #886aea !default;
 $dark:                            #444 !default;
 */
-.input-tag, .login-user input[type="text"], .login-user input[type="password"], .login-user input[type="email"], .login-user input[type="date"], .login-user textarea {
+.input-tag, .login-user input[type="text"], .login-user input[type="password"], .profile-user input[type="password"], .login-user input[type="email"], .login-user input[type="date"], .login-user textarea {
   color: #212121 !important;
   font-weight: 300;
   font-size: 14px; }
@@ -71,6 +71,9 @@ img.img-responsive {
   max-width: 100%; }
 
 .login-user input[type="password"] {
+  padding: 4px 0px 0px 3px; }
+
+.profile-user input[type="password"] {
   padding: 4px 0px 0px 6px; }
 
 .login-user input[type="email"] {

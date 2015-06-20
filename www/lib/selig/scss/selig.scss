@@ -103,7 +103,11 @@ img.img-responsive {
 }
 .login-user input[type="password"] {
    @extend .input-tag;
-    padding: 4px 0px 0px 6px;
+    padding: 4px 0px 0px 3px;
+}
+.profile-user input[type="password"] {
+   @extend .input-tag;
+   padding: 4px 0px 0px 6px;
 }
 
 .login-user input[type="email"] {
