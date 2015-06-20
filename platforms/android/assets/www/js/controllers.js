@@ -1,8 +1,8 @@
 angular.module('starter.controllers', [])
     .controller('AppCtrl', function($scope) {})
     .controller('ArticlesCtrl', function($scope) {
-    
-       $scope.showDetails = "dontshow";
+
+        $scope.showDetails = "dontshow";
         $scope.moredetails = "Read More";
         $scope.showmore = function() {
             console.log("show more clicked");
@@ -15,15 +15,15 @@ angular.module('starter.controllers', [])
             }
 
         };
-  $scope.moretext = [{
+        $scope.moretext = [{
             more: "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam aliquet ultrices dignissim. Donec pretium et dui ut imperdiet. Aliquam et urna non neque tempor vehicula at quis justo. Ut eleifend odio justo, et finibus mi aliquet vitae. Etiam euismod dapibus arcu nec pellentesque. Suspendisse faucibus velit ornare, tincidunt massa in, ullamcorper lectus. Quisque semper venenatis nulla, at auctor libero pharetra ultrices. Duis ut enim egestas, varius lorem ac, sodales sapien."
 
         }];
 
-})
+    })
     .controller('HomeCtrl', function($scope) {
-    
-         //        ***** tabchange ****
+
+        //        ***** tabchange ****
 
         $scope.tab = 'popular';
         $scope.classa = 'active';
@@ -49,7 +49,7 @@ angular.module('starter.controllers', [])
 
 
         //            ******** end *******
- $scope.populars = [{
+        $scope.populars = [{
             imagename: "Lower Kintaganban River",
             imgpath: "img/blog/work/work-popular.jpg"
         }, {
@@ -77,7 +77,7 @@ angular.module('starter.controllers', [])
             imagename: "Etiam euismod",
             imgpath: "img/blog/Miscellaneous/misc-popular.jpg"
         }];
- $scope.latests = [{
+        $scope.latests = [{
             imagename: "Lower Kintaganban River",
             imgpath: "img/blog/work/work-latest.jpg"
         }, {
@@ -102,7 +102,7 @@ angular.module('starter.controllers', [])
             imagename: "Etiam euismod",
             imgpath: "img/blog/Miscellaneous/misc-latest.jpg"
         }];
-$scope.featureds = [{
+        $scope.featureds = [{
             imagename: "Lower Kintaganban River",
             imgpath: "img/blog/work/work-featured.jpg"
         }, {
@@ -129,7 +129,7 @@ $scope.featureds = [{
         }];
 
 
-})
+    })
     .controller('UserloginCtrl', function($scope, $stateParams) {})
     .controller('FaqCtrl', function($scope, $stateParams) {
 
@@ -224,49 +224,55 @@ $scope.featureds = [{
         };
     })
     .controller('SettingCtrl', function($scope, $stateParams) {})
+    .controller('GallerycategoryCtrl', function($scope, $stateParams) {
+
+      
+    
+        $scope.fashion = [{
+            imgpath: "img/gallery/fashion/fashion1.jpg"
+        }, {
+            imgpath: "img/gallery/fashion/fashion2.jpg"
+        }, {
+            imgpath: "img/gallery/fashion/fashion3.jpg"
+        }, {
+            imgpath: "img/gallery/fashion/fashion4.jpg"
+        }, {
+            imgpath: "img/gallery/fashion/fashion5.jpg"
+        }];
+
+       
+
+
+    })
     .controller('GalleryCtrl', function($scope, $stateParams) {
         $scope.gallery = [{
+            id: 1,
             imagename: "People",
             imgpath: "img/gallery/images.jpg"
         }, {
+            id: 2,
             imagename: "Travel",
             imgpath: "img/gallery/people1.jpg"
         }, {
+            id: 3,
             imagename: "Nature",
-            imgpath: "img/gallery/nature1.jpg"
+            imgpath: "img/gallery/nature6.jpg"
         }, {
+            id: 4,
             imagename: "Art",
             imgpath: "img/gallery/nature2.jpg"
         }, {
+            id: 5,
             imagename: "Miscellaneous",
             imgpath: "img/gallery/people2.jpg"
         }, {
-            imagename: "Travel",
-            imgpath: "img/gallery/nature3.jpg"
-        }, {
+            id: 6,
             imagename: "Fashion",
             imgpath: "img/gallery/people3.jpg"
         }, {
-            imagename: "people",
-            imgpath: "img/gallery/people4.jpg"
-        }, {
-            imagename: "Nature",
-            imgpath: "img/gallery/nature4.jpg"
-        }, {
-            imagename: "Art",
-            imgpath: "img/gallery/nature6.jpg"
-        }, {
+            id: 7,
             imagename: "Busniess",
             imgpath: "img/gallery/nature5.jpg"
-        }, {
-            imagename: "Art",
-            imgpath: "img/gallery/nature7.jpg"
-        }, {
-            imagename: "Travel",
-            imgpath: "img/gallery/nature8.jpg"
-        }, {
-            imagename: "Nature",
-            imgpath: "img/gallery/nature10.jpg"
         }];
 
 

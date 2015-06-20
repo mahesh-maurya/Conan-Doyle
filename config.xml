@@ -42,8 +42,8 @@
     <preference name="AutoHideSplashScreen" value="false" />
     <preference name="ShowSplashScreenSpinner" value="false" />
 
-    <icon src="www/img/Login-Page-1.png" />
-    <splash src="www/img/Login-Page-1.png" />
+    <icon src="res/icon/icon.png" />
+    <splash src="res/screen/screen.png" />
 
     <!--Splash Screen Preference-->
     <!--Refer https://github.com/apache/cordova-plugin-splashscreen for more details-->
@@ -51,17 +51,17 @@
     <preference name="SplashScreenBackgroundColor" value="#ffffff" />
     <preference name="SplashMaintainAspectRatio" value="true" />
 
-    <!--Needed for status bar plugin-->
+    <!--for status bar plugin-->
     <feature name="StatusBar">
         <param name="ios-package" value="CDVStatusBar" onload="true" />
     </feature>
 
-    <!--Needed for ionic keyboard plugin-->
+    <!--for ionic keyboard plugin-->
     <feature name="Keyboard">
         <param name="ios-package" value="IonicKeyboard" onload="true" />
     </feature>
 
-    <!--Needed for splash screen plugin-->
+    <!--for splash screen plugin-->
     <feature name="SplashScreen">
         <param name="ios-package" value="CDVSplashScreen" />
         <param name="android-package" value="cordova-plugin-splashscreen" />
