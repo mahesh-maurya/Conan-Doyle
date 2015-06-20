@@ -84,7 +84,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'wu.masonry'])
                 }
             }
         })
-      .state('app.gallery-category', {
+        .state('app.gallery-category', {
             url: "/gallery-category/:id",
             views: {
                 'menuContent': {
@@ -152,3 +152,18 @@ angular.module('starter', ['ionic', 'starter.controllers', 'wu.masonry'])
         return makeSlices;
     }
 ]);
+
+function splitarray(fullarray, splitsize) {
+    var newarray = [];
+    var k=0;
+    for (var i = 0; i < fullarray.length; i++) {
+        var arrindex=Math.floor(i/splitsize);
+        console.log(arrindex);
+        if((newarray.length-1)!=arrindex)
+        {
+            newarray[arrindex]=[];
+        }
+        newarray[arrindex].push(fullarray[i]);
+    }
+    return newarray;
+};

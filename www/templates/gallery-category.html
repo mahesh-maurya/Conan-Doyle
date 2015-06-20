@@ -8,12 +8,12 @@
             </div>
         </div>
         <div class="gallery-img ">
-            <div class="row" ng-repeat="pro in fashions | inSlicesOf:2">
+           
+            <div class="row" ng-repeat="pro in newfashions">
                
-                <div class="col col-50" ng-click="openModal(fashions.indexOf(fashion));" ng-repeat="fashion in pro" >
+                <div class="col col-50" ng-click="openModal(fashions.indexOf(fashion));" ng-repeat="fashion in pro"  >
                     <figure class="image-set">
                         <img ng-src="{{fashion.imgpath}}" class="full-image">
-
                     </figure>
                 </div>
             </div>

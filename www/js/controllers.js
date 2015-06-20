@@ -244,6 +244,7 @@ angular.module('starter.controllers', [])
             imgpath: "img/gallery/fashion/fashion5.jpg"
         }];
 
+        $scope.newfashions=splitarray($scope.fashions,2);
 
         $ionicModal.fromTemplateUrl('templates/galleryimages.html', {
             scope: $scope,

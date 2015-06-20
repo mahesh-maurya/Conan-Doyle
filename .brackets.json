@@ -1,6 +1,7 @@
 {
     "jscodehints.detectedExclusions": [
         "C:/xampp/htdocs/selig/gulpfile.js",
-        "C:/xampp/htdocs/selig/www/lib/js/angular-masonry.min.js"
+        "C:/xampp/htdocs/selig/www/lib/js/angular-masonry.min.js",
+        "C:/xampp/htdocs/selig/www/js/controllers.js"
     ]
 }
