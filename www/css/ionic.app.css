@@ -555,6 +555,30 @@ figcaption.blog-name {
 .tabs-top > .tabs, .tabs.tabs-top {
   border-bottom-width: 0px !important; }
 
+.transparent {
+  background: transparent !important; }
+
+.modal-backdrop.active {
+  background-color: rgba(0, 0, 0, 0.8); }
+
+.image-modal {
+  width: 100% !important;
+  height: 100%;
+  top: 0 !important;
+  left: 0 !important; }
+
+.centralize {
+  top: 50%;
+  position: relative;
+  transform: translateY(-50%); }
+
+.close-button {
+  position: absolute;
+  color: white;
+  font-size: 28px;
+  top: 10px;
+  left: 10px; }
+
 /*!
   Ionicons, v2.0.1
   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
