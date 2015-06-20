@@ -255,9 +255,9 @@ angular.module('starter.controllers', [])
             $scope.modal.hide();
         });
 
-        $scope.firstslide = 0;
+        $scope.firstslide =false;
         $scope.openModal = function(index) {
-            $scope.firstslide = index;
+            $scope.firstslide = true;
             $scope.modal.show();
             $ionicSlideBoxDelegate.slide(index);
         };
@@ -297,6 +297,6 @@ angular.module('starter.controllers', [])
             imgpath: "img/gallery/nature5.jpg"
         }];
 
-
+        $scope.gallerynew=splitarray($scope.gallery,2);
     })
     .controller('UsersignupCtrl', function($scope, $stateParams) {});

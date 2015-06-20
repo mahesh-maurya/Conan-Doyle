@@ -1,27 +1,32 @@
 angular.module('starter.controllers', [])
     .controller('AppCtrl', function($scope) {})
-    .controller('ArticlesCtrl', function($scope) {
 
-        $scope.showDetails = "dontshow";
-        $scope.moredetails = "Read More";
-        $scope.showmore = function() {
-            console.log("show more clicked");
-            if ($scope.showDetails == "showmore") {
-                $scope.showDetails = "dontshow";
-                $scope.moredetails = "Read More";
-            } else {
-                $scope.showDetails = "showmore";
-                $scope.moredetails = "Hide";
-            }
+.controller('ArticlesCtrl', function($scope) {
 
-        };
-        $scope.moretext = [{
-            more: "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam aliquet ultrices dignissim. Donec pretium et dui ut imperdiet. Aliquam et urna non neque tempor vehicula at quis justo. Ut eleifend odio justo, et finibus mi aliquet vitae. Etiam euismod dapibus arcu nec pellentesque. Suspendisse faucibus velit ornare, tincidunt massa in, ullamcorper lectus. Quisque semper venenatis nulla, at auctor libero pharetra ultrices. Duis ut enim egestas, varius lorem ac, sodales sapien."
+    $scope.showDetails = "dontshow";
+    $scope.moredetails = "Read More";
+    $scope.showmore = function() {
+        var newheight = $(".moretext").height();
+        console.log(newheight);
+        console.log("show more clicked");
+        if ($scope.showDetails == "showmore") {
+            $scope.showDetails = "dontshow";
+            $(".addanimation").height(0);
+            $scope.moredetails = "Read More";
+        } else {
+            $scope.showDetails = "showmore";
+            $(".addanimation").height(newheight);
+            $scope.moredetails = "Hide";
+        }
 
-        }];
+    };
+    $scope.moretext = [{
+        more: "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam aliquet ultrices dignissim. Donec pretium et dui ut imperdiet. Aliquam et urna non neque tempor vehicula at quis justo. Ut eleifend odio justo, et finibus mi aliquet vitae. Etiam euismod dapibus arcu nec pellentesque. Suspendisse faucibus velit ornare, tincidunt massa in, ullamcorper lectus. Quisque semper venenatis nulla, at auctor libero pharetra ultrices. Duis ut enim egestas, varius lorem ac, sodales sapien."
 
-    })
-    .controller('HomeCtrl', function($scope) {
+    }];
+
+})
+    .controller('HomeCtrl', function($scope, $ionicScrollDelegate) {
 
         //        ***** tabchange ****
 
@@ -33,14 +38,17 @@ angular.module('starter.controllers', [])
             //        console.log(tab);
             $scope.tab = tab;
             if (a == 1) {
+                $ionicScrollDelegate.scrollTop();
                 $scope.classa = "active";
                 $scope.classb = '';
                 $scope.classc = '';
             } else if (a == 2) {
+                $ionicScrollDelegate.scrollTop();
                 $scope.classa = '';
                 $scope.classb = "active";
                 $scope.classc = '';
             } else {
+                $ionicScrollDelegate.scrollTop();
                 $scope.classa = '';
                 $scope.classb = '';
                 $scope.classc = "active";
@@ -137,16 +145,11 @@ angular.module('starter.controllers', [])
         $scope.showDetails = "dontshow";
         $scope.moredetails = "Read More";
         $scope.showmores = function(index) {
-            console.log(index)
-            $scope.ind = index;
-            console.log("show more clicked");
-            if ($scope.showDetails == "showmores") {
-                $scope.showDetails = "dontshow";
-                $scope.moredetails = "Read More";
-            } else {
-                $scope.showDetails = "showmores";
-                $scope.moredetails = "Hide";
-            }
+            console.log(index);
+            var newheight = $(".animationfaq" + index).height();
+            console.log(newheight);
+            $(".faqhead").height(0);
+            $(".faqhead" + index).height(newheight + 10);
 
         };
         $scope.faq = [{
@@ -192,12 +195,16 @@ angular.module('starter.controllers', [])
         $scope.showDetails = "dontshow";
         $scope.moredetails = "Read More";
         $scope.showmore = function() {
+            var newheight = $(".moretext").height();
+            console.log(newheight);
             console.log("show more clicked");
             if ($scope.showDetails == "showmore") {
                 $scope.showDetails = "dontshow";
+                $(".addanimation").height(0);
                 $scope.moredetails = "Read More";
             } else {
                 $scope.showDetails = "showmore";
+                $(".addanimation").height(newheight);
                 $scope.moredetails = "Hide";
             }
 
@@ -224,11 +231,8 @@ angular.module('starter.controllers', [])
         };
     })
     .controller('SettingCtrl', function($scope, $stateParams) {})
-    .controller('GallerycategoryCtrl', function($scope, $stateParams) {
-
-      
-    
-        $scope.fashion = [{
+    .controller('GallerycategoryCtrl', function($scope, $stateParams, $ionicModal, $ionicSlideBoxDelegate) {
+        $scope.fashions = [{
             imgpath: "img/gallery/fashion/fashion1.jpg"
         }, {
             imgpath: "img/gallery/fashion/fashion2.jpg"
@@ -240,8 +244,26 @@ angular.module('starter.controllers', [])
             imgpath: "img/gallery/fashion/fashion5.jpg"
         }];
 
-       
+        $scope.newfashions=splitarray($scope.fashions,2);
 
+        $ionicModal.fromTemplateUrl('templates/galleryimages.html', {
+            scope: $scope,
+            animation: 'slide-in-up'
+        }).then(function(modal) {
+            $scope.modal = modal;
+            $scope.modal.show();
+            $scope.modal.hide();
+        });
+
+        $scope.firstslide = 0;
+        $scope.openModal = function(index) {
+            $scope.firstslide = index;
+            $scope.modal.show();
+            $ionicSlideBoxDelegate.slide(index);
+        };
+        $scope.closeModal = function() {
+            $scope.modal.hide();
+        };
 
     })
     .controller('GalleryCtrl', function($scope, $stateParams) {

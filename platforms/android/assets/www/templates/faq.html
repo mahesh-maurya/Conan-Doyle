@@ -9,11 +9,11 @@
             <h4 class="text-center">FREQUENTLY ASKED QUESTIONS</h4>
             <div class="qsn-ans" ng-repeat="faqs in faq">
                 <div class="qsn-set">
-                    <h5 class="qsn-set " ng-click="showmores(faqs.id)"><span class="qsn">Q</span>
+                    <h5 class="qsn-set " ng-click="showmores($index)"><span class="qsn">Q</span>
                {{faqs.qsn}}</h5>
                 </div>
-                <div class="ans-set">
-                    <p class="addanimation pop" ng-class="{'showmores': ind==faqs.id}">{{faqs.ans}}</p>
+                <div class="ans-set faqhead faqhead{{$index}}">
+                    <p class="addanimation pop animationfaq{{$index}}">{{faqs.ans}}</p>
                 </div>
             </div>
         </div>

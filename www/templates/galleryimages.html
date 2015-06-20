@@ -1,10 +1,10 @@
 <ion-modal-view>
- 
-        <ion-slide-box on-slide-changed="slideHasChanged($index)" >
+    <div ng-show="firstslide">
+        <ion-slide-box on-slide-changed="slideHasChanged($index)">
             <ion-slide ng-repeat="fashion in fashions">
                 <img ng-src="{{fashion.imgpath}}" class="full-image" alt="">
             </ion-slide>
-        
+
         </ion-slide-box>
-    
+    </div>
 </ion-modal-view>
