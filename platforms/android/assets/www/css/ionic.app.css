@@ -385,7 +385,7 @@ li.gender-li span {
   position: relative; }
 
 .image-set img {
-  height: 100%;
+  height: auto;
   text-align: center;
   width: 100%; }
 
