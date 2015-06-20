@@ -42,8 +42,8 @@
     <preference name="AutoHideSplashScreen" value="false" />
     <preference name="ShowSplashScreenSpinner" value="false" />
 
-    <icon src="www/img/Login-Page-1.png" />
-    <splash src="www/img/Login-Page-1.png" />
+    <icon src="res/icon/icon.png" />
+    <splash src="res/screen/screen.png" />
 
     <!--Splash Screen Preference-->
     <!--Refer https://github.com/apache/cordova-plugin-splashscreen for more details-->
