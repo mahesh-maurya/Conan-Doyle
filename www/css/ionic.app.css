@@ -226,11 +226,18 @@ h2.title-c {
 .has-header {
   top: 157px; }
 
+.bar {
+  border: none;
+  background-image: url('../img/side-menu.png');
+  background-position: bottom;
+  background-size: 100% 1px;
+  background-repeat: no-repeat; }
+
 .bars {
   border: none;
   background-image: url('../img/side-menu.png');
   background-position: bottom;
-  background-size: 100% 0px;
+  background-size: 100% 0px !important;
   background-repeat: no-repeat; }
 
 i.icon.side-menu-i {
@@ -516,6 +523,9 @@ figcaption.blog-name {
 
 .scrooling {
   background: rgba(0, 0, 0, 0.5); }
+
+.tabs-top > .tabs, .tabs.tabs-top {
+  border-bottom-width: 0px !important; }
 
 /*!
   Ionicons, v2.0.1
