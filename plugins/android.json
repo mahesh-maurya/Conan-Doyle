@@ -21,6 +21,10 @@
                             "count": 1
                         },
                         {
+                            "xml": "<feature name=\"StatusBar\"><param name=\"android-package\" value=\"org.apache.cordova.statusbar.StatusBar\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
                             "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
                         }
@@ -31,19 +35,22 @@
     },
     "installed_plugins": {
         "com.ionic.keyboard": {
-            "PACKAGE_NAME": "com.ionicframework.myapp632246"
+            "PACKAGE_NAME": "com.wohlig.selig"
         },
         "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.ionicframework.myapp632246"
+            "PACKAGE_NAME": "com.wohlig.selig"
         },
         "cordova-plugin-device": {
-            "PACKAGE_NAME": "com.ionicframework.myapp632246"
+            "PACKAGE_NAME": "com.wohlig.selig"
         },
         "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "com.ionicframework.myapp632246"
+            "PACKAGE_NAME": "com.wohlig.selig"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.wohlig.selig"
         },
         "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.ionicframework.myapp632246"
+            "PACKAGE_NAME": "com.wohlig.selig"
         }
     },
     "dependent_plugins": {}

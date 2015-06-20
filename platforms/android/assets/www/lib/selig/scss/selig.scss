@@ -21,6 +21,8 @@ $texts-font-size:                 14px !default;
 
 $input-padding:                   4px 0px 0px 3px !default;
 
+$button-stable-border:            #9C27B0 !default;
+
 $background-menu:              url('../img/side-menu.png');
 
 $sign-bg-image:                url('../img/sign-back.png') no-repeat center center;
@@ -99,7 +101,7 @@ p.login-forget.pull-right {
 
 .login-user input[type="password"] {
    @extend .input-tag;
-    padding: $input-padding;
+    padding: 4px 0px 0px 6px;
 }
 
 .login-user input[type="email"] {
@@ -142,7 +144,7 @@ p.login-forget.pull-right {
 }
 
 .login.footer {
-    margin-top: 100px;
+    margin-top: 120px;
 }
 
 .login-content:-webkit-placeholder {
@@ -282,6 +284,13 @@ h2.title-c {
   background-size: 100% 1px;
   background-repeat: no-repeat;
 }
+.bars {
+  border: none;
+   background-image: $background-menu; 
+  background-position: bottom;
+  background-size: 100% 0px !important;
+  background-repeat: no-repeat;
+}
 i.icon.side-menu-i {
     font-size: 22px !important;
 }
@@ -315,7 +324,7 @@ i.icon.side-menu-i {
 .side-image figcaption {
     color: $light;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: $lato-font-weight;
 }
 
 
@@ -433,7 +442,7 @@ figure.image-set figcaption {
 }
 
 .about-us h3 {
-    font-weight: 300;
+    font-weight: $lato-font-weight;
     text-transform: capitalize;
     color:$base-color;
       margin-bottom: 35px;
@@ -494,11 +503,11 @@ span.qsn {
   line-height: 134%
 }
 h5.qsn-set {
-  font-weight: 300;
+  font-weight: $lato-font-weight;
   line-height: 134%;
 }
 .faq-content h4 {
-    font-weight: 300;
+    font-weight: $lato-font-weight;
     margin-bottom: 40px;
     border: 1px solid $positive;
     padding: 7px;
@@ -510,7 +519,7 @@ p.addanimation.pop.showmores {
     border-radius: 6px;
     padding: 6px 8px;
     font-size: 13px;
-    font-weight: 300;
+    font-weight: $lato-font-weight;
     color: #fff;
     margin-top: 20px;
   
@@ -522,7 +531,7 @@ figcaption.blog-name {
     position: absolute;
   padding: 8px;
   color: #FFF;
-  font-weight: 300;
+  font-weight: $lato-font-weight;
   bottom: 0;
   font-size: 15px;
     text-transform: capitalize;
@@ -570,7 +579,7 @@ figcaption.blog-name {
 .art-date {
   text-align: right;
   padding-right: 20px;
-  color: #7a7a7a;
+  color: $icon-color;
 }
 .artical-content {
   position: absolute;
@@ -579,13 +588,17 @@ figcaption.blog-name {
     padding: 12px;
 }
 .articals-det h3 {
-    font-weight: 300;
+    font-weight:$lato-font-weight;
     color:#212121;
 }
 .articals-det p {
     font-size: 13px;
-    color: #7a7a7a;
+    color:$icon-color;
 }
 .scrooling{
   background: rgba(0,0,0,0.5);
+}
+.tabs-top > .tabs, .tabs.tabs-top {
+
+  border-bottom-width: 0px !important;
 }
