@@ -324,7 +324,7 @@ i.icon.side-menu-i {
 .side-image figcaption {
     color: $light;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: $lato-font-weight;
 }
 
 
@@ -442,7 +442,7 @@ figure.image-set figcaption {
 }
 
 .about-us h3 {
-    font-weight: 300;
+    font-weight: $lato-font-weight;
     text-transform: capitalize;
     color:$base-color;
       margin-bottom: 35px;
@@ -503,11 +503,11 @@ span.qsn {
   line-height: 134%
 }
 h5.qsn-set {
-  font-weight: 300;
+  font-weight: $lato-font-weight;
   line-height: 134%;
 }
 .faq-content h4 {
-    font-weight: 300;
+    font-weight: $lato-font-weight;
     margin-bottom: 40px;
     border: 1px solid $positive;
     padding: 7px;
@@ -519,7 +519,7 @@ p.addanimation.pop.showmores {
     border-radius: 6px;
     padding: 6px 8px;
     font-size: 13px;
-    font-weight: 300;
+    font-weight: $lato-font-weight;
     color: #fff;
     margin-top: 20px;
   
@@ -531,7 +531,7 @@ figcaption.blog-name {
     position: absolute;
   padding: 8px;
   color: #FFF;
-  font-weight: 300;
+  font-weight: $lato-font-weight;
   bottom: 0;
   font-size: 15px;
     text-transform: capitalize;
@@ -579,7 +579,7 @@ figcaption.blog-name {
 .art-date {
   text-align: right;
   padding-right: 20px;
-  color: #7a7a7a;
+  color: $icon-color;
 }
 .artical-content {
   position: absolute;
@@ -588,12 +588,12 @@ figcaption.blog-name {
     padding: 12px;
 }
 .articals-det h3 {
-    font-weight: 300;
+    font-weight:$lato-font-weight;
     color:#212121;
 }
 .articals-det p {
     font-size: 13px;
-    color: #7a7a7a;
+    color:$icon-color;
 }
 .scrooling{
   background: rgba(0,0,0,0.5);
