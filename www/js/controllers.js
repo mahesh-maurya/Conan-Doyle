@@ -241,32 +241,11 @@ $scope.featureds = [{
             imagename: "Miscellaneous",
             imgpath: "img/gallery/people2.jpg"
         }, {
-            imagename: "Travel",
-            imgpath: "img/gallery/nature3.jpg"
-        }, {
             imagename: "Fashion",
             imgpath: "img/gallery/people3.jpg"
         }, {
-            imagename: "people",
-            imgpath: "img/gallery/people4.jpg"
-        }, {
-            imagename: "Nature",
-            imgpath: "img/gallery/nature4.jpg"
-        }, {
-            imagename: "Art",
-            imgpath: "img/gallery/nature6.jpg"
-        }, {
             imagename: "Busniess",
             imgpath: "img/gallery/nature5.jpg"
-        }, {
-            imagename: "Art",
-            imgpath: "img/gallery/nature7.jpg"
-        }, {
-            imagename: "Travel",
-            imgpath: "img/gallery/nature8.jpg"
-        }, {
-            imagename: "Nature",
-            imgpath: "img/gallery/nature10.jpg"
         }];
 
 

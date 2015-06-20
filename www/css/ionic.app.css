@@ -383,7 +383,8 @@ li.gender-li span {
 
 figure.image-set figcaption {
   text-align: center;
-  color: #7a7a7a; }
+  color: #7a7a7a;
+  text-transform: capitalize; }
 
 .about-us h3 {
   font-weight: 300;
