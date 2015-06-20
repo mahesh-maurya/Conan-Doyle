@@ -1,16 +1,21 @@
 angular.module('starter.controllers', [])
     .controller('AppCtrl', function($scope) {})
+
     .controller('ArticlesCtrl', function($scope) {
 
-        $scope.showDetails = "dontshow";
+          $scope.showDetails = "dontshow";
         $scope.moredetails = "Read More";
         $scope.showmore = function() {
+            var newheight=$(".moretext").height();
+            console.log(newheight);
             console.log("show more clicked");
             if ($scope.showDetails == "showmore") {
                 $scope.showDetails = "dontshow";
+                $(".addanimation").height(0);
                 $scope.moredetails = "Read More";
             } else {
                 $scope.showDetails = "showmore";
+                $(".addanimation").height(newheight);
                 $scope.moredetails = "Hide";
             }
 

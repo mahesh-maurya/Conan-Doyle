@@ -569,8 +569,9 @@ figcaption.blog-name {
     color:  $base-color;
 }
 .articals-det p {
-    font-size: 13px;
+    font-size:$texts-font-size;
     color: $icon-color;
+      font-weight: $lato-font-weight;
 }
 .scrooling {
     background: rgba(0, 0, 0, 0.5);

@@ -545,8 +545,9 @@ figcaption.blog-name {
   color: #212121; }
 
 .articals-det p {
-  font-size: 13px;
-  color: #7a7a7a; }
+  font-size: 14px;
+  color: #7a7a7a;
+  font-weight: 300; }
 
 .scrooling {
   background: rgba(0, 0, 0, 0.5); }
