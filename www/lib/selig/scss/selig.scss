@@ -98,7 +98,9 @@ p.login-forget.pull-right {
       @extend .input-tag;
     padding: $input-padding;
    }
-
+img.img-responsive {
+    max-width: 100%;
+}
 .login-user input[type="password"] {
    @extend .input-tag;
     padding: 4px 0px 0px 6px;

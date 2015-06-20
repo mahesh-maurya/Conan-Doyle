@@ -67,6 +67,9 @@ p.login-forget.pull-right {
 .login-user input[type="text"] {
   padding: 4px 0px 0px 3px; }
 
+img.img-responsive {
+  max-width: 100%; }
+
 .login-user input[type="password"] {
   padding: 4px 0px 0px 6px; }
 
