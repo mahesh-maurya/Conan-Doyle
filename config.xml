@@ -51,17 +51,17 @@
     <preference name="SplashScreenBackgroundColor" value="#ffffff" />
     <preference name="SplashMaintainAspectRatio" value="true" />
 
-    <!--Needed for status bar plugin-->
+    <!--for status bar plugin-->
     <feature name="StatusBar">
         <param name="ios-package" value="CDVStatusBar" onload="true" />
     </feature>
 
-    <!--Needed for ionic keyboard plugin-->
+    <!--for ionic keyboard plugin-->
     <feature name="Keyboard">
         <param name="ios-package" value="IonicKeyboard" onload="true" />
     </feature>
 
-    <!--Needed for splash screen plugin-->
+    <!--for splash screen plugin-->
     <feature name="SplashScreen">
         <param name="ios-package" value="CDVSplashScreen" />
         <param name="android-package" value="cordova-plugin-splashscreen" />
