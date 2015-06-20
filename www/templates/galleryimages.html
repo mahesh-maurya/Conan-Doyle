@@ -1,8 +1,39 @@
-<ion-modal-view>
-    <div ng-show="firstslide">
-        <ion-slide-box on-slide-changed="slideHasChanged($index)">
+<style>
+    .transparent {
+        background: transparent !important;
+    }
+    .modal-backdrop.active {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    .image-modal {
+        width: 100% !important;
+        height: 100%;
+        top: 0 !important;
+        left: 0 !important;
+    }
+    .centralize {
+        top: 50%;
+        position: relative;
+        transform: translateY(-50%);
+    }
+    .close-button {
+        position: absolute;
+        color: white;
+        font-size: 28px;
+        top: 10px;
+        left: 10px;
+    }
+</style>
+<ion-modal-view class="image-modal transparent">
+
+    <h1 class="close-button icon ion-android-close" ng-click="closeModal();"></h1>
+
+    <div ng-show="firstslide" class="centralize">
+        <ion-slide-box on-slide-changed="slideHasChanged($index)" show-pager="false">
             <ion-slide ng-repeat="fashion in fashions">
-                <img ng-src="{{fashion.imgpath}}" class="full-image" alt="">
+                <ion-scroll zooming="true">
+                    <img ng-src="{{fashion.imgpath}}" class="full-image" alt="">
+                </ion-scroll>
             </ion-slide>
 
         </ion-slide-box>
