@@ -370,7 +370,10 @@ angular.module('starter.controllers', [])
             animation: 'slide-in-up'
         }).then(function(modal) {
             $scope.modal = modal;
+            
             $scope.modal.show();
+            console.log($ionicSlideBoxDelegate.slide(0));
+            $ionicSlideBoxDelegate.update();
             $scope.modal.hide();
         });
 
@@ -380,7 +383,8 @@ angular.module('starter.controllers', [])
             console.log(index);
             $scope.firstslide = true;
             $scope.modal.show();
-            $ionicSlideBoxDelegate.slide(index);
+            setTimeout(function(){ $ionicSlideBoxDelegate.slide(index); }, 100);
+            
         };
         $scope.closeModal = function() {
             $scope.modal.hide();
