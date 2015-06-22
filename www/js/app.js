@@ -20,6 +20,11 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         if (cordova.platformId == 'android') {
             StatusBar.backgroundColorByHexString("#9C27B0");
         }
+        
+if (device.platform == 'iOS')
+           {
+               navigator.splashscreen.hide();
+           }
     });
 })
 
