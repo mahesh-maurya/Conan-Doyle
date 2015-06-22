@@ -4,7 +4,7 @@ angular.module('starter.controllers', [])
    angular.element($window).bind(
     "scroll", function() {
          console.log(window.pageYOffset);
-         if(window.pageYOffset > 0) {
+         if(window.pageYOffset > 10) {
            $scope.navClass = 'bar-stables';
          } else {
            $scope.navClass = 'bar-stable';
@@ -248,6 +248,8 @@ angular.module('starter.controllers', [])
          $scope.$apply();
    });  
     
+    
+    
     })
     .controller('ContactCtrl', function($scope, $stateParams) {
 
@@ -271,6 +273,7 @@ angular.module('starter.controllers', [])
     })
     .controller('SettingCtrl', function($scope, $stateParams) {})
     .controller('GallerycategoryCtrl', function($scope, $stateParams, $ionicModal, $ionicSlideBoxDelegate) {
+    
         $scope.fashions = [{
             imgpath: "img/gallery/fashion/fashion1.jpg"
         }, {
@@ -283,6 +286,55 @@ angular.module('starter.controllers', [])
             imgpath: "img/gallery/fashion/fashion5.jpg"
         }];
 
+        $scope.art = [{
+            imgpath: "img/gallery/art/art1.jpg"
+        }, {
+            imgpath: "img/gallery/art/art2.jpg"
+        }, {
+            imgpath: "img/gallery/art/art3.jpg"
+        }, {
+            imgpath: "img/gallery/art/art4.jpg"
+        }];
+    
+    $scope.travel = [{
+            imgpath: "img/gallery/travel/travel1.jpg"
+        }, {
+            imgpath: "img/gallery/travel/travel2.jpg"
+        }, {
+            imgpath: "img/gallery/travel/travel3.jpg"
+        }];
+    
+    $scope.people = [{
+            imgpath: "img/gallery/people/people1.jpg"
+        }, {
+            imgpath: "img/gallery/people/people2.jpg"
+        }, {
+            imgpath: "img/gallery/people/people3.jpg"
+        }, {
+            imgpath: "img/gallery/people/people4.jpg"
+        }];
+
+      $scope.nature = [{
+            imgpath: "img/gallery/nature/nature1.jpg"
+        }, {
+            imgpath: "img/gallery/nature/nature2.jpg"
+        }, {
+            imgpath: "img/gallery/nature/nature3.jpg"
+        }, {
+            imgpath: "img/gallery/nature/nature4.jpg"
+        }, {
+            imgpath: "img/gallery/nature/nature5.jpg"
+        }];
+
+      $scope.business = [{
+            imgpath: "img/gallery/business/business1.jpg"
+        }, {
+            imgpath: "img/gallery/business/business2.jpg"
+        }, {
+            imgpath: "img/gallery/business/business3.jpg"
+        }];
+
+    
         $scope.newfashions=splitarray($scope.fashions,2);
 
 
