@@ -587,6 +587,9 @@ figcaption.blog-name {
   top: 10px;
   left: 10px; }
 
+.bar-stables ion-header-bar {
+  background: black !important; }
+
 /*!
   Ionicons, v2.0.1
   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/

@@ -460,6 +460,7 @@ figure.image-set figcaption {
     -moz-transition: all 1s;
     -o-transition: all 1s;
     -ms-transition: all 1s;
+    transition: all 1s;
     overflow: hidden;
 }
 .ans-set.faqhead {
@@ -468,6 +469,7 @@ figure.image-set figcaption {
     -ms-transition: all 1s;
     -moz-transition: all 1s;
     -o-transition: all 1s;
+   transition: all 1s;
     height: 0px;
 }
 p.addanimation {
@@ -613,14 +615,11 @@ figcaption.blog-name {
 }
 .close-button {
     position: absolute;
-    color: white;
+    color:  $light;
     font-size: 28px;
     top: 10px;
     left: 10px;
 }
 .bar-stables ion-header-bar {
     background: black !important;
-}
-ion-header-bar {
-    //-webkit-transition: all 5s;
 }
