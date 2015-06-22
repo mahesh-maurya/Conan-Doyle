@@ -12,5 +12,9 @@
             </intent-filter>
         </activity>
     </application>
+<<<<<<< HEAD
     <uses-sdk android:minSdkVersion="11" android:targetSdkVersion="14" />
+=======
+    <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="14" />
+>>>>>>> origin/master
 </manifest>

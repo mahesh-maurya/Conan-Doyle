@@ -1,5 +1,6 @@
 var abc = 0;
 angular.module('starter.controllers', [])
+<<<<<<< HEAD
     .controller('AppCtrl', function($scope, $ionicScrollDelegate) {
         $scope.navClass = 'bar-stable';
 
@@ -16,6 +17,22 @@ angular.module('starter.controllers', [])
         };
 
     })
+=======
+    .controller('AppCtrl', function($scope,$window) {
+     $scope.navClass = 'bar-stable';
+   angular.element($window).bind(
+    "scroll", function() {
+         console.log(window.pageYOffset);
+         if(window.pageYOffset > 0) {
+           $scope.navClass = 'bar-stables';
+         } else {
+           $scope.navClass = 'bar-stable';
+         }
+         $scope.$apply();
+   });  
+    
+})
+>>>>>>> origin/master
 
 .controller('ArticlesCtrl', function($scope) {
 
@@ -241,10 +258,26 @@ angular.module('starter.controllers', [])
             }
 
         };
+<<<<<<< HEAD
 
 
 
 
+=======
+    
+       $scope.navClass = 'bar-stable';
+   angular.element($window).bind(
+    "scroll", function() {
+         console.log(window.pageYOffset);
+         if(window.pageYOffset > 0) {
+           $scope.navClass = 'bar-stables';
+         } else {
+           $scope.navClass = 'bar-stable';
+         }
+         $scope.$apply();
+   });  
+    
+>>>>>>> origin/master
     })
     .controller('ContactCtrl', function($scope, $stateParams) {
 
@@ -268,7 +301,10 @@ angular.module('starter.controllers', [])
     })
     .controller('SettingCtrl', function($scope, $stateParams) {})
     .controller('GallerycategoryCtrl', function($scope, $stateParams, $ionicModal, $ionicSlideBoxDelegate) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
         $scope.fashions = [{
             imgpath: "img/gallery/fashion/fashion1.jpg"
         }, {
@@ -281,6 +317,7 @@ angular.module('starter.controllers', [])
             imgpath: "img/gallery/fashion/fashion5.jpg"
         }];
 
+<<<<<<< HEAD
         $scope.art = [{
             imgpath: "img/gallery/art/art1.jpg"
         }, {
@@ -331,6 +368,9 @@ angular.module('starter.controllers', [])
 
 
         $scope.newfashions = splitarray($scope.fashions, 2);
+=======
+        $scope.newfashions=splitarray($scope.fashions,2);
+>>>>>>> origin/master
 
 
         $ionicModal.fromTemplateUrl('templates/galleryimages.html', {
