@@ -1,5 +1,18 @@
 angular.module('starter.controllers', [])
-    .controller('AppCtrl', function($scope) {})
+    .controller('AppCtrl', function($scope,$window) {
+     $scope.navClass = 'bar-stable';
+   angular.element($window).bind(
+    "scroll", function() {
+         console.log(window.pageYOffset);
+         if(window.pageYOffset > 0) {
+           $scope.navClass = 'bar-stables';
+         } else {
+           $scope.navClass = 'bar-stable';
+         }
+         $scope.$apply();
+   });  
+    
+})
 
 .controller('ArticlesCtrl', function($scope) {
 
@@ -26,7 +39,20 @@ angular.module('starter.controllers', [])
     }];
 
 })
-    .controller('HomeCtrl', function($scope, $ionicScrollDelegate) {
+    .controller('HomeCtrl', function($scope, $ionicScrollDelegate,$window) {
+    
+           $scope.navClass = 'bar-stable';
+   angular.element($window).bind(
+    "scroll", function() {
+         console.log(window.pageYOffset);
+         if(window.pageYOffset > 0) {
+           $scope.navClass = 'bar-stables';
+         } else {
+           $scope.navClass = 'bar-stable';
+         }
+         $scope.$apply();
+   });  
+    
 
         //        ***** tabchange ****
 
@@ -177,7 +203,7 @@ angular.module('starter.controllers', [])
 
 
     })
-    .controller('AboutCtrl', function($scope, $stateParams) {
+    .controller('AboutCtrl', function($scope, $stateParams,$window) {
 
         $scope.abouthead = [{
             content: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
@@ -209,6 +235,19 @@ angular.module('starter.controllers', [])
             }
 
         };
+    
+       $scope.navClass = 'bar-stable';
+   angular.element($window).bind(
+    "scroll", function() {
+         console.log(window.pageYOffset);
+         if(window.pageYOffset > 0) {
+           $scope.navClass = 'bar-stables';
+         } else {
+           $scope.navClass = 'bar-stable';
+         }
+         $scope.$apply();
+   });  
+    
     })
     .controller('ContactCtrl', function($scope, $stateParams) {
 
@@ -245,6 +284,7 @@ angular.module('starter.controllers', [])
         }];
 
         $scope.newfashions=splitarray($scope.fashions,2);
+
 
         $ionicModal.fromTemplateUrl('templates/galleryimages.html', {
             scope: $scope,

@@ -451,6 +451,9 @@ figure.image-set figcaption {
     text-align: left;
     height: 0px;
     -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    -ms-transition: all 1s;
     overflow: hidden;
 }
 .ans-set.faqhead {
@@ -535,8 +538,9 @@ figcaption.blog-name {
     position: relative;
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
-    -mz-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
     -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
     position: absolute;
     top: 0;
     width: 100%;
@@ -580,13 +584,39 @@ figcaption.blog-name {
 .tabs.tabs-top {
     border-bottom-width: 0px !important;
 }
-.modal-wrapper {
-  z-index: 11;
-  position: relative;
-  top: 50%;
-  transform: translatey(-50%);
-}
-.modal-backdrop-bg {
-  pointer-events: none;
-  background-color: rgba(0, 0, 0, 0.57);
-}
+    .transparent {
+        background: transparent !important;
+    }
+    .modal-backdrop.active {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    .image-modal {
+        width: 100% !important;
+        height: 100%;
+        top: 0 !important;
+        left: 0 !important;
+    }
+    .centralize {
+        top: 50%;
+        position: relative;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+    }
+    .close-button {
+        position: absolute;
+        color: white;
+        font-size: 28px;
+        top: 10px;
+        left: 10px;
+    }
+
+
+//.bar-stable{
+//background: blue !important;
+//}
+//.bar-stables{
+//background: black !important;
+//}

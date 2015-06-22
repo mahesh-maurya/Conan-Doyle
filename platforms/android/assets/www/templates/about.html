@@ -1,9 +1,12 @@
 <ion-view>
+   
     <ion-content style="top:0px">
-        <div class="about-set">
-            <div class="map-set">
+       <div perfect-parallax parallax-ratio="0.1" parallax-css="transform:translateY">
+        <div perfect-parallax parallax-ratio="0.5" parallax-css="background-position-y" parallax-init-val="-100" class="about-set">
+            <div perfect-parallax parallax-ratio="1.0" parallax-css="bottom" parallax-init-val="100" class="map-set">
                 <h2 class="title-c">About us</h2>
             </div>
+        </div>
         </div>
         <div class="about-us">
             <h3 ng-repeat="head in abouthead">"{{head.content}}"</h3>
