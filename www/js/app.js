@@ -86,6 +86,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         })
         .state('app.gallery-category', {
             url: "/gallery-category/:id",
+            cache: false,
             views: {
                 'menuContent': {
                     templateUrl: "templates/gallery-category.html",

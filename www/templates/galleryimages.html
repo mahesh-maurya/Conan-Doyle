@@ -5,9 +5,9 @@
 
     <div ng-show="firstslide" class="centralize">
         <ion-slide-box on-slide-changed="slideHasChanged($index)" show-pager="false">
-            <ion-slide ng-repeat="fashion in fashions">
+            <ion-slide ng-repeat="image in innergallery">
                 <ion-scroll zooming="true">
-                    <img ng-src="{{fashion.imgpath}}" class="full-image" alt="">
+                    <img ng-src="{{image.imgpath}}" class="full-image" alt="">
                 </ion-scroll>
             </ion-slide>
 

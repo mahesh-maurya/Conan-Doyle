@@ -3,15 +3,15 @@
         <div class="gallery2-set">
 
             <div class="map-set">
-                <h2 class="title-c">Fashion</h2>
+                <h2 class="title-c" ng-bind="titletext"></h2>
 
             </div>
         </div>
         <div class="gallery-img ">
            
-            <div class="row" ng-repeat="pro in newfashions">
+            <div class="row" ng-repeat="pro in newgallery">
                
-                <div class="col col-50" ng-click="openModal(fashions.indexOf(fashion));" ng-repeat="fashion in pro"  >
+                <div class="col col-50" ng-click="openModal(innergallery.indexOf(fashion));" ng-repeat="fashion in pro"  >
                     <figure class="image-set">
                         <img ng-src="{{fashion.imgpath}}" class="full-image">
                     </figure>

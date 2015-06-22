@@ -7,11 +7,11 @@ angular.module('starter.controllers', [])
         abc = maindele;
 
         $scope.mainscrolling = function() {
-            
-            var topscroll=maindele.getScrollPosition().top;
-            var oncomblack=600.0;
-            var coloropacity=topscroll/oncomblack;
-            $(".navClass ion-header-bar").css("background","-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(64, 62, 93,"+coloropacity+")), color-stop(100%,rgba(255,255,255,0.00)))");
+
+            var topscroll = maindele.getScrollPosition().top;
+            var oncomblack = 600.0;
+            var coloropacity = topscroll / oncomblack;
+            $(".navClass ion-header-bar").css("background", "-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(64, 62, 93," + coloropacity + ")), color-stop(100%,rgba(255,255,255,0.00)))");
 
         };
 
@@ -269,7 +269,7 @@ angular.module('starter.controllers', [])
     .controller('SettingCtrl', function($scope, $stateParams) {})
     .controller('GallerycategoryCtrl', function($scope, $stateParams, $ionicModal, $ionicSlideBoxDelegate) {
 
-        $scope.fashions = [{
+        $scope.fashion = [{
             imgpath: "img/gallery/fashion/fashion1.jpg"
         }, {
             imgpath: "img/gallery/fashion/fashion2.jpg"
@@ -328,10 +328,42 @@ angular.module('starter.controllers', [])
         }, {
             imgpath: "img/gallery/business/business3.jpg"
         }];
+        $scope.miscellaneous = [{
+            imgpath: "img/gallery/business/business1.jpg"
+        }, {
+            imgpath: "img/gallery/business/business2.jpg"
+        }, {
+            imgpath: "img/gallery/business/business3.jpg"
+        }];
+        var tobesplit = [];
 
+        $scope.titletext = $stateParams.id;
+        switch ($stateParams.id) {
+            case "Art":
+                tobesplit = $scope.art;
+                break;
+            case "Travel":
+                tobesplit = $scope.travel;
+                break;
+            case "Fashion":
+                tobesplit = $scope.fashion;
+                break;
+            case "Business":
+                tobesplit = $scope.business;
+                break;
+            case "Nature":
+                tobesplit = $scope.nature;
+                break;
+            case "People":
+                tobesplit = $scope.people;
+                break;
+            case "Miscellaneous":
+                tobesplit = $scope.miscellaneous;
+                break;
 
-        $scope.newfashions = splitarray($scope.fashions, 2);
-
+        }
+        $scope.innergallery = tobesplit;
+        $scope.newgallery = splitarray(tobesplit, 2);
 
         $ionicModal.fromTemplateUrl('templates/galleryimages.html', {
             scope: $scope,
@@ -342,8 +374,10 @@ angular.module('starter.controllers', [])
             $scope.modal.hide();
         });
 
+
         $scope.firstslide = false;
         $scope.openModal = function(index) {
+            console.log(index);
             $scope.firstslide = true;
             $scope.modal.show();
             $ionicSlideBoxDelegate.slide(index);
@@ -380,7 +414,7 @@ angular.module('starter.controllers', [])
             imgpath: "img/gallery/people3.jpg"
         }, {
             id: 7,
-            imagename: "Busniess",
+            imagename: "Business",
             imgpath: "img/gallery/nature5.jpg"
         }];
 
