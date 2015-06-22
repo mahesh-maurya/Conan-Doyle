@@ -5,9 +5,16 @@ $positive:#9C27B0 !default;
  $icon-color:#7a7a7a !default;
  $link-color:#909090 !default;
  $light-grey:#eeeeee !default;
- $font-family-sans-serif:"Lato","Helvetica Neue","Roboto","Segoe UI",sans-serif !default;
- $font-family-light-sans-serif:"Lato","HelveticaNeue-Light","Roboto-Light","Segoe UI-Light",
-  sans-serif-light !default;
+ $font-family-sans-serif:"Lato",
+"Helvetica Neue",
+"Roboto",
+"Segoe UI",
+sans-serif !default;
+ $font-family-light-sans-serif:"Lato",
+"HelveticaNeue-Light",
+"Roboto-Light",
+"Segoe UI-Light",
+sans-serif-light !default;
  $light:#fff !default;
  $input-color-placeholder:#212121 !default;
  $lato-font-weight:300 !default;
@@ -238,7 +245,7 @@ img.img-responsive {
     background: transparent;
 }
 input::-webkit-input-placeholder {
-    color:  $base-color;
+    color: $base-color;
 }
 h1.title.back-arrow i {
     float: left;
@@ -345,7 +352,7 @@ img.user-pic {
 }
 i.icon.ion-ios-plus-empty.image-up {
     position: absolute;
-    color:  $light;
+    color: $light;
     font-size: 20px;
     z-index: 999999;
     background: #50d2c2;
@@ -439,7 +446,6 @@ figure.image-set figcaption {
     text-align: center;
     margin-top: 20px;
 }
-
 .know-btn {
     border: 1px solid #9C27B0;
     padding: 10px 35px;
@@ -498,7 +504,7 @@ h5.qsn-set {
     border: 1px solid $positive;
     padding: 7px;
     background: $positive;
-    color:  $light;
+    color: $light;
 }
 p.addanimation.pop.showmores {
     background: rgb(156, 39, 176);
@@ -506,7 +512,7 @@ p.addanimation.pop.showmores {
     padding: 6px 8px;
     font-size: 13px;
     font-weight: $lato-font-weight;
-    color:  $light;
+    color: $light;
     margin-top: 20px;
 }
 .qsn-set {
@@ -515,7 +521,7 @@ p.addanimation.pop.showmores {
 figcaption.blog-name {
     position: absolute;
     padding: 8px;
-    color:  $light;
+    color: $light;
     font-weight: $lato-font-weight;
     bottom: 0;
     font-size: 15px;
@@ -548,7 +554,7 @@ figcaption.blog-name {
 .user-imgs {
     text-align: right;
     position: absolute;
-     top: 115px;
+    top: 115px;
     right: 30px;
     z-index: 99999;
 }
@@ -570,12 +576,12 @@ figcaption.blog-name {
 }
 .articals-det h3 {
     font-weight: $lato-font-weight;
-    color:  $base-color;
+    color: $base-color;
 }
 .articals-det p {
-    font-size:$texts-font-size;
+    font-size: $texts-font-size;
     color: $icon-color;
-      font-weight: $lato-font-weight;
+    font-weight: $lato-font-weight;
 }
 .scrooling {
     background: rgba(0, 0, 0, 0.5);
@@ -584,39 +590,37 @@ figcaption.blog-name {
 .tabs.tabs-top {
     border-bottom-width: 0px !important;
 }
-    .transparent {
-        background: transparent !important;
-    }
-    .modal-backdrop.active {
-        background-color: rgba(0, 0, 0, 0.8);
-    }
-    .image-modal {
-        width: 100% !important;
-        height: 100%;
-        top: 0 !important;
-        left: 0 !important;
-    }
-    .centralize {
-        top: 50%;
-        position: relative;
-        transform: translateY(-50%);
-        -webkit-transform: translateY(-50%);
-        -moz-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        -o-transform: translateY(-50%);
-    }
-    .close-button {
-        position: absolute;
-        color: white;
-        font-size: 28px;
-        top: 10px;
-        left: 10px;
-    }
-
-
-//.bar-stable{
-//background: blue !important;
-//}
-.bar-stables{
-background: black !important;
+.transparent {
+    background: transparent !important;
+}
+.modal-backdrop.active {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.image-modal {
+    width: 100% !important;
+    height: 100%;
+    top: 0 !important;
+    left: 0 !important;
+}
+.centralize {
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+.close-button {
+    position: absolute;
+    color: white;
+    font-size: 28px;
+    top: 10px;
+    left: 10px;
+}
+.bar-stables ion-header-bar {
+    background: black !important;
+}
+ion-header-bar {
+    //-webkit-transition: all 5s;
 }

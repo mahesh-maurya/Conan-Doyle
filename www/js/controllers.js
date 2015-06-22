@@ -1,18 +1,21 @@
+var abc = 0;
 angular.module('starter.controllers', [])
-    .controller('AppCtrl', function($scope,$window) {
-     $scope.navClass = 'bar-stable';
-   angular.element($window).bind(
-    "scroll", function() {
-         console.log(window.pageYOffset);
-         if(window.pageYOffset > 10) {
-           $scope.navClass = 'bar-stables';
-         } else {
-           $scope.navClass = 'bar-stable';
-         }
-         $scope.$apply();
-   });  
-    
-})
+    .controller('AppCtrl', function($scope, $ionicScrollDelegate) {
+        $scope.navClass = 'bar-stable';
+
+        var maindele = $ionicScrollDelegate;
+        abc = maindele;
+
+        $scope.mainscrolling = function() {
+            
+            var topscroll=maindele.getScrollPosition().top;
+            var oncomblack=600.0;
+            var coloropacity=topscroll/oncomblack;
+            $(".navClass ion-header-bar").css("background","-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(64, 62, 93,"+coloropacity+")), color-stop(100%,rgba(255,255,255,0.00)))");
+
+        };
+
+    })
 
 .controller('ArticlesCtrl', function($scope) {
 
@@ -39,20 +42,20 @@ angular.module('starter.controllers', [])
     }];
 
 })
-    .controller('HomeCtrl', function($scope, $ionicScrollDelegate,$window) {
-    
-           $scope.navClass = 'bar-stable';
-   angular.element($window).bind(
-    "scroll", function() {
-         console.log(window.pageYOffset);
-         if(window.pageYOffset > 0) {
-           $scope.navClass = 'bar-stables';
-         } else {
-           $scope.navClass = 'bar-stable';
-         }
-         $scope.$apply();
-   });  
-    
+    .controller('HomeCtrl', function($scope, $ionicScrollDelegate, $window) {
+
+        $scope.navClass = 'bar-stable';
+        angular.element($window).bind(
+            "scroll", function() {
+                console.log(window.pageYOffset);
+                if (window.pageYOffset > 0) {
+                    $scope.navClass = 'bar-stables';
+                } else {
+                    $scope.navClass = 'bar-stable';
+                }
+                $scope.$apply();
+            });
+
 
         //        ***** tabchange ****
 
@@ -203,7 +206,10 @@ angular.module('starter.controllers', [])
 
 
     })
-    .controller('AboutCtrl', function($scope, $stateParams,$window) {
+    .controller('AboutCtrl', function($scope, $stateParams, $window, $ionicScrollDelegate) {
+
+
+
 
         $scope.abouthead = [{
             content: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
@@ -235,21 +241,10 @@ angular.module('starter.controllers', [])
             }
 
         };
-    
-       $scope.navClass = 'bar-stable';
-   angular.element($window).bind(
-    "scroll", function() {
-         console.log(window.pageYOffset);
-         if(window.pageYOffset > 0) {
-           $scope.navClass = 'bar-stables';
-         } else {
-           $scope.navClass = 'bar-stable';
-         }
-         $scope.$apply();
-   });  
-    
-    
-    
+
+
+
+
     })
     .controller('ContactCtrl', function($scope, $stateParams) {
 
@@ -273,7 +268,7 @@ angular.module('starter.controllers', [])
     })
     .controller('SettingCtrl', function($scope, $stateParams) {})
     .controller('GallerycategoryCtrl', function($scope, $stateParams, $ionicModal, $ionicSlideBoxDelegate) {
-    
+
         $scope.fashions = [{
             imgpath: "img/gallery/fashion/fashion1.jpg"
         }, {
@@ -295,16 +290,16 @@ angular.module('starter.controllers', [])
         }, {
             imgpath: "img/gallery/art/art4.jpg"
         }];
-    
-    $scope.travel = [{
+
+        $scope.travel = [{
             imgpath: "img/gallery/travel/travel1.jpg"
         }, {
             imgpath: "img/gallery/travel/travel2.jpg"
         }, {
             imgpath: "img/gallery/travel/travel3.jpg"
         }];
-    
-    $scope.people = [{
+
+        $scope.people = [{
             imgpath: "img/gallery/people/people1.jpg"
         }, {
             imgpath: "img/gallery/people/people2.jpg"
@@ -314,7 +309,7 @@ angular.module('starter.controllers', [])
             imgpath: "img/gallery/people/people4.jpg"
         }];
 
-      $scope.nature = [{
+        $scope.nature = [{
             imgpath: "img/gallery/nature/nature1.jpg"
         }, {
             imgpath: "img/gallery/nature/nature2.jpg"
@@ -326,7 +321,7 @@ angular.module('starter.controllers', [])
             imgpath: "img/gallery/nature/nature5.jpg"
         }];
 
-      $scope.business = [{
+        $scope.business = [{
             imgpath: "img/gallery/business/business1.jpg"
         }, {
             imgpath: "img/gallery/business/business2.jpg"
@@ -334,8 +329,8 @@ angular.module('starter.controllers', [])
             imgpath: "img/gallery/business/business3.jpg"
         }];
 
-    
-        $scope.newfashions=splitarray($scope.fashions,2);
+
+        $scope.newfashions = splitarray($scope.fashions, 2);
 
 
         $ionicModal.fromTemplateUrl('templates/galleryimages.html', {
@@ -347,7 +342,7 @@ angular.module('starter.controllers', [])
             $scope.modal.hide();
         });
 
-        $scope.firstslide =false;
+        $scope.firstslide = false;
         $scope.openModal = function(index) {
             $scope.firstslide = true;
             $scope.modal.show();
@@ -389,6 +384,6 @@ angular.module('starter.controllers', [])
             imgpath: "img/gallery/nature5.jpg"
         }];
 
-        $scope.gallerynew=splitarray($scope.gallery,2);
+        $scope.gallerynew = splitarray($scope.gallery, 2);
     })
     .controller('UsersignupCtrl', function($scope, $stateParams) {});
