@@ -4,21 +4,20 @@ angular.module('starter.controllers', [])
 
 
         //****** Code For changing header color on scrolling ******
-
-
         $scope.navClass = 'bar-stable';
 
-        var maindele = $ionicScrollDelegate;
+        var maindele = $ionicScrollDelegate.$getByHandle('mainScroll');
         abc = maindele;
 
         $scope.mainscrolling = function() {
-
             var topscroll = maindele.getScrollPosition().top;
-            var oncomblack = 600.0;
+            var oncomblack = 300.0;
             var coloropacity = topscroll / oncomblack;
-            $(".navClass ion-header-bar").css("background", "-webkit-gradient(linear, left top, left bottom, color-             stop(0%,rgba(64, 62, 93," + coloropacity + ")), color-stop(100%,rgba(255,255,255,0.00)))");
+            $(".navClass ion-header-bar").css("background", "-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(64, 62, 93," + coloropacity + ")), color-stop(100%,rgba(255,255,255,0.00)))");
 
         };
+
+
 
         //    ****** End ******
 
@@ -33,7 +32,6 @@ angular.module('starter.controllers', [])
     $scope.showmore = function() {
         var newheight = $(".moretext").height();
         console.log(newheight);
-        console.log("show more clicked");
         if ($scope.showDetails == "showmore") {
             $scope.showDetails = "dontshow";
             $(".addanimation").height(0);
@@ -299,6 +297,12 @@ angular.module('starter.controllers', [])
 
         //***** End ******
 
+        //****** Code For changing header color on scrolling ******
+
+
+
+
+        //    ****** End ******
 
     })
     .controller('ContactCtrl', function($scope, $stateParams) {
@@ -332,7 +336,7 @@ angular.module('starter.controllers', [])
 
 
 .controller('GallerycategoryCtrl', function($scope, $stateParams, $ionicModal, $ionicSlideBoxDelegate) {
-    
+
     //    ****** Gallery Images Json Format data ******
 
     $scope.fashion = [{
@@ -394,7 +398,7 @@ angular.module('starter.controllers', [])
     }, {
         imgpath: "img/gallery/business/business3.jpg"
     }];
-    
+
     $scope.miscellaneous = [{
         imgpath: "img/gallery/business/business1.jpg"
     }, {
@@ -402,12 +406,12 @@ angular.module('starter.controllers', [])
     }, {
         imgpath: "img/gallery/business/business3.jpg"
     }];
-    
-//    ****** End ******
-    
-    
-//    ****** Code For Calling Images ******
-    
+
+    //    ****** End ******
+
+
+    //    ****** Code For Calling Images ******
+
     var tobesplit = [];
 
     $scope.titletext = $stateParams.id;
@@ -435,14 +439,14 @@ angular.module('starter.controllers', [])
             break;
 
     }
-    
-    
+
+
     $scope.innergallery = tobesplit;
     $scope.newgallery = splitarray(tobesplit, 2);
-    
-//    ****** End *******
-    
-//    ****** Code For Open Image In popup ******
+
+    //    ****** End *******
+
+    //    ****** Code For Open Image In popup ******
 
     $ionicModal.fromTemplateUrl('templates/galleryimages.html', {
         scope: $scope,
@@ -470,15 +474,15 @@ angular.module('starter.controllers', [])
     $scope.closeModal = function() {
         $scope.modal.hide();
     };
-    
-//    ****** End *******
+
+    //    ****** End *******
 
 })
     .controller('GalleryCtrl', function($scope, $stateParams) {
-    
-    //    ****** Code For Calling Images Json Format ******
-    
-    
+
+        //    ****** Code For Calling Images Json Format ******
+
+
         $scope.gallery = [{
             id: 1,
             imagename: "People",
@@ -509,12 +513,12 @@ angular.module('starter.controllers', [])
             imgpath: "img/gallery/nature5.jpg"
         }];
 
-//     ****** End ******
-    
-    
+        //     ****** End ******
+
+
         $scope.gallerynew = splitarray($scope.gallery, 2);
-    
+
     })
 
 
-    .controller('UsersignupCtrl', function($scope, $stateParams) {});
+.controller('UsersignupCtrl', function($scope, $stateParams) {});
