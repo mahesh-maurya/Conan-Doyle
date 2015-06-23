@@ -1,39 +1,67 @@
-$positive:#2980b9 !default;
- $calm:#03A9F4 !default;
- $stable:transparent !default;
- $base-color:#212121 !default;
- $icon-color:#7a7a7a !default;
- $link-color:#909090 !default;
- $light-grey:#eeeeee !default;
- $font-family-sans-serif:"Lato",
-"Helvetica Neue",
-"Roboto",
-"Segoe UI",
-sans-serif !default;
- $font-family-light-sans-serif:"Lato",
-"HelveticaNeue-Light",
-"Roboto-Light",
-"Segoe UI-Light",
-sans-serif-light !default;
- $light:#fff !default;
- $input-color-placeholder:#212121 !default;
- $lato-font-weight:300 !default;
- $button-stable-text:#fff !default;
- $headings-font-weight:500 !default;
- $texts-font-size:14px !default;
- $input-padding:4px 0px 0px 3px !default;
- $button-stable-border:transparent !default;
- $background-menu:url('../img/side-menu.png');
- $sign-bg-image:url('../img/sign-back.png') no-repeat center center;
- $contact-bg-image:url('../img/component/contact.png') no-repeat center center;
- $setting-bg-image:url('../img/component/setting.png') no-repeat center center;
- $gallery-bg-image:url('../img/component/gallery.png') no-repeat center center;
- $gallery2-bg-image:url('../img/component/gallery2.png') no-repeat center center;
- $about-bg-image:url('../img/component/about.png') no-repeat center center;
- $faq-bg-image:url('../img/component/faq.png') no-repeat center center;
- $home-bg-image:url('../img/component/home.png') no-repeat center center;
- $artical-bg-image:url('../img/component/artical.png') no-repeat center center;
- $bar-stable-bg:transparent !default;
+// ****** Customization Blue Color For App *******
+
+// $positive:                       #9c28b1 !default;
+
+//****** End ******
+
+// ****** Customization Red Color For App *******
+
+// $positive:                       #E84C3D !default;
+
+//****** End ******
+
+// ****** Customization Green Color For App *******
+
+// $positive:                       #27a01f !default;
+
+//****** End ******
+
+ $positive:                       #9C27B0 !default;
+ $calm:                           #03A9F4 !default;
+ $stable:                         transparent !default;
+ $base-color:                     #212121 !default;
+ $icon-color:                     #7a7a7a !default;
+ $link-color:                     #909090 !default;
+ $light-grey:                     #eeeeee !default;
+ $font-family-sans-serif:         "Lato","Helvetica Neue","Roboto","Segoe UI",sans-serif !default;
+ $font-family-light-sans-serif:   "Lato","HelveticaNeue-Light","Roboto-Light","Segoe UI-Light",sans-serif-light !default;
+ $light:                          #fff !default;
+ $input-color-placeholder:        #212121 !default;
+ $lato-font-weight:               300 !default;
+ $button-stable-text:             #fff !default;
+ $headings-font-weight:           500 !default;
+ $texts-font-size:                14px !default;
+ $input-padding:                  4px 0px 0px 3px !default;
+ $pad-font-size:                  13px !default;
+ $button-stable-border:           transparent !default;
+ $background-menu:                url('../img/side-menu.png');
+ $sign-bg-image:                  url('../img/sign-back.png') no-repeat center center;
+ $contact-bg-image:               url('../img/component/contact.png') no-repeat center center;
+ $setting-bg-image:               url('../img/component/setting.png') no-repeat center center;
+ $gallery-bg-image:               url('../img/component/gallery.png') no-repeat center center;
+ $gallery2-bg-image:              url('../img/component/gallery2.png') no-repeat center center;
+ $about-bg-image:                 url('../img/component/about.png') no-repeat center center;
+ $faq-bg-image:                   url('../img/component/faq.png') no-repeat center center;
+ $home-bg-image:                  url('../img/component/home.png') no-repeat center center;
+ $artical-bg-image:               url('../img/component/artical.png') no-repeat center center;
+ $bar-stable-bg:                  transparent !default;
+
+
+@mixin transition($transition-property, $transition-time) {
+    -webkit-transition: $transition-property $transition-time;
+    -moz-transition: $transition-property $transition-time;
+    -ms-transition: $transition-property $transition-time;
+    -o-transition: $transition-property $transition-time;
+    transition: $transition-property $transition-time;
+}
+
+@mixin clip-path($clip) {
+  -webkit-clip-path: $clip;
+  -moz-clip-path: $clip;
+  -ms-clip-path: $clip;
+  clip-path: $clip;
+}
+
 //********  custom class ********'
  .input-tag {
     color: $base-color !important;
@@ -41,6 +69,8 @@ sans-serif-light !default;
     font-size: $texts-font-size;
 }
 //******* End ********
+
+
 @font-face {
     font-family: 'Lato';
     src: url("../fonts/Lato-Bold.ttf");
@@ -138,7 +168,7 @@ img.img-responsive {
 }
 .login-content:-webkit-placeholder {
     color: $input-color-placeholder;
-    font-size: 13px;
+    font-size: $pad-font-size;
 }
 .sign.text-center {
     margin: 16px auto;
@@ -158,81 +188,49 @@ img.img-responsive {
 }
 .clip-polygon {
     background: $sign-bg-image;
-    -moz-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
-    -ms-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
-    -o-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
-    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
+    @include clip-path(polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%));
     background-size: cover;
     height: 215px;
 }
 .contact-set {
     background: $contact-bg-image;
-    -moz-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
-    -ms-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
-    -o-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
-    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
+    @include clip-path(polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%));
     background-size: cover;
     height: 215px;
 }
 .setting-set {
     background: $setting-bg-image;
-    -moz-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
-    -ms-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
-    -o-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
-    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
+    @include clip-path(polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%));
     background-size: cover;
     height: 215px;
 }
 .gallery-set {
     background: $gallery-bg-image;
-    -moz-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
-    -ms-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
-    -o-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
-    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
+    @include clip-path(polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%));
     background-size: cover;
     height: 215px;
 }
 .gallery2-set {
     background: $gallery2-bg-image;
-    -moz-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
-    -ms-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
-    -o-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
-    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
+    @include clip-path(polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%));
     background-size: cover;
     height: 215px;
 }
 .about-set {
     background: $about-bg-image;
-    -moz-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
-    -ms-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
-    -o-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
-    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
+    @include clip-path(polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%));
     background-size: cover;
     height: 215px;
 }
 .faq-set {
     background: $faq-bg-image;
-    -moz-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
-    -ms-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
-    -o-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
-    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
+    @include clip-path(polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%));
     background-size: cover;
     height: 215px;
 }
 .artical-set {
     background: $artical-bg-image;
-    -moz-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
-    -ms-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
-    -o-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
-    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%);
+    @include clip-path(polygon(0% 0%, 100% 0%, 100% 75%, 100% 64%, 0% 83%, 56% 64%, 0% 83%));
     background-size: cover;
     height: 215px;
 }
@@ -293,7 +291,7 @@ i.icon.side-menu-i {
     color: $icon-color;
 }
 .side-menu ion-item {
-    font-size: 13px !important;
+    font-size: $pad-font-size !important;
     color: $base-color;
 }
 .item-complex.item-icon-left .item-content {
@@ -333,10 +331,10 @@ i.icon.side-menu-i {
 }
 a.map {
     color: $light;
-    margin: 13px;
+    margin: $pad-font-size;
 }
 .map-active {
-    border-bottom: 2px solid #9C27B0;
+    border-bottom: 2px solid $positive;
     padding-bottom: 2px;
 }
 .contact-map h4 {
@@ -344,7 +342,7 @@ a.map {
     color: $icon-color;
 }
 .tab-set {
-    padding-left: 13px;
+    padding-left: $pad-font-size;
 }
 img.user-pic {
     float: right;
@@ -390,7 +388,7 @@ span.input-label.gender-name {
     height: 4px !important;
 }
 li.gender-li span {
-    font-size: 13px;
+    font-size: $pad-font-size;
     vertical-align: super;
     margin: 0px 18px 0px 0px;
     color: $input-color-placeholder;
@@ -440,14 +438,14 @@ figure.image-set figcaption {
     font-weight: $lato-font-weight;
 }
 .about-us {
-    padding: 13px;
+    padding: $pad-font-size;
 }
 .know-more {
     text-align: center;
     margin-top: 20px;
 }
 .know-btn {
-    border: 1px solid #9C27B0;
+    border: 1px solid  $positive;
     padding: 10px 35px;
     background: $positive;
     color: $light;
@@ -456,20 +454,12 @@ figure.image-set figcaption {
 .know-content {
     text-align: left;
     height: 0px;
-    -webkit-transition: all 1s;
-    -moz-transition: all 1s;
-    -o-transition: all 1s;
-    -ms-transition: all 1s;
-    transition: all 1s;
+     @include transition(all,1s);
     overflow: hidden;
 }
 .ans-set.faqhead {
     overflow: hidden;
-    -webkit-transition: all 1s;
-    -ms-transition: all 1s;
-    -moz-transition: all 1s;
-    -o-transition: all 1s;
-   transition: all 1s;
+   @include transition(all,1s);;
     height: 0px;
 }
 p.addanimation {
@@ -484,7 +474,7 @@ p.addanimation {
     height: 70px !important;
 }
 .faq-content {
-    padding: 13px;
+    padding: $pad-font-size;
 }
 h5.qsn-set {} span.qsn {
     font-size: 27px;
@@ -512,7 +502,7 @@ p.addanimation.pop.showmores {
     background: rgb(156, 39, 176);
     border-radius: 6px;
     padding: 6px 8px;
-    font-size: 13px;
+    font-size: $pad-font-size;
     font-weight: $lato-font-weight;
     color: $light;
     margin-top: 20px;
@@ -543,12 +533,11 @@ figcaption.blog-name {
 .layer {
     height: 180px;
     background: -webkit-linear-gradient(rgba(0, 0, 0, 0.2) 55%, rgba(22, 22, 22, 1));
+    background: -moz-linear-gradient(rgba(0, 0, 0, 0.2) 55%, rgba(22, 22, 22, 1));
+    background: -ms-linear-gradient(rgba(0, 0, 0, 0.2) 55%, rgba(22, 22, 22, 1));
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.2) 55%, rgba(22, 22, 22, 1));
     position: relative;
-    transition: all 0.5s ease;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
+    @include transition(all,0.5s);
     position: absolute;
     top: 0;
     width: 100%;
