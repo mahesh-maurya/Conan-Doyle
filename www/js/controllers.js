@@ -332,6 +332,8 @@ angular.module('starter.controllers', [])
 
 
 .controller('GallerycategoryCtrl', function($scope, $stateParams, $ionicModal, $ionicSlideBoxDelegate) {
+    
+    //    ****** Gallery Images Json Format data ******
 
     $scope.fashion = [{
         imgpath: "img/gallery/fashion/fashion1.jpg"
@@ -392,6 +394,7 @@ angular.module('starter.controllers', [])
     }, {
         imgpath: "img/gallery/business/business3.jpg"
     }];
+    
     $scope.miscellaneous = [{
         imgpath: "img/gallery/business/business1.jpg"
     }, {
@@ -399,6 +402,12 @@ angular.module('starter.controllers', [])
     }, {
         imgpath: "img/gallery/business/business3.jpg"
     }];
+    
+//    ****** End ******
+    
+    
+//    ****** Code For Calling Images ******
+    
     var tobesplit = [];
 
     $scope.titletext = $stateParams.id;
@@ -426,8 +435,14 @@ angular.module('starter.controllers', [])
             break;
 
     }
+    
+    
     $scope.innergallery = tobesplit;
     $scope.newgallery = splitarray(tobesplit, 2);
+    
+//    ****** End *******
+    
+//    ****** Code For Open Image In popup ******
 
     $ionicModal.fromTemplateUrl('templates/galleryimages.html', {
         scope: $scope,
@@ -455,9 +470,15 @@ angular.module('starter.controllers', [])
     $scope.closeModal = function() {
         $scope.modal.hide();
     };
+    
+//    ****** End *******
 
 })
     .controller('GalleryCtrl', function($scope, $stateParams) {
+    
+    //    ****** Code For Calling Images Json Format ******
+    
+    
         $scope.gallery = [{
             id: 1,
             imagename: "People",
@@ -488,6 +509,12 @@ angular.module('starter.controllers', [])
             imgpath: "img/gallery/nature5.jpg"
         }];
 
+//     ****** End ******
+    
+    
         $scope.gallerynew = splitarray($scope.gallery, 2);
+    
     })
+
+
     .controller('UsersignupCtrl', function($scope, $stateParams) {});
