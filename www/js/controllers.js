@@ -1,6 +1,11 @@
 var abc = 0;
 angular.module('starter.controllers', [])
     .controller('AppCtrl', function($scope, $ionicScrollDelegate) {
+
+
+        //****** Code For changing header color on scrolling ******
+
+
         $scope.navClass = 'bar-stable';
 
         var maindele = $ionicScrollDelegate;
@@ -11,13 +16,17 @@ angular.module('starter.controllers', [])
             var topscroll = maindele.getScrollPosition().top;
             var oncomblack = 600.0;
             var coloropacity = topscroll / oncomblack;
-            $(".navClass ion-header-bar").css("background", "-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(64, 62, 93," + coloropacity + ")), color-stop(100%,rgba(255,255,255,0.00)))");
+            $(".navClass ion-header-bar").css("background", "-webkit-gradient(linear, left top, left bottom, color-             stop(0%,rgba(64, 62, 93," + coloropacity + ")), color-stop(100%,rgba(255,255,255,0.00)))");
 
         };
+
+        //    ****** End ******
 
     })
 
 .controller('ArticlesCtrl', function($scope) {
+
+    //    * * * * * * Code For Show More texts * * * * * *
 
     $scope.showDetails = "dontshow";
     $scope.moredetails = "Read More";
@@ -36,13 +45,27 @@ angular.module('starter.controllers', [])
         }
 
     };
+
+
+    //    * * * * * * End * * * * * *
+
+
+    //    ****** More Text Json Format data ******
+
+
     $scope.moretext = [{
         more: "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam aliquet ultrices dignissim. Donec pretium et dui ut imperdiet. Aliquam et urna non neque tempor vehicula at quis justo. Ut eleifend odio justo, et finibus mi aliquet vitae. Etiam euismod dapibus arcu nec pellentesque. Suspendisse faucibus velit ornare, tincidunt massa in, ullamcorper lectus. Quisque semper venenatis nulla, at auctor libero pharetra ultrices. Duis ut enim egestas, varius lorem ac, sodales sapien."
 
     }];
 
+
+    //    ****** End ******
+
 })
     .controller('HomeCtrl', function($scope, $ionicScrollDelegate, $window) {
+
+        //****** Code For changing header color on scrolling ******
+
 
         $scope.navClass = 'bar-stable';
         angular.element($window).bind(
@@ -56,6 +79,7 @@ angular.module('starter.controllers', [])
                 $scope.$apply();
             });
 
+        //    ****** End ******
 
         //        ***** tabchange ****
 
@@ -86,6 +110,10 @@ angular.module('starter.controllers', [])
 
 
         //            ******** end *******
+
+
+        //    ****** Home Page Images Tab Json Format Data *******
+
         $scope.populars = [{
             imagename: "Lower Kintaganban River",
             imgpath: "img/blog/work/work-popular.jpg"
@@ -114,6 +142,8 @@ angular.module('starter.controllers', [])
             imagename: "Etiam euismod",
             imgpath: "img/blog/Miscellaneous/misc-popular.jpg"
         }];
+
+
         $scope.latests = [{
             imagename: "Lower Kintaganban River",
             imgpath: "img/blog/work/work-latest.jpg"
@@ -139,6 +169,8 @@ angular.module('starter.controllers', [])
             imagename: "Etiam euismod",
             imgpath: "img/blog/Miscellaneous/misc-latest.jpg"
         }];
+
+
         $scope.featureds = [{
             imagename: "Lower Kintaganban River",
             imgpath: "img/blog/work/work-featured.jpg"
@@ -165,51 +197,68 @@ angular.module('starter.controllers', [])
             imgpath: "img/blog/Miscellaneous/misc-featured.jpg"
         }];
 
+        //    ******* End ******
 
     })
-    .controller('UserloginCtrl', function($scope, $stateParams) {})
-    .controller('FaqCtrl', function($scope, $stateParams) {
 
 
-        $scope.showDetails = "dontshow";
-        $scope.moredetails = "Read More";
-        $scope.showmores = function(index) {
-            console.log(index);
-            var newheight = $(".animationfaq" + index).height();
-            console.log(newheight);
-            $(".faqhead").height(0);
-            $(".faqhead" + index).height(newheight + 10);
+.controller('UserloginCtrl', function($scope, $stateParams) {})
 
-        };
-        $scope.faq = [{
-            id: 0,
-            qsn: "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry ? ",
-            ans: "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid."
-        }, {
-            id: 1,
-            qsn: "Nulla nisi dolor, tempus non urna id, volutpat tempus massa ? ",
-            ans: "Praesent aliquet orci vel varius egestas. Suspendisse commodo massa ligula, eu lobortis sem ultricies convallis."
-        }, {
-            id: 2,
-            qsn: "Phasellus pulvinar sollicitudin nisi, at commodo augue molestie at.?  ",
-            ans: "Nam tempor fringilla posuere. Donec lacinia sed odio ac interdum"
-        }, {
-            id: 3,
-            qsn: "Nullam pharetra vehicula suscipit ? ",
-            ans: "Nunc lacinia justo non libero sollicitudin imperdiet."
-        }, {
-            id: 4,
-            qsn: "Morbi placerat lectus ac neque cursus, molestie pulvinar ipsum posuere? ",
-            ans: " In vitae ultricies mi, sit amet pharetra ex. Suspendisse condimentum pulvinar erat sed venenatis."
-        }];
+
+.controller('FaqCtrl', function($scope, $stateParams) {
+
+    //    ****** More Text Json Format data ******
+
+
+    $scope.showDetails = "dontshow";
+    $scope.moredetails = "Read More";
+    $scope.showmores = function(index) {
+        console.log(index);
+        var newheight = $(".animationfaq" + index).height();
+        console.log(newheight);
+        $(".faqhead").height(0);
+        $(".faqhead" + index).height(newheight + 10);
+
+    };
+
+
+    //    ****** End ******
 
 
 
-    })
+    //    ****** FAQ Json Format data ******
+
+
+    $scope.faq = [{
+        id: 0,
+        qsn: "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry ? ",
+        ans: "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid."
+    }, {
+        id: 1,
+        qsn: "Nulla nisi dolor, tempus non urna id, volutpat tempus massa ? ",
+        ans: "Praesent aliquet orci vel varius egestas. Suspendisse commodo massa ligula, eu lobortis sem ultricies convallis."
+    }, {
+        id: 2,
+        qsn: "Phasellus pulvinar sollicitudin nisi, at commodo augue molestie at.?  ",
+        ans: "Nam tempor fringilla posuere. Donec lacinia sed odio ac interdum"
+    }, {
+        id: 3,
+        qsn: "Nullam pharetra vehicula suscipit ? ",
+        ans: "Nunc lacinia justo non libero sollicitudin imperdiet."
+    }, {
+        id: 4,
+        qsn: "Morbi placerat lectus ac neque cursus, molestie pulvinar ipsum posuere? ",
+        ans: " In vitae ultricies mi, sit amet pharetra ex. Suspendisse condimentum pulvinar erat sed venenatis."
+    }];
+
+    //    ****** End ******
+
+
+})
     .controller('AboutCtrl', function($scope, $stateParams, $window, $ionicScrollDelegate) {
 
 
-
+        //    ****** About Content Json Format data ******
 
         $scope.abouthead = [{
             content: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
@@ -223,6 +272,12 @@ angular.module('starter.controllers', [])
             more: "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam aliquet ultrices dignissim. Donec pretium et dui ut imperdiet. Aliquam et urna non neque tempor vehicula at quis justo. Ut eleifend odio justo, et finibus mi aliquet vitae. Etiam euismod dapibus arcu nec pellentesque. Suspendisse faucibus velit ornare, tincidunt massa in, ullamcorper lectus. Quisque semper venenatis nulla, at auctor libero pharetra ultrices. Duis ut enim egestas, varius lorem ac, sodales sapien."
 
         }];
+
+        //    ****** End ******
+
+
+        //    ****** More Text Json Format data ******
+
 
         $scope.showDetails = "dontshow";
         $scope.moredetails = "Read More";
@@ -242,11 +297,13 @@ angular.module('starter.controllers', [])
 
         };
 
-
+        //***** End ******
 
 
     })
     .controller('ContactCtrl', function($scope, $stateParams) {
+
+        //        ***** tabchange ****
 
         $scope.tab = 'form-set';
         $scope.classa = 'map-active';
@@ -265,132 +322,141 @@ angular.module('starter.controllers', [])
 
             }
         };
-    })
-    .controller('SettingCtrl', function($scope, $stateParams) {})
-    .controller('GallerycategoryCtrl', function($scope, $stateParams, $ionicModal, $ionicSlideBoxDelegate) {
 
-        $scope.fashion = [{
-            imgpath: "img/gallery/fashion/fashion1.jpg"
-        }, {
-            imgpath: "img/gallery/fashion/fashion2.jpg"
-        }, {
-            imgpath: "img/gallery/fashion/fashion3.jpg"
-        }, {
-            imgpath: "img/gallery/fashion/fashion4.jpg"
-        }, {
-            imgpath: "img/gallery/fashion/fashion5.jpg"
-        }];
-
-        $scope.art = [{
-            imgpath: "img/gallery/art/art1.jpg"
-        }, {
-            imgpath: "img/gallery/art/art2.jpg"
-        }, {
-            imgpath: "img/gallery/art/art3.jpg"
-        }, {
-            imgpath: "img/gallery/art/art4.jpg"
-        }];
-
-        $scope.travel = [{
-            imgpath: "img/gallery/travel/travel1.jpg"
-        }, {
-            imgpath: "img/gallery/travel/travel2.jpg"
-        }, {
-            imgpath: "img/gallery/travel/travel3.jpg"
-        }];
-
-        $scope.people = [{
-            imgpath: "img/gallery/people/people1.jpg"
-        }, {
-            imgpath: "img/gallery/people/people2.jpg"
-        }, {
-            imgpath: "img/gallery/people/people3.jpg"
-        }, {
-            imgpath: "img/gallery/people/people4.jpg"
-        }];
-
-        $scope.nature = [{
-            imgpath: "img/gallery/nature/nature1.jpg"
-        }, {
-            imgpath: "img/gallery/nature/nature2.jpg"
-        }, {
-            imgpath: "img/gallery/nature/nature3.jpg"
-        }, {
-            imgpath: "img/gallery/nature/nature4.jpg"
-        }, {
-            imgpath: "img/gallery/nature/nature5.jpg"
-        }];
-
-        $scope.business = [{
-            imgpath: "img/gallery/business/business1.jpg"
-        }, {
-            imgpath: "img/gallery/business/business2.jpg"
-        }, {
-            imgpath: "img/gallery/business/business3.jpg"
-        }];
-        $scope.miscellaneous = [{
-            imgpath: "img/gallery/business/business1.jpg"
-        }, {
-            imgpath: "img/gallery/business/business2.jpg"
-        }, {
-            imgpath: "img/gallery/business/business3.jpg"
-        }];
-        var tobesplit = [];
-
-        $scope.titletext = $stateParams.id;
-        switch ($stateParams.id) {
-            case "Art":
-                tobesplit = $scope.art;
-                break;
-            case "Travel":
-                tobesplit = $scope.travel;
-                break;
-            case "Fashion":
-                tobesplit = $scope.fashion;
-                break;
-            case "Business":
-                tobesplit = $scope.business;
-                break;
-            case "Nature":
-                tobesplit = $scope.nature;
-                break;
-            case "People":
-                tobesplit = $scope.people;
-                break;
-            case "Miscellaneous":
-                tobesplit = $scope.miscellaneous;
-                break;
-
-        }
-        $scope.innergallery = tobesplit;
-        $scope.newgallery = splitarray(tobesplit, 2);
-
-        $ionicModal.fromTemplateUrl('templates/galleryimages.html', {
-            scope: $scope,
-            animation: 'slide-in-up'
-        }).then(function(modal) {
-            $scope.modal = modal;
-            
-            $scope.modal.show();
-            console.log($ionicSlideBoxDelegate.slide(0));
-            $ionicSlideBoxDelegate.update();
-            $scope.modal.hide();
-        });
-
-
-        $scope.firstslide = false;
-        $scope.openModal = function(index) {
-            console.log(index);
-            $scope.firstslide = true;
-            $scope.modal.show();
-            setTimeout(function(){ $ionicSlideBoxDelegate.slide(index); }, 100);
-            
-        };
-        $scope.closeModal = function() {
-            $scope.modal.hide();
-        };
+        //    ****** End ******
 
     })
+
+
+.controller('SettingCtrl', function($scope, $stateParams) {})
+
+
+.controller('GallerycategoryCtrl', function($scope, $stateParams, $ionicModal, $ionicSlideBoxDelegate) {
+
+    $scope.fashion = [{
+        imgpath: "img/gallery/fashion/fashion1.jpg"
+    }, {
+        imgpath: "img/gallery/fashion/fashion2.jpg"
+    }, {
+        imgpath: "img/gallery/fashion/fashion3.jpg"
+    }, {
+        imgpath: "img/gallery/fashion/fashion4.jpg"
+    }, {
+        imgpath: "img/gallery/fashion/fashion5.jpg"
+    }];
+
+    $scope.art = [{
+        imgpath: "img/gallery/art/art1.jpg"
+    }, {
+        imgpath: "img/gallery/art/art2.jpg"
+    }, {
+        imgpath: "img/gallery/art/art3.jpg"
+    }, {
+        imgpath: "img/gallery/art/art4.jpg"
+    }];
+
+    $scope.travel = [{
+        imgpath: "img/gallery/travel/travel1.jpg"
+    }, {
+        imgpath: "img/gallery/travel/travel2.jpg"
+    }, {
+        imgpath: "img/gallery/travel/travel3.jpg"
+    }];
+
+    $scope.people = [{
+        imgpath: "img/gallery/people/people1.jpg"
+    }, {
+        imgpath: "img/gallery/people/people2.jpg"
+    }, {
+        imgpath: "img/gallery/people/people3.jpg"
+    }, {
+        imgpath: "img/gallery/people/people4.jpg"
+    }];
+
+    $scope.nature = [{
+        imgpath: "img/gallery/nature/nature1.jpg"
+    }, {
+        imgpath: "img/gallery/nature/nature2.jpg"
+    }, {
+        imgpath: "img/gallery/nature/nature3.jpg"
+    }, {
+        imgpath: "img/gallery/nature/nature4.jpg"
+    }, {
+        imgpath: "img/gallery/nature/nature5.jpg"
+    }];
+
+    $scope.business = [{
+        imgpath: "img/gallery/business/business1.jpg"
+    }, {
+        imgpath: "img/gallery/business/business2.jpg"
+    }, {
+        imgpath: "img/gallery/business/business3.jpg"
+    }];
+    $scope.miscellaneous = [{
+        imgpath: "img/gallery/business/business1.jpg"
+    }, {
+        imgpath: "img/gallery/business/business2.jpg"
+    }, {
+        imgpath: "img/gallery/business/business3.jpg"
+    }];
+    var tobesplit = [];
+
+    $scope.titletext = $stateParams.id;
+    switch ($stateParams.id) {
+        case "Art":
+            tobesplit = $scope.art;
+            break;
+        case "Travel":
+            tobesplit = $scope.travel;
+            break;
+        case "Fashion":
+            tobesplit = $scope.fashion;
+            break;
+        case "Business":
+            tobesplit = $scope.business;
+            break;
+        case "Nature":
+            tobesplit = $scope.nature;
+            break;
+        case "People":
+            tobesplit = $scope.people;
+            break;
+        case "Miscellaneous":
+            tobesplit = $scope.miscellaneous;
+            break;
+
+    }
+    $scope.innergallery = tobesplit;
+    $scope.newgallery = splitarray(tobesplit, 2);
+
+    $ionicModal.fromTemplateUrl('templates/galleryimages.html', {
+        scope: $scope,
+        animation: 'slide-in-up'
+    }).then(function(modal) {
+        $scope.modal = modal;
+
+        $scope.modal.show();
+        console.log($ionicSlideBoxDelegate.slide(0));
+        $ionicSlideBoxDelegate.update();
+        $scope.modal.hide();
+    });
+
+
+    $scope.firstslide = false;
+    $scope.openModal = function(index) {
+        console.log(index);
+        $scope.firstslide = true;
+        $scope.modal.show();
+        setTimeout(function() {
+            $ionicSlideBoxDelegate.slide(index);
+        }, 100);
+
+    };
+    $scope.closeModal = function() {
+        $scope.modal.hide();
+    };
+
+})
     .controller('GalleryCtrl', function($scope, $stateParams) {
         $scope.gallery = [{
             id: 1,
