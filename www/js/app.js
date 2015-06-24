@@ -20,11 +20,10 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         if (cordova.platformId == 'android') {
             StatusBar.backgroundColorByHexString("#9C27B0");
         }
-        
-if (device.platform == 'iOS')
-           {
-               navigator.splashscreen.hide();
-           }
+
+        if (device.platform == 'iOS') {
+            navigator.splashscreen.hide();
+        }
     });
 })
 
@@ -132,13 +131,12 @@ if (device.platform == 'iOS')
 
 function splitarray(fullarray, splitsize) {
     var newarray = [];
-    var k=0;
+    var k = 0;
     for (var i = 0; i < fullarray.length; i++) {
-        var arrindex=Math.floor(i/splitsize);
+        var arrindex = Math.floor(i / splitsize);
         console.log(arrindex);
-        if((newarray.length-1)!=arrindex)
-        {
-            newarray[arrindex]=[];
+        if ((newarray.length - 1) != arrindex) {
+            newarray[arrindex] = [];
         }
         newarray[arrindex].push(fullarray[i]);
     }
