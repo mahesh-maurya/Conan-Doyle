@@ -23,7 +23,7 @@ angular.module('starter.controllers', [])
 
     })
 
-.controller('ArticlesCtrl', function($scope) {
+.controller('ArticlesCtrl', function($scope,$ionicScrollDelegate) {
 
     //    * * * * * * Code For Show More texts * * * * * *
 
@@ -35,11 +35,16 @@ angular.module('starter.controllers', [])
         if ($scope.showDetails == "showmore") {
             $scope.showDetails = "dontshow";
             $(".addanimation").height(0);
+            $ionicScrollDelegate.$getByHandle('mainScroll').resize();
+            $ionicScrollDelegate.$getByHandle('mainScroll').scrollBottom();
             $scope.moredetails = "Read More";
         } else {
             $scope.showDetails = "showmore";
             $(".addanimation").height(newheight);
+            
             $scope.moredetails = "Hide";
+            $ionicScrollDelegate.$getByHandle('mainScroll').resize();
+            $ionicScrollDelegate.$getByHandle('mainScroll').scrollBottom();
         }
 
     };
@@ -89,17 +94,17 @@ angular.module('starter.controllers', [])
             //        console.log(tab);
             $scope.tab = tab;
             if (a == 1) {
-                $ionicScrollDelegate.scrollTop();
+                $ionicScrollDelegate.$getByHandle('mainScroll').resize();
                 $scope.classa = "active";
                 $scope.classb = '';
                 $scope.classc = '';
             } else if (a == 2) {
-                $ionicScrollDelegate.scrollTop();
+                $ionicScrollDelegate.$getByHandle('mainScroll').resize();
                 $scope.classa = '';
                 $scope.classb = "active";
                 $scope.classc = '';
             } else {
-                $ionicScrollDelegate.scrollTop();
+                $ionicScrollDelegate.$getByHandle('mainScroll').resize();
                 $scope.classa = '';
                 $scope.classb = '';
                 $scope.classc = "active";
@@ -203,7 +208,7 @@ angular.module('starter.controllers', [])
 .controller('UserloginCtrl', function($scope, $stateParams) {})
 
 
-.controller('FaqCtrl', function($scope, $stateParams) {
+.controller('FaqCtrl', function($scope, $stateParams,$ionicScrollDelegate) {
 
     //    ****** More Text Json Format data ******
 
@@ -216,6 +221,8 @@ angular.module('starter.controllers', [])
         console.log(newheight);
         $(".faqhead").height(0);
         $(".faqhead" + index).height(newheight + 10);
+        $ionicScrollDelegate.resize();
+        
 
     };
 
@@ -287,10 +294,14 @@ angular.module('starter.controllers', [])
                 $scope.showDetails = "dontshow";
                 $(".addanimation").height(0);
                 $scope.moredetails = "Read More";
+                $ionicScrollDelegate.$getByHandle('mainScroll').resize();
+                $ionicScrollDelegate.$getByHandle('mainScroll').scrollBottom();
             } else {
                 $scope.showDetails = "showmore";
                 $(".addanimation").height(newheight);
                 $scope.moredetails = "Hide";
+                $ionicScrollDelegate.$getByHandle('mainScroll').resize();
+                $ionicScrollDelegate.$getByHandle('mainScroll').scrollBottom();
             }
 
         };
