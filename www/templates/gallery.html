@@ -1,20 +1,22 @@
 <ion-view>
     <ion-content style="top:0px" overflow-scroll="true" delegate-handle="mainScroll" on-scroll="mainscrolling();">
-        <div class="gallery-set">
 
+        <div class="gallery-set">
             <div class="map-set">
                 <h2 class="title-c">Gallery</h2>
-
             </div>
         </div>
+
         <div class="gallery-img ">
             <div class="row" ng-repeat="pro in gallerynew">
                 <div class="col col-50" ng-click="openModal($index);" ng-repeat="gal in pro">
                     <div class="set-image">
-                        <a  href="#/app/gallery-category/{{gal.imagename}}"><figure class="image-set">
-                            <img ng-src="{{gal.imgpath}}" class="full-image">
-                            <figcaption>{{gal.imagename}}</figcaption>
-                        </figure></a>
+                        <a href="#/app/gallery-category/{{gal.imagename}}">
+                            <figure class="image-set">
+                                <img ng-src="{{gal.imgpath}}" class="full-image">
+                                <figcaption>{{gal.imagename}}</figcaption>
+                            </figure>
+                        </a>
                     </div>
                 </div>
             </div>

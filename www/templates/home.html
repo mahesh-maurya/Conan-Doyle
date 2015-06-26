@@ -1,7 +1,9 @@
 <ion-view>
+
     <div class="bar has-tabs-top bar-header bar-positive">
         <h1 class="title">Home</h1>
     </div>
+
     <div class="tabs-striped tabs-top tabs-background-positive tabs-color-light">
         <div class="tabs">
             <a class="tab-item {{classa}}" ng-click="tabchange('popular',1)">
@@ -15,44 +17,50 @@
             </a>
         </div>
     </div>
+
     <ion-content class=" has-tabs-top">
         <div class="popular" ng-show="tab=='popular'">
             <a href="#/app/articles">
-               <div class="popular-set" ng-repeat="popular in populars" >
-                <figure>
-                    <img ng-src="{{popular.imgpath}}" alt="{{popular.imagename}}" class="full-image">
-                    <div class="layer">
-                        <figcaption class="blog-name">{{popular.imagename}}</figcaption>
-                    </div>
-                </figure>
-            </div>
+                <div class="popular-set" ng-repeat="popular in populars">
+                    <figure>
+                        <img ng-src="{{popular.imgpath}}" alt="{{popular.imagename}}" class="full-image">
+                        <div class="layer">
+                            <figcaption class="blog-name">{{popular.imagename}}</figcaption>
+                        </div>
+                    </figure>
+                </div>
             </a>
         </div>
-            <div class="latest" ng-show="tab=='latest'">
+
+        <div class="latest" ng-show="tab=='latest'">
             <a href="#/app/articles">
-            <div class="popular-set" ng-repeat="latest in latests">
-                <figure>
-                    <img ng-src="{{latest.imgpath}}" alt="{{latest.imagename}}" class="full-image">
-                    <div class="layer">
-                        <figcaption class="blog-name">{{latest.imagename}}</figcaption>
-                    </div>
+                <div class="popular-set" ng-repeat="latest in latests">
+                    <figure>
+                        <img ng-src="{{latest.imgpath}}" alt="{{latest.imagename}}" class="full-image">
+                        <div class="layer">
+                            <figcaption class="blog-name">{{latest.imagename}}</figcaption>
+                        </div>
 
-                </figure>
+                    </figure>
 
-                </div></a>
+                </div>
+            </a>
         </div>
-            <div class="featured" ng-show="tab=='featured'">
+
+        <div class="featured" ng-show="tab=='featured'">
             <a href="#/app/articles">
-            <div class="popular-set" ng-repeat="featured in featureds">
-                <figure>
-                    <img ng-src="{{featured.imgpath}}" alt="{{featured.imagename}}" class="full-image">
-                    <div class="layer">
-                        <figcaption class="blog-name">{{featured.imagename}}</figcaption>
-                    </div>
+                <div class="popular-set" ng-repeat="featured in featureds">
+                    <figure>
+                        <img ng-src="{{featured.imgpath}}" alt="{{featured.imagename}}" class="full-image">
+                        <div class="layer">
+                            <figcaption class="blog-name">{{featured.imagename}}</figcaption>
+                        </div>
 
-                </figure>
+                    </figure>
 
-                </div></a>
+                </div>
+            </a>
         </div>
+
     </ion-content>
 </ion-view>

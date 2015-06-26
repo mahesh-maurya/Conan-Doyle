@@ -1,6 +1,6 @@
 <ion-view>
-
     <ion-content style="top:0px" overflow-scroll="true" delegate-handle="mainScroll" on-scroll="mainscrolling();">
+
         <div class="user-imgs">
             <figure>
                 <img src="img/component/profile.png">
@@ -25,12 +25,12 @@
                 <div class="art-pic">
                     <img src="img/blog/travel/art.png" class="full-image">
                 </div>
-                 <div class="know-content addanimation" ng-class="showDetails">
-                <p ng-repeat="text in moretext" class="moretext moreart">{{text.more}}</p>
-            </div>
-            <div class="know-more know-btn" ng-click="showmore('moreart');">
-                {{moredetails}}
-            </div>
+                <div class="know-content addanimation" ng-class="showDetails">
+                    <p ng-repeat="text in moretext" class="moretext moreart">{{text.more}}</p>
+                </div>
+                <div class="know-more know-btn" ng-click="showmore('moreart');">
+                    {{moredetails}}
+                </div>
 
             </div>
         </div>

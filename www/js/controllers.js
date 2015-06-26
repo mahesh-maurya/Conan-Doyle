@@ -4,6 +4,7 @@ angular.module('starter.controllers', [])
 
 
         //****** Code For changing header color on scrolling ******
+
         $scope.navClass = 'bar-stable';
 
         var maindele = $ionicScrollDelegate.$getByHandle('mainScroll');
@@ -17,20 +18,18 @@ angular.module('starter.controllers', [])
 
         };
 
-
-
         //    ****** End ******
 
     })
 
-.controller('ArticlesCtrl', function($scope,$ionicScrollDelegate) {
+.controller('ArticlesCtrl', function($scope, $ionicScrollDelegate) {
 
     //    * * * * * * Code For Show More texts * * * * * *
 
     $scope.showDetails = "dontshow";
     $scope.moredetails = "Read More";
     $scope.showmore = function(classname) {
-        var newheight = $(".moretext."+classname).height();
+        var newheight = $(".moretext." + classname).height();
         console.log(newheight);
         if ($scope.showDetails == "showmore") {
             $scope.showDetails = "dontshow";
@@ -41,7 +40,7 @@ angular.module('starter.controllers', [])
         } else {
             $scope.showDetails = "showmore";
             $(".addanimation").height(newheight);
-            
+
             $scope.moredetails = "Hide";
             $ionicScrollDelegate.$getByHandle('mainScroll').resize();
             $ionicScrollDelegate.$getByHandle('mainScroll').scrollBottom();
@@ -55,12 +54,10 @@ angular.module('starter.controllers', [])
 
     //    ****** More Text Json Format data ******
 
-
     $scope.moretext = [{
         more: "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam aliquet ultrices dignissim. Donec pretium et dui ut imperdiet. Aliquam et urna non neque tempor vehicula at quis justo. Ut eleifend odio justo, et finibus mi aliquet vitae. Etiam euismod dapibus arcu nec pellentesque. Suspendisse faucibus velit ornare, tincidunt massa in, ullamcorper lectus. Quisque semper venenatis nulla, at auctor libero pharetra ultrices. Duis ut enim egestas, varius lorem ac, sodales sapien."
 
     }];
-
 
     //    ****** End ******
 
@@ -68,7 +65,6 @@ angular.module('starter.controllers', [])
     .controller('HomeCtrl', function($scope, $ionicScrollDelegate, $window) {
 
         //****** Code For changing header color on scrolling ******
-
 
         $scope.navClass = 'bar-stable';
         angular.element($window).bind(
@@ -208,10 +204,9 @@ angular.module('starter.controllers', [])
 .controller('UserloginCtrl', function($scope, $stateParams) {})
 
 
-.controller('FaqCtrl', function($scope, $stateParams,$ionicScrollDelegate) {
+.controller('FaqCtrl', function($scope, $stateParams, $ionicScrollDelegate) {
 
     //    ****** More Text Json Format data ******
-
 
     $scope.showDetails = "dontshow";
     $scope.moredetails = "Read More";
@@ -222,17 +217,15 @@ angular.module('starter.controllers', [])
         $(".faqhead").height(0);
         $(".faqhead" + index).height(newheight + 10);
         $ionicScrollDelegate.resize();
-        
+
 
     };
-
 
     //    ****** End ******
 
 
 
     //    ****** FAQ Json Format data ******
-
 
     $scope.faq = [{
         id: 0,
@@ -283,11 +276,10 @@ angular.module('starter.controllers', [])
 
         //    ****** More Text Json Format data ******
 
-
         $scope.showDetails = "dontshow";
         $scope.moredetails = "Read More";
         $scope.showmore = function(classname) {
-            var newheight = $(".moretext."+classname).height();
+            var newheight = $(".moretext." + classname).height();
             console.log(newheight);
             console.log("show more clicked");
             if ($scope.showDetails == "showmore") {
@@ -307,13 +299,6 @@ angular.module('starter.controllers', [])
         };
 
         //***** End ******
-
-        //****** Code For changing header color on scrolling ******
-
-
-
-
-        //    ****** End ******
 
     })
     .controller('ContactCtrl', function($scope, $stateParams) {
