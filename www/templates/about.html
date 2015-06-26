@@ -12,9 +12,9 @@
             <h3 ng-repeat="head in abouthead">"{{head.content}}"</h3>
             <p ng-repeat="cont in content">{{cont.detail}}</p>
             <div class="know-content addanimation" ng-class="showDetails">
-                <p ng-repeat="text in moretext" class="moretext">{{text.more}}</p>
+                <p ng-repeat="text in moretext" class="moretext moreabout">{{text.more}}</p>
             </div>
-            <div class="know-more know-btn" ng-click="showmore();">
+            <div class="know-more know-btn" ng-click="showmore('moreabout');">
                 {{moredetails}}
             </div>
         </div>

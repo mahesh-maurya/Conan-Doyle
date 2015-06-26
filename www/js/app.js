@@ -18,7 +18,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
             StatusBar.overlaysWebView(true);
         }
         if (cordova.platformId == 'android') {
-            StatusBar.backgroundColorByHexString("#9C27B0");
+            StatusBar.backgroundColorByHexString("#641A70");
         }
 
         if (device.platform == 'iOS') {

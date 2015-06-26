@@ -29,8 +29,8 @@ angular.module('starter.controllers', [])
 
     $scope.showDetails = "dontshow";
     $scope.moredetails = "Read More";
-    $scope.showmore = function() {
-        var newheight = $(".moretext").height();
+    $scope.showmore = function(classname) {
+        var newheight = $(".moretext."+classname).height();
         console.log(newheight);
         if ($scope.showDetails == "showmore") {
             $scope.showDetails = "dontshow";
@@ -143,52 +143,52 @@ angular.module('starter.controllers', [])
 
 
         $scope.latests = [{
-            imagename: "Lower Kintaganban River",
+            imagename: " Fusce nisl nisl",
             imgpath: "img/blog/work/demo450x250.png"
         }, {
-            imagename: "fringilla blandit ligula",
+            imagename: "Etiam euismod",
             imgpath: "img/blog/travel/demo450x250.png"
         }, {
-            imagename: "Nulla hendrerit ",
+            imagename: "Nulla hendrerit",
             imgpath: "img/blog/fashion/demo450x250.png"
         }, {
-            imagename: "Lorem ipsum dolor",
+            imagename: "Donec quis",
             imgpath: "img/blog/art/demo450x250.png"
         }, {
-            imagename: "Fusce nisl nisl",
+            imagename: "Lower Kintaganban River",
             imgpath: "img/blog/food/demo450x250.png"
         }, {
-            imagename: "suscipit sit amet ",
+            imagename: "suscipit sit amet",
             imgpath: "img/blog/nature/demo450x250.png"
         }, {
-            imagename: "Donec quis",
+            imagename: "Lorem ipsum dolor",
             imgpath: "img/blog/sports/demo450x250.png"
         }, {
-            imagename: "Etiam euismod",
+            imagename: "fringilla blandit ligula",
             imgpath: "img/blog/Miscellaneous/demo450x250.png"
         }];
 
 
         $scope.featureds = [{
-            imagename: "Lower Kintaganban River",
+            imagename: "Nulla hendrerit",
             imgpath: "img/blog/work/demo450x250.png"
         }, {
-            imagename: "fringilla blandit ligula",
+            imagename: "Fusce nisl nisl",
             imgpath: "img/blog/travel/demo450x250.png"
         }, {
-            imagename: "Nulla hendrerit ",
+            imagename: "Lower Kintaganban River",
             imgpath: "img/blog/fashion/demo450x250.png"
         }, {
-            imagename: "Lorem ipsum dolor",
+            imagename: "Donec quis",
             imgpath: "img/blog/art/demo450x250.png"
         }, {
-            imagename: "Fusce nisl nisl",
+            imagename: "fringilla blandit ligula",
             imgpath: "img/blog/food/demo450x250.png"
         }, {
             imagename: "suscipit sit amet ",
             imgpath: "img/blog/nature/demo450x250.png"
         }, {
-            imagename: "Donec quis",
+            imagename: "Lorem ipsum dolor",
             imgpath: "img/blog/sports/demo450x250.png"
         }, {
             imagename: "Etiam euismod",
@@ -279,8 +279,8 @@ angular.module('starter.controllers', [])
 
         $scope.showDetails = "dontshow";
         $scope.moredetails = "Read More";
-        $scope.showmore = function() {
-            var newheight = $(".moretext").height();
+        $scope.showmore = function(classname) {
+            var newheight = $(".moretext."+classname).height();
             console.log(newheight);
             console.log("show more clicked");
             if ($scope.showDetails == "showmore") {
