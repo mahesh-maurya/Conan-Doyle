@@ -1,5 +1,5 @@
 var abc = 0;
-angular.module('starter.controllers', [])
+angular.module('starter.controllers', ['myservices'])
     .controller('AppCtrl', function ($scope, $ionicScrollDelegate) {
 
 
@@ -29,7 +29,7 @@ angular.module('starter.controllers', [])
 
     })
 
-.controller('ArticlesCtrl', function ($scope, $ionicScrollDelegate) {
+.controller('ArticlesCtrl', function ($scope, $ionicScrollDelegate, MyServices) {
 
         //    * * * * * * Code For Show More texts * * * * * *
 
@@ -65,11 +65,18 @@ angular.module('starter.controllers', [])
             more: "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam aliquet ultrices dignissim. Donec pretium et dui ut imperdiet. Aliquam et urna non neque tempor vehicula at quis justo. Ut eleifend odio justo, et finibus mi aliquet vitae. Etiam euismod dapibus arcu nec pellentesque. Suspendisse faucibus velit ornare, tincidunt massa in, ullamcorper lectus. Quisque semper venenatis nulla, at auctor libero pharetra ultrices. Duis ut enim egestas, varius lorem ac, sodales sapien."
 
     }];
+    
+    
+        $scope.post = MyServices.getPostDetail();
+    if($scope.post.type == 'photo'){
+        $scope.images = $scope.post.photos.splice(1,$scope.post.photos.length-1);
+    }
+        console.log($scope.post);
 
         //    ****** End ******
 
     })
-    .controller('HomeCtrl', function ($scope, $ionicScrollDelegate, $window) {
+    .controller('HomeCtrl', function ($scope, $ionicScrollDelegate, $window, MyServices, $location) {
 
         //****** Code For changing header color on scrolling ******
 
@@ -120,35 +127,49 @@ angular.module('starter.controllers', [])
 
 
         //    ****** Home Page Images Tab Json Format Data *******
+    
+        $scope.populars = [];
+    
+        MyServices.getPosts(function(data, status){
+            console.log(data);
+            $scope.populars = data.response.posts;
+        });
+    
+        $scope.postDetail = function(post){
+            MyServices.postDetail(post);
+            $location.url("app/articles");
+        }
+    
+    
 
-        $scope.populars = [{
-            imagename: "Lower Kintaganban River",
-            imgpath: "img/blog/work/demo450x250.png"
-        }, {
-            imagename: "fringilla blandit ligula",
-            imgpath: "img/blog/travel/demo450x250.png"
-        }, {
-            imagename: "Nulla hendrerit ",
-            imgpath: "img/blog/fashion/demo450x250.png"
-        }, {
-            imagename: "Lorem ipsum dolor",
-            imgpath: "img/blog/art/demo450x250.png"
-        }, {
-            imagename: "Fusce nisl nisl",
-            imgpath: "img/blog/food/demo450x250.png"
-        }, {
-            imagename: "Nam aliquejpg",
-            imgpath: "img/blog/business/demo450x250.png"
-        }, {
-            imagename: "suscipit sit amet ",
-            imgpath: "img/blog/nature/demo450x250.png"
-        }, {
-            imagename: "Donec quis",
-            imgpath: "img/blog/sports/demo450x250.png"
-        }, {
-            imagename: "Etiam euismod",
-            imgpath: "img/blog/Miscellaneous/demo450x250.png"
-        }];
+//        $scope.populars = [{
+//            imagename: "Lower Kintaganban River",
+//            imgpath: "img/blog/work/demo450x250.png"
+//        }, {
+//            imagename: "fringilla blandit ligula",
+//            imgpath: "img/blog/travel/demo450x250.png"
+//        }, {
+//            imagename: "Nulla hendrerit ",
+//            imgpath: "img/blog/fashion/demo450x250.png"
+//        }, {
+//            imagename: "Lorem ipsum dolor",
+//            imgpath: "img/blog/art/demo450x250.png"
+//        }, {
+//            imagename: "Fusce nisl nisl",
+//            imgpath: "img/blog/food/demo450x250.png"
+//        }, {
+//            imagename: "Nam aliquejpg",
+//            imgpath: "img/blog/business/demo450x250.png"
+//        }, {
+//            imagename: "suscipit sit amet ",
+//            imgpath: "img/blog/nature/demo450x250.png"
+//        }, {
+//            imagename: "Donec quis",
+//            imgpath: "img/blog/sports/demo450x250.png"
+//        }, {
+//            imagename: "Etiam euismod",
+//            imgpath: "img/blog/Miscellaneous/demo450x250.png"
+//        }];
 
 
         $scope.latests = [{

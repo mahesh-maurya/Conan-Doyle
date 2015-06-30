@@ -20,12 +20,13 @@
 
     <ion-content class=" has-tabs-top">
         <div class="popular" ng-show="tab=='popular'">
-            <a href="#/app/articles">
+<!--            <a href="#/app/articles">-->
+            <a>
                 <div class="popular-set" ng-repeat="popular in populars">
-                    <figure>
-                        <img ng-src="{{popular.imgpath}}" alt="{{popular.imagename}}" class="full-image">
+                    <figure ng-click="postDetail(popular)">
+                        <img ng-src="{{popular.trail[0].blog.theme.header_image}}" alt="{{popular.imagename}}" class="full-image">
                         <div class="layer">
-                            <figcaption class="blog-name">{{popular.imagename}}</figcaption>
+                            <figcaption class="blog-name">{{popular.slug}}</figcaption>
                         </div>
                     </figure>
                 </div>
