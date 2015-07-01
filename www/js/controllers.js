@@ -68,6 +68,8 @@ angular.module('starter.controllers', ['myservices'])
     
     
         $scope.post = MyServices.getPostDetail();
+//    $scope.txts = $scope.post.trail[0].content.split(">");
+    console.log($scope.txts);
     if($scope.post.type == 'photo'){
         $scope.images = $scope.post.photos.splice(1,$scope.post.photos.length-1);
     }
@@ -97,7 +99,7 @@ angular.module('starter.controllers', ['myservices'])
 
         //        ***** tabchange ****
 
-        $scope.tab = 'popular';
+        $scope.tab = 'text';
         $scope.classa = 'active';
         $scope.classb = '';
         $scope.classc = '';
@@ -132,7 +134,7 @@ angular.module('starter.controllers', ['myservices'])
     
         MyServices.getPosts(function(data, status){
             console.log(data);
-            $scope.populars = data.response.posts;
+            $scope.texts = data.response.posts;
         });
     
         $scope.postDetail = function(post){

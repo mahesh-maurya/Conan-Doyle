@@ -6,40 +6,40 @@
 
     <div class="tabs-striped tabs-top tabs-background-positive tabs-color-light">
         <div class="tabs">
-            <a class="tab-item {{classa}}" ng-click="tabchange('popular',1)">
-                <span>Popular</span>
+            <a class="tab-item {{classa}}" ng-click="tabchange('text',1)">
+                <span>Text</span>
             </a>
-            <a class="tab-item {{classb}}" ng-click="tabchange('latest',2)">
-                <span>Latest</span>
+            <a class="tab-item {{classb}}" ng-click="tabchange('photos',2)">
+                <span>Photos</span>
             </a>
-            <a class="tab-item {{classc}}" ng-click="tabchange('featured',3)">
-                <span>Featured</span>
+            <a class="tab-item {{classc}}" ng-click="tabchange('videos',3)">
+                <span>videos</span>
             </a>
         </div>
     </div>
 
     <ion-content class=" has-tabs-top">
-        <div class="popular" ng-show="tab=='popular'">
+        <div class="popular" ng-show="tab=='text'">
 <!--            <a href="#/app/articles">-->
             <a>
-                <div class="popular-set" ng-repeat="popular in populars">
-                    <figure ng-click="postDetail(popular)">
-                        <img ng-src="{{popular.trail[0].blog.theme.header_image}}" alt="{{popular.imagename}}" class="full-image">
+                <div class="popular-set" ng-repeat="text in texts" ng-if="text.type=='text'">
+                    <figure ng-click="postDetail(text)">
+                        <img ng-src="{{text.trail[0].blog.theme.header_image}}" alt="{{text.imagename}}" class="full-image">
                         <div class="layer">
-                            <figcaption class="blog-name">{{popular.slug}}</figcaption>
+                            <figcaption class="blog-name">{{text.slug}}</figcaption>
                         </div>
                     </figure>
                 </div>
             </a>
         </div>
 
-        <div class="latest" ng-show="tab=='latest'">
-            <a href="#/app/articles">
-                <div class="popular-set" ng-repeat="latest in latests">
-                    <figure>
-                        <img ng-src="{{latest.imgpath}}" alt="{{latest.imagename}}" class="full-image">
+        <div class="latest" ng-show="tab=='photos'">
+            <a>
+                <div class="popular-set" ng-repeat="text in texts" ng-if="text.type=='photo'">
+                    <figure ng-click="postDetail(text)">
+                        <img ng-src="{{text.imgpath}}" alt="{{text.imagename}}" class="full-image">
                         <div class="layer">
-                            <figcaption class="blog-name">{{latest.imagename}}</figcaption>
+                            <figcaption class="blog-name">{{text.slug}}</figcaption>
                         </div>
 
                     </figure>
@@ -48,9 +48,9 @@
             </a>
         </div>
 
-        <div class="featured" ng-show="tab=='featured'">
+        <div class="featured" ng-show="tab=='videos'">
             <a href="#/app/articles">
-                <div class="popular-set" ng-repeat="featured in featureds">
+                <div class="popular-set" ng-repeat="text in texts" ng-if="text.type=='link'">
                     <figure>
                         <img ng-src="{{featured.imgpath}}" alt="{{featured.imagename}}" class="full-image">
                         <div class="layer">
