@@ -9,7 +9,7 @@ myservices.factory('MyServices', function($http) {
     var returnval = {};
 
     returnval.getPosts = function(callback) {
-        return $http.get("http://localhost/tumblr?url=http://api.tumblr.com/v2/blog/quilling.tumblr.com/posts").success(callback);
+        return $http.get("http://wohlig.co.in/tumblr/?url=http://api.tumblr.com/v2/blog/quilling.tumblr.com/posts").success(callback);
     };
     
     returnval.postDetail = function(post) {
