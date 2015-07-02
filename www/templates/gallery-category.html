@@ -10,8 +10,10 @@
         <div class="gallery-img ">
             <div class="row" ng-repeat="pro in newgallery">
                 <div class="col col-50" ng-click="openModal(innergallery.indexOf(fashion));" ng-repeat="fashion in pro">
+                    
                     <figure class="image-set">
-                        <img ng-src="{{fashion.imgpath}}" class="full-image">
+                        <img ng-src="https://farm{{fashion.farm}}.staticflickr.com/{{fashion.server}}/{{fashion.id}}_{{fashion.secret}}_q.jpg" class="full-image">
+                        <figcaption>{{fashion.title}}</figcaption>
                     </figure>
                 </div>
             </div>

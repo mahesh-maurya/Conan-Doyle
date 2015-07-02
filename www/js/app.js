@@ -27,6 +27,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'myservices', 'jagrut
     });
 })
 
+
 .config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
     //Ionic native scrolling
     $ionicConfigProvider.scrolling.jsScrolling(false);

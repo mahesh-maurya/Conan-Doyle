@@ -3,8 +3,8 @@
 
         <div class="user-imgs">
             <figure>
-                <img src="{{post.trail[0].blog.theme.header_image}}">
-                <figcaption>Ana Toduri</figcaption>
+                <img src="{{post.trail[0].blog.theme.header_image}}" ng-if="post.trail.length!=0">
+                <figcaption>{{post.trail[0].blog.name}}</figcaption>
             </figure>
         </div>
         <div class="artical-set">
@@ -43,7 +43,7 @@
                 <div class="know-content addanimation" ng-class="showDetails" ng-repeat="img in images">
                     <p class="moretext moreart"><img src="{{img.original_size.url}}" class="full-image"></p>
                 </div>
-                <div class="know-more know-btn" ng-click="showmore('moreart');">
+                <div class="know-more know-btn" ng-click="showmore('moreart');" ng-if="images.length > 1">
                     {{moredetails}}
                 </div>
 
@@ -60,18 +60,22 @@
 
             </div>
             <div class="articals-det" ng-if="post.type == 'link'">
-                <h3>"{{post.blog_name}}...."</h3>
+                <h3>"{{post.title}}...."</h3>
                 <p ng-bind-html="post.trail[0].content | rawHtml"></p>
+                <p ng-bind-html="post.excerpt | rawHtml"></p>
+                <a href="{{post.url}}"><p ng-bind-html="post.url | rawHtml"></p></a>
 
                 <div class="art-pic" ng-repeat="img in post.photos">
                     <img src="{{img.original_size.url}}" class="full-image">
                 </div>
+<!--
                 <div class="know-content addanimation" ng-class="showDetails">
                     <p ng-repeat="img in post.photos" class="moretext moreart">{{text.more}}</p>
                 </div>
                 <div class="know-more know-btn" ng-click="showmore('moreart');">
                     {{moredetails}}
                 </div>
+-->
 
             </div>
         </div>
