@@ -10,8 +10,8 @@ myservices.factory('MyServices', function($http) {
 
     returnval.getPosts = function(callback) {
 //        return $http.get("http://wohlig.co.in/tumblr/?url=http://api.tumblr.com/v2/blog/holyartsandcraftsbatman.tumblr.com/posts").success(callback);
-//        return $http.get("http://wohlig.co.in/tumblr/?url=http://api.tumblr.com/v2/blog/humoristics.tumblr.com/posts").success(callback);
-        return $http.get("http://wohlig.co.in/tumblr/?url=http://api.tumblr.com/v2/blog/wohligtecjhkjhhnology.tumblr.com/posts").success(callback);
+        return $http.get("http://wohlig.co.in/tumblr/?url=http://api.tumblr.com/v2/blog/humoristics.tumblr.com/posts").success(callback);
+//        return $http.get("http://wohlig.co.in/tumblr/?url=http://api.tumblr.com/v2/blog/wohligtechnology.tumblr.com/posts").success(callback);
 //        return $http.get("http://wohlig.co.in/tumblr/?url=http://api.tumblr.com/v2/blog/jamiewignall.tumblr.com/posts").success(callback);
     };
     
