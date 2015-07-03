@@ -557,7 +557,8 @@ p.text-image img {
 
 .articals-det h3 {
   font-weight: 300;
-  color: #212121; }
+  color: #212121;
+  text-align: center; }
 
 .articals-det p {
   font-size: 14px;
@@ -613,7 +614,8 @@ p.text-image img {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 16px;
-  text-transform: capitalize; }
+  text-transform: capitalize;
+  color: #9C27B0; }
 
 /*!
   Ionicons, v2.0.1

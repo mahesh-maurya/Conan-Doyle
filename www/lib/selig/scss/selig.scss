@@ -583,6 +583,7 @@ p.text-image img {
 .articals-det h3 {
     font-weight: $lato-font-weight;
     color: $base-color;
+      text-align: center;
 }
 .articals-det p {
     font-size: $texts-font-size;
@@ -641,4 +642,6 @@ p.text-image img {
     transform: translate(-50%,-50%);
     font-size: 16px;
     text-transform: capitalize;
+     color: #9C27B0;
+
 }

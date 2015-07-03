@@ -21,7 +21,7 @@
             </div>
             <div class="articals-det" ng-if="post.type=='text'">
                 <h3>"{{post.slug}}...."</h3>
-                <p ng-bind-html="post.trail[0].content | rawHtml"></p>
+                <p class="text-image" ng-bind-html="post.trail[0].content | rawHtml"></p>
 
 <!--
                 <div class="know-content addanimation" ng-class="showDetails">
