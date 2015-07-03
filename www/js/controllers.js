@@ -29,9 +29,17 @@ angular.module('starter.controllers', ['myservices'])
 
     })
 
-.controller('ArticlesCtrl', function($scope, $ionicScrollDelegate, MyServices) {
+.controller('ArticlesCtrl', function($scope, $ionicScrollDelegate, MyServices, $ionicLoading) {
 
     //    * * * * * * Code For Show More texts * * * * * *
+
+    $ionicLoading.show({
+        content: 'Uploading Image',
+        animation: 'fade-in',
+        showBackdrop: true,
+        maxWidth: 200,
+        showDelay: '0'
+    });
 
     $scope.showDetails = "dontshow";
     $scope.moredetails = "Read More";
@@ -68,6 +76,7 @@ angular.module('starter.controllers', ['myservices'])
 
 
     $scope.post = MyServices.getPostDetail();
+    $ionicLoading.hide();
     //    $scope.txts = $scope.post.trail[0].content.split(">");
     console.log($scope.txts);
     if ($scope.post.type == 'photo') {
@@ -78,15 +87,17 @@ angular.module('starter.controllers', ['myservices'])
     //    ****** End ******
 
 })
-    .controller('HomeCtrl', function($scope, $ionicScrollDelegate, $window, MyServices, $location) {
+    .controller('HomeCtrl', function($scope, $ionicScrollDelegate, $window, MyServices, $location, $ionicLoading) {
 
         //****** Code For changing header color on scrolling ******
 
-
-        //    Galleria.run('.galleria', {
-        //    flickr: 'search:galleria'
-        //});
-
+        $ionicLoading.show({
+            content: 'Uploading Image',
+            animation: 'fade-in',
+            showBackdrop: true,
+            maxWidth: 200,
+            showDelay: '0'
+        });
         $scope.navClass = 'bar-stable';
         angular.element($window).bind(
             "scroll",
@@ -142,6 +153,7 @@ angular.module('starter.controllers', ['myservices'])
 
         MyServices.getPosts(function(data, status) {
             console.log(data);
+            $ionicLoading.hide();
             if (data != '') {
                 $scope.text = _.filter(data.response.posts, function(n) {
                     return n.type == "text";
@@ -166,89 +178,6 @@ angular.module('starter.controllers', ['myservices'])
         }
 
 
-
-        //        $scope.populars = [{
-        //            imagename: "Lower Kintaganban River",
-        //            imgpath: "img/blog/work/demo450x250.png"
-        //        }, {
-        //            imagename: "fringilla blandit ligula",
-        //            imgpath: "img/blog/travel/demo450x250.png"
-        //        }, {
-        //            imagename: "Nulla hendrerit ",
-        //            imgpath: "img/blog/fashion/demo450x250.png"
-        //        }, {
-        //            imagename: "Lorem ipsum dolor",
-        //            imgpath: "img/blog/art/demo450x250.png"
-        //        }, {
-        //            imagename: "Fusce nisl nisl",
-        //            imgpath: "img/blog/food/demo450x250.png"
-        //        }, {
-        //            imagename: "Nam aliquejpg",
-        //            imgpath: "img/blog/business/demo450x250.png"
-        //        }, {
-        //            imagename: "suscipit sit amet ",
-        //            imgpath: "img/blog/nature/demo450x250.png"
-        //        }, {
-        //            imagename: "Donec quis",
-        //            imgpath: "img/blog/sports/demo450x250.png"
-        //        }, {
-        //            imagename: "Etiam euismod",
-        //            imgpath: "img/blog/Miscellaneous/demo450x250.png"
-        //        }];
-
-
-        $scope.latests = [{
-            imagename: " Fusce nisl nisl",
-            imgpath: "img/blog/work/demo450x250.png"
-        }, {
-            imagename: "Etiam euismod",
-            imgpath: "img/blog/travel/demo450x250.png"
-        }, {
-            imagename: "Nulla hendrerit",
-            imgpath: "img/blog/fashion/demo450x250.png"
-        }, {
-            imagename: "Donec quis",
-            imgpath: "img/blog/art/demo450x250.png"
-        }, {
-            imagename: "Lower Kintaganban River",
-            imgpath: "img/blog/food/demo450x250.png"
-        }, {
-            imagename: "suscipit sit amet",
-            imgpath: "img/blog/nature/demo450x250.png"
-        }, {
-            imagename: "Lorem ipsum dolor",
-            imgpath: "img/blog/sports/demo450x250.png"
-        }, {
-            imagename: "fringilla blandit ligula",
-            imgpath: "img/blog/Miscellaneous/demo450x250.png"
-        }];
-
-
-        $scope.featureds = [{
-            imagename: "Nulla hendrerit",
-            imgpath: "img/blog/work/demo450x250.png"
-        }, {
-            imagename: "Fusce nisl nisl",
-            imgpath: "img/blog/travel/demo450x250.png"
-        }, {
-            imagename: "Lower Kintaganban River",
-            imgpath: "img/blog/fashion/demo450x250.png"
-        }, {
-            imagename: "Donec quis",
-            imgpath: "img/blog/art/demo450x250.png"
-        }, {
-            imagename: "fringilla blandit ligula",
-            imgpath: "img/blog/food/demo450x250.png"
-        }, {
-            imagename: "suscipit sit amet ",
-            imgpath: "img/blog/nature/demo450x250.png"
-        }, {
-            imagename: "Lorem ipsum dolor",
-            imgpath: "img/blog/sports/demo450x250.png"
-        }, {
-            imagename: "Etiam euismod",
-            imgpath: "img/blog/Miscellaneous/demo450x250.png"
-        }];
 
         //    ******* End ******
 
@@ -383,15 +312,27 @@ angular.module('starter.controllers', ['myservices'])
 
 
 .controller('ProfileCtrl', function($scope, $stateParams) {})
-.controller('SettingCtrl', function($scope, $stateParams) {})
+    .controller('SettingCtrl', function($scope, $stateParams) {})
 
 
-.controller('GallerycategoryCtrl', function($scope, $stateParams, $ionicModal, $ionicSlideBoxDelegate, MyServices) {
+.controller('GallerycategoryCtrl', function($scope, $stateParams, $ionicModal, $ionicSlideBoxDelegate, MyServices, $ionicLoading) {
 
     //    ****** Gallery Images Json Format data ******
+    
+    $scope.GalleryName = $stateParams.name;
+    console.log($scope.GalleryName);
+
+    $ionicLoading.show({
+        content: 'Uploading Image',
+        animation: 'fade-in',
+        showBackdrop: true,
+        maxWidth: 200,
+        showDelay: '0'
+    });
 
     MyServices.getFlickrGallaryPhotos($stateParams.id, function(data, status) {
         console.log(data);
+        $ionicLoading.hide();
         $scope.innergallery = data.photos.photo;
         $scope.newgallery = splitarray(data.photos.photo, 2);
     });
@@ -430,44 +371,20 @@ angular.module('starter.controllers', ['myservices'])
     //    ****** End *******
 
 })
-    .controller('GalleryCtrl', function($scope, $stateParams, MyServices) {
+    .controller('GalleryCtrl', function($scope, $stateParams, MyServices, $ionicLoading) {
 
         //    ****** Code For Calling Images Json Format ******
-
-
-        //        $scope.gallery = [{
-        //            id: 1,
-        //            imagename: "People",
-        //            imgpath: "img/gallery/demo500x313.png"
-        //        }, {
-        //            id: 2,
-        //            imagename: "Travel",
-        //            imgpath: "img/gallery/demo500x313.png"
-        //        }, {
-        //            id: 3,
-        //            imagename: "Nature",
-        //            imgpath: "img/gallery/demo500x313.png"
-        //        }, {
-        //            id: 4,
-        //            imagename: "Art",
-        //            imgpath: "img/gallery/demo500x313.png"
-        //        }, {
-        //            id: 5,
-        //            imagename: "Miscellaneous",
-        //            imgpath: "img/gallery/demo500x313.png"
-        //        }, {
-        //            id: 6,
-        //            imagename: "Fashion",
-        //            imgpath: "img/gallery/demo500x313.png"
-        //        }, {
-        //            id: 7,
-        //            imagename: "Business",
-        //            imgpath: "img/gallery/demo500x313.png"
-        //        }];
-
+        $ionicLoading.show({
+            content: 'Uploading Image',
+            animation: 'fade-in',
+            showBackdrop: true,
+            maxWidth: 200,
+            showDelay: '0'
+        });
 
         MyServices.getFlickrGallary(function(data, status) {
             console.log(data);
+            $ionicLoading.hide();
             $scope.isgallary = data;
             $scope.gallerynew = splitarray(data.galleries.gallery, 2);
 

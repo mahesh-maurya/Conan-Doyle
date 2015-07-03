@@ -1,5 +1,7 @@
 
 var adminurl = "http://www.wohlig.co.in/LightSaberBackend/index.php/json/";
+
+
 var post = [];
 
 var myservices = angular.module('myservices', []);

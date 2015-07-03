@@ -2,6 +2,7 @@
     "jscodehints.detectedExclusions": [
         "C:/xampp/htdocs/selig/gulpfile.js",
         "C:/xampp/htdocs/selig/www/lib/js/angular-masonry.min.js",
-        "C:/xampp/htdocs/selig/www/js/controllers.js"
+        "C:/xampp/htdocs/selig/www/js/controllers.js",
+        "/Applications/XAMPP/xamppfiles/htdocs/selig/Selig/FullApplication/www/lib/ionic/js/angular-ui/angular-ui-router.min.js"
     ]
 }
