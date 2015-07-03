@@ -1,58 +1,87 @@
 <ion-view>
+
     <div class="bar has-tabs-top bar-header bar-positive">
         <h1 class="title">Home</h1>
     </div>
+
     <div class="tabs-striped tabs-top tabs-background-positive tabs-color-light">
         <div class="tabs">
-            <a class="tab-item {{classa}}" ng-click="tabchange('popular',1)">
+            <a class="tab-item {{classa}}" ng-click="tabchange('text',1)">
                 <span>Popular</span>
             </a>
-            <a class="tab-item {{classb}}" ng-click="tabchange('latest',2)">
+            <a class="tab-item {{classb}}" ng-click="tabchange('photos',2)">
                 <span>Latest</span>
             </a>
-            <a class="tab-item {{classc}}" ng-click="tabchange('featured',3)">
+            <a class="tab-item {{classc}}" ng-click="tabchange('link',3)">
                 <span>Featured</span>
             </a>
         </div>
     </div>
+
     <ion-content class=" has-tabs-top">
-        <div class="popular" ng-show="tab=='popular'">
-            <a href="#/app/articles">
-               <div class="popular-set" ng-repeat="popular in populars" >
-                <figure>
-                    <img ng-src="{{popular.imgpath}}" alt="{{popular.imagename}}" class="full-image">
-                    <div class="layer">
-                        <figcaption class="blog-name">{{popular.imagename}}</figcaption>
-                    </div>
-                </figure>
-            </div>
+
+        <div class="popular" ng-show="tab=='text'">
+            <!--            <a href="#/app/articles">-->
+            <a>
+                <div class="popular-set" ng-repeat="txt in text">
+                    <figure ng-click="postDetail(txt.meta.links.self)">
+
+                        <img ng-src="{{txt.author.avatar_URL}}" alt="{{txt.imagename}}" class="full-image">
+                        <div class="layer">
+                            <figcaption class="blog-name">{{txt.slug}}</figcaption>
+                        </div>
+                    </figure>
+                </div>
+            </a>
+            <!--            if there is not text post-->
+            <a ng-if="text==''">
+                <div class="layer">
+                    <figcaption class="blog-name">No Post Yet..</figcaption>
+                </div>
             </a>
         </div>
-            <div class="latest" ng-show="tab=='latest'">
-            <a href="#/app/articles">
-            <div class="popular-set" ng-repeat="latest in latests">
-                <figure>
-                    <img ng-src="{{latest.imgpath}}" alt="{{latest.imagename}}" class="full-image">
-                    <div class="layer">
-                        <figcaption class="blog-name">{{latest.imagename}}</figcaption>
-                    </div>
 
-                </figure>
+        <div class="latest" ng-show="tab=='photos'">
+            <a>
+                <div class="popular-set" ng-repeat="pht in photo">
+                    <figure ng-click="postDetail(pht.meta.links.self)">
+                        <img ng-src="{{pht.author.avatar_URL}}" alt="{{pht.imagename}}" class="full-image">
+                        <div class="layer">
+                            <figcaption class="blog-name">{{pht.slug}}</figcaption>
+                        </div>
 
-                </div></a>
+                    </figure>
+
+                </div>
+            </a>
+            <!--     if there is not photo post      -->
+            <a ng-if="photo==''">
+                <div class="layer">
+                    <figcaption class="blog-name">No Freshly Pressed Post</figcaption>
+                </div>
+            </a>
         </div>
-            <div class="featured" ng-show="tab=='featured'">
-            <a href="#/app/articles">
-            <div class="popular-set" ng-repeat="featured in featureds">
-                <figure>
-                    <img ng-src="{{featured.imgpath}}" alt="{{featured.imagename}}" class="full-image">
-                    <div class="layer">
-                        <figcaption class="blog-name">{{featured.imagename}}</figcaption>
-                    </div>
 
-                </figure>
+        <div class="featured" ng-show="tab=='link'">
+            <a>
+                <div class="popular-set" ng-repeat="lik in link">
+                    <figure ng-click="postDetail(lik)">
+                        <img ng-src="{{lik.URL}}" alt="{{lik.imagename}}" class="full-image">
+                        <div class="layer">
+                            <figcaption class="blog-name">{{lik.slug}}</figcaption>
+                        </div>
 
-                </div></a>
+                    </figure>
+
+                </div>
+            </a>
+            <!--            if there is no link post-->
+            <a ng-if="link==''">
+                <div class="layer">
+                    <figcaption class="blog-name">No Link Post</figcaption>
+                </div>
+            </a>
         </div>
+
     </ion-content>
 </ion-view>

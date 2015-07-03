@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers'])
+angular.module('starter', ['ionic', 'starter.controllers', 'myservices', 'jagruticontroller'])
 
 .run(function($ionicPlatform) {
     $ionicPlatform.ready(function() {
@@ -18,10 +18,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
             StatusBar.overlaysWebView(true);
         }
         if (cordova.platformId == 'android') {
-            StatusBar.backgroundColorByHexString("#9C27B0");
+            StatusBar.backgroundColorByHexString("#641A70");
+        }
+
+        if (device.platform == 'iOS') {
+            navigator.splashscreen.hide();
         }
     });
 })
+
 
 .config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
     //Ionic native scrolling
@@ -86,6 +91,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         })
         .state('app.gallery-category', {
             url: "/gallery-category/:id",
+            cache: false,
             views: {
                 'menuContent': {
                     templateUrl: "templates/gallery-category.html",
@@ -122,17 +128,41 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         });
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/user-login');
-});
+})
+
+.directive('myYoutube', function ($sce) {
+    return {
+        restrict: 'EA',
+        scope: {
+            code: '='
+        },
+        replace: true,
+        template: '<iframe style="overflow:hidden;height:100%;width:100%" width="100%" height="100%" src="{{url}}" frameborder="0" allowfullscreen></iframe>',
+        link: function (scope) {
+            console.log('here');
+            scope.$watch('code', function (newVal) {
+                if (newVal) {
+                    scope.url = $sce.trustAsResourceUrl("http://www.youtube.com/embed/NEkBgE_DSX0");
+                }
+            });
+        }
+    };
+})
+
+.filter('rawHtml', ['$sce', function ($sce) {
+    return function (val) {
+        return $sce.trustAsHtml(val);
+    };
+}]);
 
 function splitarray(fullarray, splitsize) {
     var newarray = [];
-    var k=0;
+    var k = 0;
     for (var i = 0; i < fullarray.length; i++) {
-        var arrindex=Math.floor(i/splitsize);
+        var arrindex = Math.floor(i / splitsize);
         console.log(arrindex);
-        if((newarray.length-1)!=arrindex)
-        {
-            newarray[arrindex]=[];
+        if ((newarray.length - 1) != arrindex) {
+            newarray[arrindex] = [];
         }
         newarray[arrindex].push(fullarray[i]);
     }

@@ -1,9 +1,10 @@
-<ion-view>
+<ion-view ng-controller="LoginJagruti">
 
     <div class="bar bar-header dark-green">
         <h1 class="title back-arrow"><a href="#/user-login"><i class="icon ion-ios-arrow-thin-left"></i></a></h1>
     </div>
-    <ion-content >
+
+    <ion-content>
         <div class="parallax">
             <div class="clip-polygon">
                 <h2 class="title">Sign Up</h2>
@@ -29,6 +30,7 @@
                 </div>
             </div>
         </div>
+
         <div class="signin footer">
             <div class="login-btn btn-set">
                 <a href="#/app/home">
@@ -40,7 +42,13 @@
             <div class="sign  text-center">
                 <span>Don’t have an account?<a href="#/user-login">Sign In</a></span>
             </div>
+            <div class="sign  text-center" ng-click="facebooklogin()">
+                <span>Don’t have an account?<a href="#/user-login">Sign In With Facebook</a></span>
+            </div>
+            <div class="sign  text-center" ng-click="twitterlogin()">
+                <span>Don’t have an account?<a href="#/user-login">Sign In With Twitter</a></span>
+            </div>
         </div>
-    </ion-content>
 
+    </ion-content>
 </ion-view>

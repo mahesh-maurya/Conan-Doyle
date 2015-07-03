@@ -170,8 +170,6 @@ angular.module('starter.controllers', ['myservices'])
         //        });
         //
         $ionicLoading.show({
-                        //        template: 'We are fetching the best rates for you.',
-
                         content: 'Uploading Image',
                         animation: 'fade-in',
                         showBackdrop: true,
@@ -193,6 +191,11 @@ angular.module('starter.controllers', ['myservices'])
         MyServices.getFreshlyPressed(function(data, status) {
             console.log(data);
             $scope.photo = data.posts;
+        });
+    
+        MyServices.getSiteComment(function(data, status) {
+            console.log(data);
+            $scope.link = data.comments;
         });
 
 
