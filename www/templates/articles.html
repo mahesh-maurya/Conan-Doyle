@@ -3,8 +3,8 @@
 
         <div class="user-imgs">
             <figure>
-                <img src="{{post.trail[0].blog.theme.header_image}}" ng-if="post.trail.length!=0">
-                <figcaption>{{post.trail[0].blog.name}}</figcaption>
+                <img src="{{post.author.avatar_URL}}" ng-if="post.trail.length!=0">
+                <figcaption>{{post.author.name}}</figcaption>
             </figure>
         </div>
         <div class="artical-set">
@@ -17,11 +17,11 @@
         <div class="articalcontent">
             <div class="art-date">
 <!--                <p>June 15,2015</p>-->
-                <p>{{post.timestamp | date:"MMM dd, yyyy"}}</p>
+                <p>{{post.date | date:"MMM dd, yyyy"}}</p>
             </div>
-            <div class="articals-det" ng-if="post.type=='text'">
+            <div class="articals-det">
                 <h3>"{{post.slug}}...."</h3>
-                <p ng-bind-html="post.trail[0].content | rawHtml"></p>
+                <p ng-bind-html="post.content | rawHtml"></p>
 
 <!--
                 <div class="know-content addanimation" ng-class="showDetails">

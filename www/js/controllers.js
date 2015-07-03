@@ -29,7 +29,7 @@ angular.module('starter.controllers', ['myservices'])
 
     })
 
-.controller('ArticlesCtrl', function($scope, $ionicScrollDelegate, MyServices) {
+.controller('ArticlesCtrl', function($scope, $ionicScrollDelegate, MyServices, $stateParams) {
 
     //    * * * * * * Code For Show More texts * * * * * *
 
@@ -67,18 +67,23 @@ angular.module('starter.controllers', ['myservices'])
     }];
 
 
-    $scope.post = MyServices.getPostDetail();
-    //    $scope.txts = $scope.post.trail[0].content.split(">");
-    console.log($scope.txts);
-    if ($scope.post.type == 'photo') {
-        $scope.images = $scope.post.photos.splice(1, $scope.post.photos.length - 1);
-    }
-    console.log($scope.post);
+    MyServices.getWordpressPostsById(function(data, status) {
+        console.log(data);
+        $scope.post = data;
+    });
+
+
+    //    $scope.post = MyServices.getPostDetail();
+    //    console.log($scope.txts);
+    //    if ($scope.post.type == 'photo') {
+    //        $scope.images = $scope.post.photos.splice(1, $scope.post.photos.length - 1);
+    //    }
+    //    console.log($scope.post);
 
     //    ****** End ******
 
 })
-    .controller('HomeCtrl', function($scope, $ionicScrollDelegate, $window, MyServices, $location) {
+    .controller('HomeCtrl', function($scope, $ionicScrollDelegate, $window, MyServices, $location, $ionicLoading) {
 
         //****** Code For changing header color on scrolling ******
 
@@ -86,6 +91,10 @@ angular.module('starter.controllers', ['myservices'])
         //    Galleria.run('.galleria', {
         //    flickr: 'search:galleria'
         //});
+
+        $scope.text = [];
+        $scope.photo = [];
+        $scope.link = [];
 
         $scope.navClass = 'bar-stable';
         angular.element($window).bind(
@@ -135,120 +144,57 @@ angular.module('starter.controllers', ['myservices'])
 
         //    ****** Home Page Images Tab Json Format Data *******
 
-        $scope.populars = [];
-        $scope.text = [];
-        $scope.photo = [];
-        $scope.link = [];
+        //        $scope.populars = [];
+        //        $scope.text = [];
+        //        $scope.photo = [];
+        //        $scope.link = [];
+        //
+        //        MyServices.getPosts(function(data, status) {
+        //            console.log(data);
+        //            if (data != '') {
+        //                $scope.text = _.filter(data.response.posts, function(n) {
+        //                    return n.type == "text";
+        //                });
+        //                console.log("text");
+        //                console.log($scope.text);
+        //                $scope.photo = _.filter(data.response.posts, function(n) {
+        //                    return n.type == "photo";
+        //                });
+        //                console.log("photo");
+        //                console.log($scope.photo);
+        //                $scope.link = _.filter(data.response.posts, function(n) {
+        //                    return n.type == "link";
+        //                });
+        //            }
+        //
+        //        });
+        //
+        $ionicLoading.show({
+                        //        template: 'We are fetching the best rates for you.',
 
-        MyServices.getPosts(function(data, status) {
-            console.log(data);
-            if (data != '') {
-                $scope.text = _.filter(data.response.posts, function(n) {
-                    return n.type == "text";
-                });
-                console.log("text");
-                console.log($scope.text);
-                $scope.photo = _.filter(data.response.posts, function(n) {
-                    return n.type == "photo";
-                });
-                console.log("photo");
-                console.log($scope.photo);
-                $scope.link = _.filter(data.response.posts, function(n) {
-                    return n.type == "link";
-                });
-            }
-
-        });
-
+                        content: 'Uploading Image',
+                        animation: 'fade-in',
+                        showBackdrop: true,
+                        maxWidth: 200,
+                        showDelay: '0'
+                    });
+    
         $scope.postDetail = function(post) {
-            MyServices.postDetail(post);
+            $.jStorage.set("detail", post);
             $location.url("app/articles");
         }
 
+        MyServices.getWordpressPosts(function(data, status) {
+            $ionicLoading.hide();
+            console.log(data);
+            $scope.text = data.posts;
+        });
 
+        MyServices.getFreshlyPressed(function(data, status) {
+            console.log(data);
+            $scope.photo = data.posts;
+        });
 
-        //        $scope.populars = [{
-        //            imagename: "Lower Kintaganban River",
-        //            imgpath: "img/blog/work/demo450x250.png"
-        //        }, {
-        //            imagename: "fringilla blandit ligula",
-        //            imgpath: "img/blog/travel/demo450x250.png"
-        //        }, {
-        //            imagename: "Nulla hendrerit ",
-        //            imgpath: "img/blog/fashion/demo450x250.png"
-        //        }, {
-        //            imagename: "Lorem ipsum dolor",
-        //            imgpath: "img/blog/art/demo450x250.png"
-        //        }, {
-        //            imagename: "Fusce nisl nisl",
-        //            imgpath: "img/blog/food/demo450x250.png"
-        //        }, {
-        //            imagename: "Nam aliquejpg",
-        //            imgpath: "img/blog/business/demo450x250.png"
-        //        }, {
-        //            imagename: "suscipit sit amet ",
-        //            imgpath: "img/blog/nature/demo450x250.png"
-        //        }, {
-        //            imagename: "Donec quis",
-        //            imgpath: "img/blog/sports/demo450x250.png"
-        //        }, {
-        //            imagename: "Etiam euismod",
-        //            imgpath: "img/blog/Miscellaneous/demo450x250.png"
-        //        }];
-
-
-        $scope.latests = [{
-            imagename: " Fusce nisl nisl",
-            imgpath: "img/blog/work/demo450x250.png"
-        }, {
-            imagename: "Etiam euismod",
-            imgpath: "img/blog/travel/demo450x250.png"
-        }, {
-            imagename: "Nulla hendrerit",
-            imgpath: "img/blog/fashion/demo450x250.png"
-        }, {
-            imagename: "Donec quis",
-            imgpath: "img/blog/art/demo450x250.png"
-        }, {
-            imagename: "Lower Kintaganban River",
-            imgpath: "img/blog/food/demo450x250.png"
-        }, {
-            imagename: "suscipit sit amet",
-            imgpath: "img/blog/nature/demo450x250.png"
-        }, {
-            imagename: "Lorem ipsum dolor",
-            imgpath: "img/blog/sports/demo450x250.png"
-        }, {
-            imagename: "fringilla blandit ligula",
-            imgpath: "img/blog/Miscellaneous/demo450x250.png"
-        }];
-
-
-        $scope.featureds = [{
-            imagename: "Nulla hendrerit",
-            imgpath: "img/blog/work/demo450x250.png"
-        }, {
-            imagename: "Fusce nisl nisl",
-            imgpath: "img/blog/travel/demo450x250.png"
-        }, {
-            imagename: "Lower Kintaganban River",
-            imgpath: "img/blog/fashion/demo450x250.png"
-        }, {
-            imagename: "Donec quis",
-            imgpath: "img/blog/art/demo450x250.png"
-        }, {
-            imagename: "fringilla blandit ligula",
-            imgpath: "img/blog/food/demo450x250.png"
-        }, {
-            imagename: "suscipit sit amet ",
-            imgpath: "img/blog/nature/demo450x250.png"
-        }, {
-            imagename: "Lorem ipsum dolor",
-            imgpath: "img/blog/sports/demo450x250.png"
-        }, {
-            imagename: "Etiam euismod",
-            imgpath: "img/blog/Miscellaneous/demo450x250.png"
-        }];
 
         //    ******* End ******
 
