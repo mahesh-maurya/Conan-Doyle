@@ -617,6 +617,16 @@ p.text-image img {
   text-transform: capitalize;
   color: #9C27B0; }
 
+.item-divider-positive {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  min-height: 30px;
+  /* background-color: #9C27B0; */
+  color: #9C27B0 !important;
+  font-weight: 400 !important;
+  border-width: 0px !important;
+  font-size: 16px; }
+
 /*!
   Ionicons, v2.0.1
   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
