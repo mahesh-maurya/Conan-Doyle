@@ -382,6 +382,7 @@ angular.module('starter.controllers', ['myservices'])
     })
 
 
+.controller('ProfileCtrl', function($scope, $stateParams) {})
 .controller('SettingCtrl', function($scope, $stateParams) {})
 
 

@@ -1,49 +1,51 @@
-<ion-view>
-    <ion-content style="top:0px" overflow-scroll="true" delegate-handle="mainScroll" on-scroll="mainscrolling();">
+<ion-view >
 
-        <div class="setting-set">
+  <ion-content style="top:0px" overflow-scroll="true" delegate-handle="mainScroll" on-scroll="mainscrolling();">
+         <div class="profiles-set">
             <div class="map-set">
-                <h2 class="title-c">Settings</h2>
-                <i class="icon ion-ios-plus-empty image-up"></i>
-                <img class="user-pic" src="img/component/profile2.png">
+                <h2 class="title-c">Setting</h2>
+         
+             
             </div>
         </div>
         
-        <div class="setting-form">
-            <div class="list profile-user">
-                <label class="item item-input item-stacked-label first-label">
-                    <span class="input-label">First Name</span>
-                    <input type="text" placeholder="John">
-                </label>
-                <label class="item item-input item-stacked-label">
-                    <span class="input-label">Last Name</span>
-                    <input type="text" placeholder="Suhr">
-                </label>
-                <label class="item item-input item-stacked-label">
-                    <span class="input-label">Email</span>
-                    <input type="text" placeholder="john@suhr.com">
-                </label>
-                <label class="item item-input item-stacked-label">
-                    <span class="input-label">Birthday</span>
-                    <input type="text" onfocus="(this.type='date')" placeholder="Birth Date">
-                </label>
-                <label class="item item-input item-stacked-label first-label">
-                    <span class="input-label">Change password</span>
-                    <input type="password" placeholder="********">
-                </label>
+    <ul class="list">
 
-            </div>
-            <div class="login footer">
-                <div class="login-btn btn-set">
-                    <a>
-                        <button class="button button-full button-positive button-block">
-                            Edit
-                        </button>
-                    </a>
-                </div>
+      <div class="item item-divider">TOGGLE</div>
 
-            </div>
-        </div>
+      <ion-toggle ng-model="airplaneMode" toggle-class="toggle-assertive">Airplane Mode</ion-toggle>
+      <ion-toggle ng-model="wifi" toggle-class="toggle-positive">Wi-Fi</ion-toggle>
+      <ion-toggle ng-model="bluetooth" toggle-class="toggle-calm">Bluetooth</ion-toggle>
+      <ion-toggle ng-model="personalHotspot" toggle-class="toggle-dark">Personal Hotspot</ion-toggle>
 
-    </ion-content>
+      <div class="item item-divider profile-check">CHECKBOXES</div>
+
+      <ion-checkbox ng-model="checkOpt1">Option 1</ion-checkbox>
+      <ion-checkbox ng-model="checkOpt2">Option 2</ion-checkbox>
+      <ion-checkbox ng-model="checkOpt3">Option 3</ion-checkbox>
+
+      <div class="item item-divider">RADIO</div>
+
+      <ion-radio ng-model="radioChoice" ng-value="'A'">Choose A</ion-radio>
+      <ion-radio ng-model="radioChoice" ng-value="'B'">Choose B</ion-radio>
+      <ion-radio ng-model="radioChoice" ng-value="'C'">Choose C</ion-radio>
+
+      <div class="item item-divider">RANGES</div>
+
+      <div class="range">
+        <i class="icon ion-volume-low"></i>
+        <input type="range" name="volume">
+        <i class="icon ion-volume-high"></i>
+      </div>
+      <div class="item range range-positive">
+        <i class="icon ion-ios-sunny-outline"></i>
+        <input type="range" name="volume" min="0" max="100" value="33">
+        <i class="icon ion-ios-sunny"></i>
+      </div>
+
+      <div class="item item-divider"></div>
+
+     
+    </ul>
+  </ion-content>
 </ion-view>
