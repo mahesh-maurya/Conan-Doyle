@@ -1,6 +1,8 @@
 //FOR WORDPRESS INTEGRATION 
 var Wordpress_UserName = "en.blog.wordpress.com";
 
+//wordpress
+
 
 //FOR FLICKR INTEGRATION
 //var Api_Key = "477a6eb655b448de7fffcb16ae4455b2";
