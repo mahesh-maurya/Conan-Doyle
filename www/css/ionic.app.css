@@ -501,12 +501,22 @@ figcaption.blog-name {
   text-transform: capitalize; }
 
 .popular-set {
-  height: 180px;
+  height: 100%;
   width: 100%;
-  overflow: hidden;
   background-position: center center;
   background-size: cover;
-  position: relative; }
+  position: relative;
+  display: block;
+  overflow: hidden; }
+
+.popular-set img {
+  position: absolute;
+  top: 50%;
+  min-height: 100%;
+  display: block;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  min-width: 100%; }
 
 .popular-set figure {
   height: 180px; }
@@ -528,10 +538,10 @@ figcaption.blog-name {
   width: 100%; }
 
 .user-imgs {
-  text-align: right;
+  text-align: center;
   position: absolute;
   top: 115px;
-  right: 30px;
+  right: 19px;
   z-index: 99999;
   text-transform: capitalize; }
 
