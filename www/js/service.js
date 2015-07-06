@@ -3,7 +3,7 @@ var post = [];
 
 var myservices = angular.module('myservices', []);
 
-myservices.factory('MyServices', function($http,TUBMLR_API_URL,FLICKR_API_URL) {
+myservices.factory('MyServices', function($http,TUBMLR_API_URL,FLICKR_API_URL,FLICKR_GALLERY_API_URL) {
 
     var returnval = {};
 
