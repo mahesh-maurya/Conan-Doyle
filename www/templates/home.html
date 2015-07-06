@@ -66,7 +66,7 @@
             <a>
                 <div class="popular-set" ng-repeat="lik in link">
                     <figure ng-click="postDetail(lik)">
-                        <img ng-src="{{lik.URL}}" alt="{{lik.imagename}}" class="full-image">
+                        <img ng-src="{{lik.author.avatar_URL}}" alt="{{lik.imagename}}" class="full-image">
                         <div class="layer">
                             <figcaption class="blog-name">{{lik.slug}}</figcaption>
                         </div>
