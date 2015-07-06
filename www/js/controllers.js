@@ -184,6 +184,8 @@ angular.module('starter.controllers', ['myservices'])
 
         MyServices.getWordpressPosts(function(data, status) {
             $ionicLoading.hide();
+            
+        console.log("my post");
             console.log(data);
             $scope.text = data.posts;
         });

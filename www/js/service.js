@@ -2,7 +2,7 @@ var post = [];
 
 var myservices = angular.module('myservices', []);
 
-myservices.factory('MyServices', function($http, WORDPRESS_API_URL, FLICKR_API_URL, FLICKR_GALLERY_API_URL) {
+myservices.factory('MyServices', function($http, WORDPRESS_API_URL, FLICKR_API_URL, FLICKR_GALLERY_API_URL, Wordpress_UserName) {
 
     var returnval = {};
 
@@ -16,9 +16,9 @@ myservices.factory('MyServices', function($http, WORDPRESS_API_URL, FLICKR_API_U
 
     returnval.getWordpressPosts = function(callback) {
         var getdata = function(data, status) {
-            return $http.get(data.meta.links.posts + "?page=100").success(callback);
+            return $http.get(data.meta.links.posts).success(callback);
         }
-        $http.get(WORDPRESS_API_URL + "sites/koreanindo.net").success(getdata);
+        $http.get(WORDPRESS_API_URL + "sites/"+Wordpress_UserName).success(getdata);
     };
     returnval.getSiteComment = function(callback) {
         var getdata = function(data, status) {
@@ -26,7 +26,7 @@ myservices.factory('MyServices', function($http, WORDPRESS_API_URL, FLICKR_API_U
             console.log(data);
             return $http.get(data.meta.links.comments).success(callback);
         }
-        $http.get(WORDPRESS_API_URL + "sites/koreanindo.net").success(getdata);
+        $http.get(WORDPRESS_API_URL + "sites/"+Wordpress_UserName).success(getdata);
     };
 
     returnval.getWordpressPostsById = function(callback) {
