@@ -1,3 +1,5 @@
+var adminurl = "http://www.wohlig.co.in";
+
 var post = [];
 
 var myservices = angular.module('myservices', []);

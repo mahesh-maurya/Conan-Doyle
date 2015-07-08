@@ -8,8 +8,8 @@
         </div>
 
         <div class="gallery-img ">
-            <div class="row" ng-repeat="pro in gallerynew">
-                <div class="col col-50" ng-click="openModal($index);" ng-repeat="gal in pro">
+            <div class="row" collection-repeat="pro in gallerynew">
+                <div class="col col-50" ng-click="openModal($index);" collection-repeat="gal in pro">
                     <div class="set-image">
                         <a href="#/app/gallery-category/{{gal.id}}">
                             <figure class="image-set">
