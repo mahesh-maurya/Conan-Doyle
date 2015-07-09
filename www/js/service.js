@@ -1,3 +1,4 @@
+var adminurl = "http://wohlig.co.in/";
 
 var post = [];
 
