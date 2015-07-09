@@ -18,12 +18,11 @@
         </div>
     </div>
 
-    <ion-content class=" has-tabs-top">
+    <ion-content class="has-tabs-top" overflow-scroll="true">
 
-        <div class="popular" ng-show="tab=='text'">
+        <div  class="popular" ng-show="tab=='text'">
             <!--            <a href="#/app/articles">-->
-            <a>
-                <div class="popular-set" ng-repeat="txt in text">
+                <div class="popular-set" collection-repeat="txt in text">
                     <figure ng-click="postDetail(txt)">
 
                         <img ng-src="{{txt.trail[0].blog.theme.header_image}}" alt="{{txt.imagename}}" class="full-image">
@@ -32,7 +31,6 @@
                         </div>
                     </figure>
                 </div>
-            </a>
             <!--            if there is not text post-->
             <a ng-if="text==''">
                 <div class="no-data">
