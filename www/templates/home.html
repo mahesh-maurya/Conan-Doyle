@@ -43,7 +43,7 @@
 
         <div class="latest" ng-show="tab=='photos'">
             <a>
-                <div class="popular-set" collection-repeat="pht in photo">
+                <div class="popular-set" ng-repeat="pht in photo">
                     <figure ng-click="postDetail(pht.meta.links.self)">
                         <img ng-src="{{pht.author.avatar_URL}}" alt="{{pht.imagename}}" class="full-image">
                         <div class="layer">
@@ -64,7 +64,7 @@
 
         <div class="featured" ng-show="tab=='link'">
             <a>
-                <div class="popular-set" collection-repeat="lik in link">
+                <div class="popular-set" ng-repeat="lik in link">
                     <figure ng-click="postDetail(lik)">
                         <img ng-src="{{lik.author.avatar_URL}}" alt="{{lik.imagename}}" class="full-image">
                         <div class="layer">
