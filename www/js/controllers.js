@@ -421,7 +421,6 @@ angular.module('starter.controllers', ['myservices'])
             console.log(data);
             $scope.isgallary = data;
             $scope.gallerynew = splitarray(data.galleries.gallery, 2);
-
             console.log($scope.gallerynew);
         });
 
