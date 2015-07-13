@@ -647,6 +647,24 @@ p.text-image img {
   background-color: #45b0e3;
   color: #fff; }
 
+.post-list {
+  margin-top: 20px; }
+
+.item.item-body.word-content {
+  padding: 0px 16px; }
+
+.item.item-avatar.post-head {
+  background: #9C9C9C;
+  color: #fff !important; }
+
+.item.item-avatar.post-head h2 {
+  color: #fff;
+  text-transform: capitalize; }
+
+.item.item-avatar.post-head p {
+  color: #E1E1E1;
+  font-size: 13px !important; }
+
 /*!
   Ionicons, v2.0.1
   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
