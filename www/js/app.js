@@ -79,6 +79,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'myservices', 'jagrut
                     controller: 'SettingCtrl'
                 }
             }
+        })   
+    .state('app.profile', {
+            url: "/profile",
+            views: {
+                'menuContent': {
+                    templateUrl: "templates/profile.html",
+                    controller: 'ProfileCtrl'
+                }
+            }
         })
         .state('app.gallery', {
             url: "/gallery",

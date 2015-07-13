@@ -334,6 +334,7 @@ angular.module('starter.controllers', ['myservices'])
 
 
 .controller('SettingCtrl', function($scope, $stateParams) {})
+.controller('ProfileCtrl', function($scope, $stateParams) {})
 
 
 .controller('GallerycategoryCtrl', function($scope, $stateParams, $ionicModal, $ionicSlideBoxDelegate, MyServices) {
