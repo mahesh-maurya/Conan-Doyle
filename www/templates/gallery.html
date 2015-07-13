@@ -8,10 +8,10 @@
         </div>
 
         <div class="gallery-img ">
-            <div class="row" collection-repeat="pro in gallerynew">
-                <div class="col col-50" ng-click="openModal($index);" collection-repeat="gal in pro">
+            <div class="row" ng-repeat="pro in gallerynew">
+                <div class="col col-50" ng-click="openModal($index);" ng-repeat="gal in pro">
                     <div class="set-image">
-                        <a href="#/app/gallery-category/{{gal.id}}">
+                        <a href="#/app/gallery-category/{{gal.id}}/{{gal.title._content}}">
                             <figure class="image-set">
                                 <img ng-src="https://farm{{gal.primary_photo_farm}}.staticflickr.com/{{gal.primary_photo_server}}/{{gal.primary_photo_id}}_{{gal.primary_photo_secret}}_q.jpg" class="full-image">
                                 <figcaption>{{gal.title._content}}</figcaption>

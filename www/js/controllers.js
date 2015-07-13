@@ -339,6 +339,7 @@ angular.module('starter.controllers', ['myservices'])
 .controller('GallerycategoryCtrl', function($scope, $stateParams, $ionicModal, $ionicSlideBoxDelegate, MyServices) {
 
     //    ****** Gallery Images Json Format data ******
+	$scope.name = $stateParams.name;
 
     MyServices.getFlickrGallaryPhotos($stateParams.id, function(data, status) {
         console.log(data);

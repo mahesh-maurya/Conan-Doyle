@@ -90,7 +90,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'myservices', 'jagrut
             }
         })
         .state('app.gallery-category', {
-            url: "/gallery-category/:id",
+            url: "/gallery-category/:id/:name",
             cache: false,
             views: {
                 'menuContent': {
