@@ -593,6 +593,7 @@ p.text-image img {
     font-weight: $lato-font-weight;
     color: $base-color;
       text-align: center;
+      text-transform: capitalize;
 }
 .articals-det p {
     font-size: $texts-font-size;
@@ -605,6 +606,9 @@ p.text-image img {
 .tabs-top > .tabs,
 .tabs.tabs-top {
     border-bottom-width: 0px !important;
+}
+.articals-det a {
+    color: $positive;
 }
 
 .transparent {
@@ -690,9 +694,21 @@ p.text-image img {
 .item.item-avatar.post-head h2 {
     color: #fff;
     text-transform: capitalize;
+     font-size: 13px;
 }
 
 .item.item-avatar.post-head p {
     color: #E1E1E1;
-    font-size: 13px !important;
+    font-size: 12px !important;
+}
+.item.item-body.word-content p {
+    font-size: 13px;
+}
+.articals-det img {
+    width: 100%;
+    height: auto;
+}
+.articals-det div {
+    width: 100%;
+   
 }

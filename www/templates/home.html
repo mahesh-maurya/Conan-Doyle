@@ -49,7 +49,7 @@
 
                     <div class="item item-body word-content">
                         <!--    <img class="full-image" src="delorean.jpg">-->
-                        <p ng-bind-html="txt.content | rawHtml">
+                        <p ng-bind-html="txt.content | cut:true:300:'...'| rawHtml ">
 <!--                            This is a "Facebook" styled Card. The header is created from a Thumbnail List item, the content is from a card-body consisting of an image and paragraph text. The footer consists of tabs, icons aligned left, within the card-footer.-->
                         </p>
                         <div class="post-actions row">
@@ -73,50 +73,86 @@
 
             <!--            if there is not text post-->
             <a ng-if="text==''">
-                <div class="layer">
-                    <figcaption class="blog-name">No Post Yet..</figcaption>
+                <div class="no-data">
+                  <p>No Freshly Pressed Post</p>
                 </div>
             </a>
         </div>
 
         <div class="latest" ng-show="tab=='photos'">
-            <a>
-                <div class="popular-set" ng-repeat="pht in photo">
-                    <figure ng-click="postDetail(pht.meta.links.self)">
-                        <img ng-src="{{pht.author.avatar_URL}}" alt="{{pht.imagename}}" class="full-image">
-                        <div class="layer">
-                            <figcaption class="blog-name">{{pht.slug}}</figcaption>
-                        </div>
+                  <div class="post-list">
+                <div class="list card margin-tp" ng-repeat="txt in photo">
 
-                    </figure>
+                    <div class="item item-avatar post-head">
+                        <img src="{{txt.author.avatar_URL}}">
+                        <h2>{{txt.slug}}</h2>
+<!--                        <p>November 05, 1955</p>-->
+                        <p>{{txt.date | date:"MMMM dd, yyyy"}}</p>
+                    </div>
+
+                    <div class="item item-body word-content">
+                        <!--    <img class="full-image" src="delorean.jpg">-->
+                        <p ng-bind-html="txt.content | cut:true:300:'...'| rawHtml ">
+<!--                            This is a "Facebook" styled Card. The header is created from a Thumbnail List item, the content is from a card-body consisting of an image and paragraph text. The footer consists of tabs, icons aligned left, within the card-footer.-->
+                        </p>
+                        <div class="post-actions row">
+                            <div class="actions col col-center col-66">
+
+                            </div>
+                            <div class="read-more col col-center col-33">
+                                <a ng-click="postDetail(txt.meta.links.self)" class="button button-small button-block button-positive">
+                Read more
+              </a>
+                            </div>
+                        </div>
+                    </div>
+
 
                 </div>
-            </a>
+            </div>
             <!--     if there is not photo post      -->
             <a ng-if="photo==''">
-                <div class="layer">
-                    <figcaption class="blog-name">No Freshly Pressed Post</figcaption>
+               <div class="no-data">
+                  <p>No Freshly Pressed Post</p>
                 </div>
             </a>
         </div>
 
         <div class="featured" ng-show="tab=='link'">
-            <a>
-                <div class="popular-set" ng-repeat="lik in link">
-                    <figure ng-click="postDetail(lik)">
-                        <img ng-src="{{lik.author.avatar_URL}}" alt="{{lik.imagename}}" class="full-image">
-                        <div class="layer">
-                            <figcaption class="blog-name">{{lik.slug}}</figcaption>
-                        </div>
+                <div class="post-list">
+                <div class="list card margin-tp" ng-repeat="txt in link">
 
-                    </figure>
+                    <div class="item item-avatar post-head">
+                        <img src="{{txt.author.avatar_URL}}">
+                        <h2>{{txt.slug}}</h2>
+<!--                        <p>November 05, 1955</p>-->
+                        <p>{{txt.date | date:"MMMM dd, yyyy"}}</p>
+                    </div>
+
+                    <div class="item item-body word-content">
+                        <!--    <img class="full-image" src="delorean.jpg">-->
+                        <p ng-bind-html="txt.content | cut:true:300:'...'| rawHtml ">
+<!--                            This is a "Facebook" styled Card. The header is created from a Thumbnail List item, the content is from a card-body consisting of an image and paragraph text. The footer consists of tabs, icons aligned left, within the card-footer.-->
+                        </p>
+                        <div class="post-actions row">
+                            <div class="actions col col-center col-66">
+
+                            </div>
+                            <div class="read-more col col-center col-33">
+                                <a ng-click="postDetail(txt.meta.links.self)" class="button button-small button-block button-positive">
+                Read more
+              </a>
+                            </div>
+                        </div>
+                    </div>
+
 
                 </div>
-            </a>
+            </div>
             <!--            if there is no link post-->
             <a ng-if="link==''">
-                <div class="layer">
-                    <figcaption class="blog-name">No Link Post</figcaption>
+                <div class="no-data">
+                  <p>No Freshly Pressed Post</p>
                 </div>
             </a>
         </div>
