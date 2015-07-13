@@ -44,3 +44,5 @@ Temporary Items
 
 plugins/
 platforms/
+node_modules/
+node_modules/gulp-bower/node_modules/bower/node_modules/bower-config/node_modules/mout/src/array/find.js
