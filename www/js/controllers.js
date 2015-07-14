@@ -88,9 +88,7 @@ angular.module('starter.controllers', ['myservices'])
         //****** Code For changing header color on scrolling ******
 
 
-        //    Galleria.run('.galleria', {
-        //    flickr: 'search:galleria'
-        //});
+
 
         $scope.text = [];
         $scope.photo = [];
@@ -142,33 +140,99 @@ angular.module('starter.controllers', ['myservices'])
         //            ******** end *******
 
 
-        //    ****** Home Page Images Tab Json Format Data *******
+        $ionicLoading.show({
+                        content: 'Uploading Image',
+                        animation: 'fade-in',
+                        showBackdrop: true,
+                        maxWidth: 200,
+                        showDelay: '0'
+                    });
+    
+        $scope.postDetail = function(post) {
+            $.jStorage.set("detail", post);
+            $location.url("app/articles");
+        }
 
-        //        $scope.populars = [];
-        //        $scope.text = [];
-        //        $scope.photo = [];
-        //        $scope.link = [];
-        //
-        //        MyServices.getPosts(function(data, status) {
-        //            console.log(data);
-        //            if (data != '') {
-        //                $scope.text = _.filter(data.response.posts, function(n) {
-        //                    return n.type == "text";
-        //                });
-        //                console.log("text");
-        //                console.log($scope.text);
-        //                $scope.photo = _.filter(data.response.posts, function(n) {
-        //                    return n.type == "photo";
-        //                });
-        //                console.log("photo");
-        //                console.log($scope.photo);
-        //                $scope.link = _.filter(data.response.posts, function(n) {
-        //                    return n.type == "link";
-        //                });
-        //            }
-        //
-        //        });
-        //
+        MyServices.getWordpressPosts(function(data, status) {
+            $ionicLoading.hide();
+            
+        console.log("my post");
+            console.log(data);
+            $scope.text = data.posts;
+        });
+
+        MyServices.getFreshlyPressed(function(data, status) {
+            console.log(data);
+            $scope.photo = data.posts;
+        });
+    
+        MyServices.getSiteComment(function(data, status) {
+            console.log(data);
+            $scope.link = data.comments;
+        });
+
+
+        //    ******* End ******
+
+    })
+
+
+    .controller('HometwoCtrl', function($scope, $ionicScrollDelegate, $window, MyServices, $location, $ionicLoading) {
+
+        //****** Code For changing header color on scrolling ******
+
+
+
+        $scope.text = [];
+        $scope.photo = [];
+        $scope.link = [];
+
+        $scope.navClass = 'bar-stable';
+        angular.element($window).bind(
+            "scroll",
+            function() {
+                console.log(window.pageYOffset);
+                if (window.pageYOffset > 0) {
+                    $scope.navClass = 'bar-stables';
+                } else {
+                    $scope.navClass = 'bar-stable';
+                }
+                $scope.$apply();
+            });
+
+        //    ****** End ******
+
+        //        ***** tabchange ****
+
+        $scope.tab = 'text';
+        $scope.classa = 'active';
+        $scope.classb = '';
+        $scope.classc = '';
+        $scope.tabchange = function(tab, a) {
+            //        console.log(tab);
+            $scope.tab = tab;
+            if (a == 1) {
+                $ionicScrollDelegate.scrollTop();
+                $scope.classa = "active";
+                $scope.classb = '';
+                $scope.classc = '';
+            } else if (a == 2) {
+                $ionicScrollDelegate.scrollTop();
+                $scope.classa = '';
+                $scope.classb = "active";
+                $scope.classc = '';
+            } else {
+                $ionicScrollDelegate.scrollTop();
+                $scope.classa = '';
+                $scope.classb = '';
+                $scope.classc = "active";
+            }
+        };
+
+
+        //            ******** end *******
+
+
         $ionicLoading.show({
                         content: 'Uploading Image',
                         animation: 'fade-in',

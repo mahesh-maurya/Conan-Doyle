@@ -61,6 +61,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'myservices', 'jagrut
             }
         }
     })
+       .state('app.hometwo', {
+        url: "/hometwo",
+        views: {
+            'menuContent': {
+                templateUrl: "templates/hometwo.html",
+                controller: 'HometwoCtrl'
+            }
+        }
+    })
         .state('app.contact', {
             url: "/contact",
             views: {
