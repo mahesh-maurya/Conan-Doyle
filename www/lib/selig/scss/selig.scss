@@ -712,3 +712,19 @@ p.text-image img {
     width: 100%;
    
 }
+.item.item-body.word-content img {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.button-positive-facebook.button.activated {
+  border-color: #33477E !important;
+  background-color: #33477E !important;
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1) !important;
+}
+.button-positive-twitter.button.activated {
+  border-color: #7EBCDA ;
+  background-color: #7EBCDA;
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1) !important;
+}
