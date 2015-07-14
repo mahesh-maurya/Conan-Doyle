@@ -539,7 +539,12 @@ figcaption.blog-name {
     position: absolute;      
     top: 50%;      min-height:100%;      display:block;      
     left: 50%;      
-    -webkit-transform: translate(-50%, -50%);      min-width:100%;
+    -webkit-transform: translate(-50%, -50%);  
+    -o-transform: translate(-50%, -50%);  
+    -moz-transform: translate(-50%, -50%);  
+    -ms-transform: translate(-50%, -50%);  
+    transform: translate(-50%, -50%);  
+    min-width:100%;
 }
 .popular-set figure{
     height: 180px;
@@ -653,6 +658,10 @@ p.text-image img {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
     font-size: 15px;
     text-transform: capitalize;
      color: #9C27B0;
