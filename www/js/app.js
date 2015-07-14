@@ -17,20 +17,20 @@ angular.module('starter', ['ionic', 'starter.controllers', 'myservices', 'jagrut
             StatusBar.styleLightContent();
             StatusBar.overlaysWebView(true);
         }
-        if (cordova.platformId == 'android') {
-            StatusBar.backgroundColorByHexString("#641A70");
-        }
-
         if (device.platform == 'iOS') {
             navigator.splashscreen.hide();
         }
+        if (cordova.platformId == 'android') {
+            StatusBar.backgroundColorByHexString("#641A70");
+        }
+        app.initialize();
     });
 })
 
 
 .config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
     //Ionic native scrolling
-   // $ionicConfigProvider.scrolling.jsScrolling(false);
+    // $ionicConfigProvider.scrolling.jsScrolling(false);
 
     $stateProvider
 
@@ -71,7 +71,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'myservices', 'jagrut
                 }
             }
         })
-            .state('app.profile', {
+        .state('app.profile', {
             url: "/profile",
             views: {
                 'menuContent': {
@@ -139,7 +139,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'myservices', 'jagrut
     $urlRouterProvider.otherwise('/user-login');
 })
 
-.directive('myYoutube', function ($sce) {
+.directive('myYoutube', function($sce) {
     return {
         restrict: 'EA',
         scope: {
@@ -147,9 +147,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'myservices', 'jagrut
         },
         replace: true,
         template: '<iframe style="overflow:hidden;height:100%;width:100%" width="100%" height="100%" src="{{url}}" frameborder="0" allowfullscreen></iframe>',
-        link: function (scope) {
+        link: function(scope) {
             console.log('here');
-            scope.$watch('code', function (newVal) {
+            scope.$watch('code', function(newVal) {
                 if (newVal) {
                     scope.url = $sce.trustAsResourceUrl("http://www.youtube.com/embed/NEkBgE_DSX0");
                 }
@@ -158,11 +158,13 @@ angular.module('starter', ['ionic', 'starter.controllers', 'myservices', 'jagrut
     };
 })
 
-.filter('rawHtml', ['$sce', function ($sce) {
-    return function (val) {
-        return $sce.trustAsHtml(val);
-    };
-}]);
+.filter('rawHtml', ['$sce',
+    function($sce) {
+        return function(val) {
+            return $sce.trustAsHtml(val);
+        };
+    }
+]);
 
 function splitarray(fullarray, splitsize) {
     var newarray = [];

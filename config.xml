@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <widget id="com.wohlig.selig" version="1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Selig</name>
-    <description></description>
+    <description>Amaze with Ionic</description>
     <author email="infog@wohlig.com" href="http://www.wohlig.com/">
         Wohlig
     </author>
