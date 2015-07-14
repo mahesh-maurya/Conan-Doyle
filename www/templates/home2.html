@@ -67,16 +67,6 @@
 
                 </div>
             </div>
-
-            <!--          end-->
-
-
-            <!--            if there is not text post-->
-            <a ng-if="text==''">
-                <div class="no-data">
-                  <p>No Freshly Post</p>
-                </div>
-            </a>
         </div>
 
         <div class="latest" ng-show="tab=='photos'">
@@ -100,9 +90,7 @@
 
                             </div>
                             <div class="read-more col col-center col-33">
-                                <a ng-click="postDetail(txt.meta.links.self)" class="button button-small button-block button-positive">
-                Read more
-              </a>
+                                <a ng-click="postDetail(txt.meta.links.self)" class="button button-small button-block button-positive">Read more</a>
                             </div>
                         </div>
                     </div>
@@ -110,12 +98,6 @@
 
                 </div>
             </div>
-            <!--     if there is not photo post      -->
-            <a ng-if="photo==''">
-               <div class="no-data">
-                  <p>No Freshly Post</p>
-                </div>
-            </a>
         </div>
 
         <div class="featured" ng-show="tab=='link'">
@@ -125,7 +107,6 @@
                     <div class="item item-avatar post-head">
                         <img src="{{txt.author.avatar_URL}}">
                         <h2>{{txt.slug}}</h2>
-<!--                        <p>November 05, 1955</p>-->
                         <p>{{txt.date | date:"MMMM dd, yyyy"}}</p>
                     </div>
 
@@ -139,9 +120,7 @@
 
                             </div>
                             <div class="read-more col col-center col-33">
-                                <a ng-click="postDetail(txt.meta.links.self)" class="button button-small button-block button-positive">
-                Read more
-              </a>
+                                <a ng-click="postDetail(txt.meta.links.self)" class="button button-small button-block button-positive">Read more</a>
                             </div>
                         </div>
                     </div>
@@ -149,12 +128,6 @@
 
                 </div>
             </div>
-            <!--            if there is no link post-->
-            <a ng-if="link==''">
-                <div class="no-data">
-                  <p>No Freshly Post</p>
-                </div>
-            </a>
         </div>
 
     </ion-content>
