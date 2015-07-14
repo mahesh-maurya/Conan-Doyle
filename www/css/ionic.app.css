@@ -296,7 +296,8 @@ i.icon.side-menu-i {
   float: right;
   color: #fff;
   margin: 12px 11px 0px 3px;
-  font-size: 18px; }
+  font-size: 18px;
+  z-index: 99; }
 
 .map-set p {
   color: #fff;
@@ -615,7 +616,8 @@ p.text-image img {
   color: #fff;
   font-size: 28px;
   top: 10px;
-  left: 10px; }
+  left: 10px;
+  z-index: 99; }
 
 .bar-stables ion-header-bar {
   background: black !important; }
