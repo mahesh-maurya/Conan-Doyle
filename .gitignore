@@ -45,3 +45,4 @@ Temporary Items
 plugins/
 platforms/
 node_modules/
+npm-debug.log
