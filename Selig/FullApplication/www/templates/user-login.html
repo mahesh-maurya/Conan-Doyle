@@ -1,4 +1,4 @@
-<ion-view>
+<ion-view ng-controller="LoginJagruti">
     <ion-content overflow-scroll="true" delegate-handle="mainScroll" on-scroll="mainscrolling();">
 
         <div class="login-set">
@@ -25,10 +25,27 @@
                         </button>
                     </a>
                 </div>
-
+                <div class="or text-center">
+                    <p>- OR -</p>
+                </div>
+                 <div class="login-btn btn-set">
+                  
+                        <button  ng-click="facebooklogin()" class="button button-full button-positive-facebook button-block">
+                            Sign in With Facebook
+                        </button>
+                  
+                </div>
+                 <div class="login-btn btn-set">
+                    
+                        <button ng-click="twitterlogin()" class="button button-full button-positive-twitter button-block">
+                            Sign in With Twitter
+                        </button>
+                   
+                </div>
                 <div class="sign text-center">
                     <span>Don’t have an account?<a href="#/user-signup">Sign Up</a></span>
                 </div>
+
             </div>
         </div>
 

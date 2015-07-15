@@ -1,4 +1,4 @@
-<ion-modal-view>
+<ion-modal-view ng-controller="LoginJagruti">
    
     <ion-header-bar>
         <h1 class="title">Login</h1>
@@ -20,6 +20,9 @@
                 </label>
                 <label class="item">
                     <button class="button button-block button-positive" type="submit">Log in</button>
+                </label>
+                <label class="item">
+                    <button class="button button-block button-positive" type="submit" ng-click="facebooklogin()">Facebook Login</button>
                 </label>
             </div>
         </form>
