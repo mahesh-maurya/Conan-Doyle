@@ -22,7 +22,7 @@
 
         <div  class="popular" ng-show="tab=='text'">
             <!--            <a href="#/app/articles">-->
-                <div class="popular-set" ng-repeat="txt in text">
+                <div class="popular-set" collection-repeat="txt in text">
                     <figure ng-click="postDetail(txt)">
 
                         <img ng-src="{{txt.trail[0].blog.theme.header_image}}" alt="{{txt.imagename}}" class="full-image">

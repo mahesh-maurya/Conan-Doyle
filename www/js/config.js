@@ -1,9 +1,9 @@
 //FOR TUMBLR INTEGRATION 
-var Tumblr_UserName = "oscarprgirl.tumblr.com";
+var Tumblr_UserName = "yesaurathings.tumblr.com";
 
 //FOR FLICKR INTEGRATION
-var Api_Key = "3e67f6179c11014cc027c6a944d7d9fb";
-var User_Key = "132717193@N04";
+var Api_Key = "477a6eb655b448de7fffcb16ae4455b2";
+var User_Key = "133690617@N02";
 
 
 angular.module('starter.config', [])
