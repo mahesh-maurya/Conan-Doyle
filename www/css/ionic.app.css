@@ -650,6 +650,11 @@ p.text-image img {
   background-color: #2d4486;
   color: #fff; }
 
+.button.button-positive-twitter {
+  border-color: #45b0e3;
+  background-color: #45b0e3;
+  color: #fff; }
+
 /*!
   Ionicons, v2.0.1
   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
