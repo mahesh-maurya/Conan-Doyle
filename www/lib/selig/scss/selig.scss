@@ -1,68 +1,64 @@
 // ****** Customization Blue Color For App *******
-
 // $positive:                       #9c28b1 !default;
-
 //****** End ******
-
 // ****** Customization Red Color For App *******
-
 // $positive:                       #E84C3D !default;
-
 //****** End ******
-
 // ****** Customization Green Color For App *******
-
 // $positive:                       #27a01f !default;
-
 //****** End ******
-
- $positive:                       #9C27B0 !default;
- $calm:                           #03A9F4 !default;
- $stable:                         transparent !default;
- $base-color:                     #212121 !default;
- $icon-color:                     #7a7a7a !default;
- $link-color:                     #909090 !default;
- $light-grey:                     #eeeeee !default;
- $font-family-sans-serif:         "Lato","Helvetica Neue","Roboto","Segoe UI",sans-serif !default;
- $font-family-light-sans-serif:   "Lato","HelveticaNeue-Light","Roboto-Light","Segoe UI-Light",sans-serif-light !default;
- $light:                          #fff !default;
- $input-color-placeholder:        #212121 !default;
- $lato-font-weight:               300 !default;
- $button-stable-text:             #fff !default;
- $headings-font-weight:           500 !default;
- $texts-font-size:                14px !default;
- $input-padding:                  4px 0px 0px 3px !default;
- $pad-font-size:                  13px !default;
- $button-stable-border:           transparent !default;
- $background-menu:                url('../img/side-menu.png');
- $sign-bg-image:                  url('../img/sign-back.png') no-repeat center center;
- $contact-bg-image:               url('../img/component/contact.png') no-repeat center center;
- $setting-bg-image:               url('../img/component/setting.png') no-repeat center center;
- $gallery-bg-image:               url('../img/component/gallery.png') no-repeat center center;
- $gallery2-bg-image:              url('../img/component/gallery2.png') no-repeat center center;
- $about-bg-image:                 url('../img/component/about.png') no-repeat center center;
- $faq-bg-image:                   url('../img/component/faq.png') no-repeat center center;
- $home-bg-image:                  url('../img/component/home.png') no-repeat center center;
- $artical-bg-image:               url('../img/component/artical.png') no-repeat center center;
- $profiles-bg-image:               url('../img/component/profilebk.png') no-repeat center center;
- $bar-stable-bg:                  transparent !default;
-
-
-@mixin transition($transition-property, $transition-time) {
+ $positive:#9C27B0 !default;
+ $calm:#03A9F4 !default;
+ $stable:transparent !default;
+ $base-color:#212121 !default;
+ $icon-color:#7a7a7a !default;
+ $link-color:#909090 !default;
+ $light-grey:#eeeeee !default;
+ $font-family-sans-serif:"Lato",
+"Helvetica Neue",
+"Roboto",
+"Segoe UI",
+sans-serif !default;
+ $font-family-light-sans-serif:"Lato",
+"HelveticaNeue-Light",
+"Roboto-Light",
+"Segoe UI-Light",
+sans-serif-light !default;
+ $light:#fff !default;
+ $input-color-placeholder:#212121 !default;
+ $lato-font-weight:300 !default;
+ $button-stable-text:#fff !default;
+ $headings-font-weight:500 !default;
+ $texts-font-size:14px !default;
+ $input-padding:4px 0px 0px 3px !default;
+ $pad-font-size:13px !default;
+ $button-stable-border:transparent !default;
+ $background-menu:url('../img/side-menu.png');
+ $sign-bg-image:url('../img/sign-back.png') no-repeat center center;
+ $contact-bg-image:url('../img/component/contact.png') no-repeat center center;
+ $setting-bg-image:url('../img/component/setting.png') no-repeat center center;
+ $gallery-bg-image:url('../img/component/gallery.png') no-repeat center center;
+ $gallery2-bg-image:url('../img/component/gallery2.png') no-repeat center center;
+ $about-bg-image:url('../img/component/about.png') no-repeat center center;
+ $faq-bg-image:url('../img/component/faq.png') no-repeat center center;
+ $home-bg-image:url('../img/component/home.png') no-repeat center center;
+ $artical-bg-image:url('../img/component/artical.png') no-repeat center center;
+ $profiles-bg-image:url('../img/component/profilebk.png') no-repeat center center;
+ $bar-stable-bg:transparent !default;
+@mixin transition($transition-property,
+$transition-time) {
     -webkit-transition: $transition-property $transition-time;
     -moz-transition: $transition-property $transition-time;
     -ms-transition: $transition-property $transition-time;
     -o-transition: $transition-property $transition-time;
     transition: $transition-property $transition-time;
 }
-
 @mixin clip-path($clip) {
-  -webkit-clip-path: $clip;
-  -moz-clip-path: $clip;
-  -ms-clip-path: $clip;
-  clip-path: $clip;
+    -webkit-clip-path: $clip;
+    -moz-clip-path: $clip;
+    -ms-clip-path: $clip;
+    clip-path: $clip;
 }
-
 //********  custom class ********'
  .input-tag {
     color: $base-color !important;
@@ -70,8 +66,6 @@
     font-size: $texts-font-size;
 }
 //******* End ********
-
-
 @font-face {
     font-family: 'Lato';
     src: url("../fonts/Lato-Bold.ttf");
@@ -429,6 +423,9 @@ li.gender-li span {
     margin-bottom: 5px;
     border-radius: 5px;
 }
+.scroll {
+    height: auto;
+}
 figure.image-set figcaption {
     text-align: center;
     color: $icon-color;
@@ -452,7 +449,7 @@ figure.image-set figcaption {
     margin-top: 20px;
 }
 .know-btn {
-    border: 1px solid  $positive;
+    border: 1px solid $positive;
     padding: 10px 35px;
     background: $positive;
     color: $light;
@@ -461,12 +458,13 @@ figure.image-set figcaption {
 .know-content {
     text-align: left;
     height: 0px;
-     @include transition(all,1s);
+    @include transition(all, 1s);
     overflow: hidden;
 }
 .ans-set.faqhead {
     overflow: hidden;
-   @include transition(all,1s);;
+    @include transition(all, 1s);
+    ;
     height: 0px;
 }
 p.addanimation {
@@ -527,27 +525,38 @@ figcaption.blog-name {
     text-transform: capitalize;
 }
 .popular-set {
-   height: 100%;
-  width: 100%;
-  background-position: center center;
-  background-size: cover;
-  position: relative;
-  display: block;
-  overflow: hidden;
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    display: block;
+    overflow: hidden;
 }
 .popular-set img {
-    position: absolute;      
-    top: 50%;      min-height:100%;      display:block;      
-    left: 50%;      
-    -webkit-transform: translate(-50%, -50%); 
-    -moz-transform: translate(-50%, -50%); 
-    -ms-transform: translate(-50%, -50%); 
-    -o-transform: translate(-50%, -50%); 
-    transform: translate(-50%, -50%); 
-    min-width:100%;
+    position: absolute;
+    top: 50%;
+    min-height: 100%;
+    display: block;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    min-width: 100%;
 }
-.popular-set figure{
+.popular-set figure {
     height: 180px;
+}
+.slider-slide {
+    position: relative;
+    display: block;
+    float: left;
+    width: 100%;
+    height: none !important;
+    vertical-align: middle;
+    overflow: hidden;
 }
 .layer {
     height: 180px;
@@ -556,21 +565,19 @@ figcaption.blog-name {
     background: -ms-linear-gradient(rgba(0, 0, 0, 0.2) 55%, rgba(22, 22, 22, 1));
     background: -o-linear-gradient(rgba(0, 0, 0, 0.2) 55%, rgba(22, 22, 22, 1));
     position: relative;
-    @include transition(all,0.5s);
+    @include transition(all, 0.5s);
     position: absolute;
     top: 0;
     width: 100%;
 }
-
- .user-imgs {
-  text-align: center;
-  position: absolute;
-  top: 115px;
-  right: 19px;
-  z-index: 99999;
-  text-transform: capitalize;
+.user-imgs {
+    text-align: center;
+    position: absolute;
+    top: 115px;
+    right: 19px;
+    z-index: 99999;
+    text-transform: capitalize;
 }
-
 .user-imgs figcaption {
     text-align: center;
     margin: 0 auto;
@@ -589,7 +596,8 @@ p.text-image img {
     color: $icon-color;
 }
 .artical-content {
-//    position: absolute;
+    //    position: absolute;
+
 }
 .articals-det {
     padding: 12px;
@@ -597,7 +605,7 @@ p.text-image img {
 .articals-det h3 {
     font-weight: $lato-font-weight;
     color: $base-color;
-      text-align: center;
+    text-align: center;
 }
 .articals-det p {
     font-size: $texts-font-size;
@@ -611,7 +619,6 @@ p.text-image img {
 .tabs.tabs-top {
     border-bottom-width: 0px !important;
 }
-
 .transparent {
     background: transparent !important;
 }
@@ -635,51 +642,61 @@ p.text-image img {
 }
 .close-button {
     position: absolute;
-    color:  $light;
+    color: $light;
     font-size: 28px;
     top: 10px;
     left: 10px;
+    z-index: 999;
 }
 .bar-stables ion-header-bar {
     background: black !important;
 }
-.profile-check.checkbox input:after, .checkbox-icon:after {
-  top: 36% !important;
-  left: 32% !important;
-  width: 8px !important;
-  height: 4px !important;
+.profile-check.checkbox input:after,
+.checkbox-icon:after {
+    top: 36% !important;
+    left: 32% !important;
+    width: 8px !important;
+    height: 4px !important;
 }
 .no-data p {
     position: absolute;
-    top: 50%;
+    /* top: 100%; */
     left: 50%;
-    transform: translate(-50%,-50%);
-    -webkit-transform: translate(-50%,-50%);
-    -o-transform: translate(-50%,-50%);
-    -moz-transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%, 100%);
+    -webkit-transform: translate(-50%, 100%);
+    -o-transform: translate(-50%, 100%);
+    -moz-transform: translate(-50%, 100%);
+    -ms-transform: translate(-50%, 100%);
     font-size: 16px;
     text-transform: capitalize;
-     color: #9C27B0;
-
+    color: #9C27B0;
 }
 .item-divider-positive {
-  padding-top: 8px !important;
-  padding-bottom: 8px !important;
-  min-height: 30px;
-  /* background-color: #9C27B0; */
-  color: #9C27B0 !important;
-  font-weight: 400 !important;
-  border-width: 0px !important;
-  font-size: 16px;
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+    min-height: 30px;
+    /* background-color: #9C27B0; */
+    color: #9C27B0 !important;
+    font-weight: 400 !important;
+    border-width: 0px !important;
+    font-size: 16px;
 }
-.button.button-positive-facebook{
-  border-color: #2d4486;
-  background-color: #2d4486;
-  color: #fff;
+.button.button-positive-facebook {
+    border-color: #2d4486;
+    background-color: #2d4486;
+    color: #fff;
 }
-.button.button-positive-twitter{
-  border-color: #45b0e3;
-  background-color: #45b0e3;
-  color: #fff;
+.button.button-positive-twitter {
+    border-color: #45b0e3;
+    background-color: #45b0e3;
+    color: #fff;
+}
+.scroll-refresher {
+    position: absolute;
+    top: -60px;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+    margin: auto;
+    height: 30px !important;
 }

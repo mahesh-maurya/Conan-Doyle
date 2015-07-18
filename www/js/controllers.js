@@ -395,6 +395,14 @@ angular.module('starter.controllers', ['myservices'])
         //     ****** End ******
 
         //        $scope.gallerynew = splitarray($scope.gallery, 2);
+    
+    
+$scope.doRefresh = function() {
+   // here refresh data code
+   $scope.$broadcast('scroll.refreshComplete');
+   $scope.$apply()
+};
+  
 
     })
 

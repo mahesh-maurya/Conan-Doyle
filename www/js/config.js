@@ -1,10 +1,9 @@
 //FOR TUMBLR INTEGRATION 
-var Tumblr_UserName = "oscarprgirl.tumblr.com";
+var Tumblr_UserName = "worstcats.tumblr.com";
 
 //FOR FLICKR INTEGRATION
 var Api_Key = "3e67f6179c11014cc027c6a944d7d9fb";
 var User_Key = "132717193@N04";
-
 
 angular.module('starter.config', [])
     .constant('TUBMLR_API_URL', 'http://wohlig.co.in/tumblr/?url=http://api.tumblr.com/v2/blog/' + Tumblr_UserName + '/')
