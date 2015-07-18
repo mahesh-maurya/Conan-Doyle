@@ -1,5 +1,5 @@
 //FOR TUMBLR INTEGRATION 
-var Tumblr_UserName = "worstcats.tumblr.com";
+var Tumblr_UserName = "wohligtechnology.tumblr.com";
 
 //FOR FLICKR INTEGRATION
 var Api_Key = "3e67f6179c11014cc027c6a944d7d9fb";

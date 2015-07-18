@@ -700,3 +700,16 @@ p.text-image img {
     margin: auto;
     height: 30px !important;
 }
+.gallery-img {
+  margin-top: -10px;
+}
+.scroll-refresher {
+  position: relative !important;
+  top: -35px !important;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  margin: auto;
+  height: 40px !important;
+  z-index: 9999;
+}
