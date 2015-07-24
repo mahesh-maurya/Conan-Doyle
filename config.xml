@@ -51,52 +51,46 @@
     <preference name="SplashScreenDelay" value="5000" />
     <preference name="SplashScreenBackgroundColor" value="#ffffff" />
     <preference name="SplashMaintainAspectRatio" value="true" />
-
-
-   <!--Default icon & splash-->
-    <icon src="res/icon/icon.png" />
-    <gap:splash src="res/screen/screen.png" />
-
-
+    
     <!--iOS-->
     <!-- iOS 8.0+ -->
     <!-- iPhone 6 Plus  -->
-    <icon src="res/iOS/Resources/icons/Icon-180@3x.png" gap:platform="ios" width="180" height="180" />
+    <icon src="res/iOS/Resources/icons/Icon-180@3x.png" platform="ios" width="180" height="180" />
     <!-- iOS 7.0+ -->
     <!-- iPhone / iPod Touch  -->
-    <icon src="res/iOS/Resources/icons/icon-60.png" gap:platform="ios" width="60" height="60" />
-    <icon src="res/iOS/Resources/icons/Icon-120.png" gap:platform="ios" width="120" height="120" />
-    <icon src="res/iOS/Resources/icons/Icon-180@3x.png" gap:platform="ios" width="180" height="180" />
+    <icon src="res/iOS/Resources/icons/icon-60.png" platform="ios" width="60" height="60" />
+    <icon src="res/iOS/Resources/icons/Icon-120.png" platform="ios" width="120" height="120" />
+    <icon src="res/iOS/Resources/icons/Icon-180@3x.png" platform="ios" width="180" height="180" />
     <!-- iPad -->
-    <icon src="res/iOS/Resources/icons/Icon-76.png" gap:platform="ios" width="76" height="76" />
-    <icon src="res/iOS/Resources/icons/Icon-152.png" gap:platform="ios" width="152" height="152" />
+    <icon src="res/iOS/Resources/icons/Icon-76.png" platform="ios" width="76" height="76" />
+    <icon src="res/iOS/Resources/icons/Icon-152.png" platform="ios" width="152" height="152" />
     <!-- iOS 6.1 -->
     <!-- Spotlight Icon -->
-    <icon src="res/iOS/Resources/icons/icon-40.png" gap:platform="ios" width="40" height="40" />
-    <icon src="res/iOS/Resources/icons/Icon-80.png" gap:platform="ios" width="80" height="80" />
-    <icon src="res/iOS/Resources/icons/ios/Icon-120.png" gap:platform="ios" width="120" height="120" />
+    <icon src="res/iOS/Resources/icons/icon-40.png" platform="ios" width="40" height="40" />
+    <icon src="res/iOS/Resources/icons/Icon-80.png" platform="ios" width="80" height="80" />
+    <icon src="res/iOS/Resources/icons/ios/Icon-120.png" platform="ios" width="120" height="120" />
     <!-- iPhone / iPod Touch -->
-    <icon src="res/iOS/Resources/icons/icon.png" gap:platform="ios" width="57" height="57" />
-    <icon src="res/iOS/Resources/icons/icon@2x.png" gap:platform="ios" width="114" height="114" />
+    <icon src="res/iOS/Resources/icons/icon.png" platform="ios" width="57" height="57" />
+    <icon src="res/iOS/Resources/icons/icon@2x.png" platform="ios" width="114" height="114" />
     <!-- iPad -->
-    <icon src="res/iOS/Resources/icons/icon-72.png" gap:platform="ios" width="72" height="72" />
-    <icon src="res/iOS/Resources/icons/icon-72@2x.png" gap:platform="ios" width="144" height="144" />
+    <icon src="res/iOS/Resources/icons/icon-72.png" platform="ios" width="72" height="72" />
+    <icon src="res/iOS/Resources/icons/icon-72@2x.png" platform="ios" width="144" height="144" />
     <!-- iPhone Spotlight and Settings Icon -->
-    <icon src="res/iOS/Resources/icons/Icon-29.png" gap:platform="ios" width="29" height="29" />
-    <icon src="res/iOS/Resources/icons/Icon-58.png" gap:platform="ios" width="58" height="58" />
-    <icon src="res/iOS/Resources/icons/icon-small@3x.png" gap:platform="ios" width="87" height="87" />
+    <icon src="res/iOS/Resources/icons/Icon-29.png" platform="ios" width="29" height="29" />
+    <icon src="res/iOS/Resources/icons/Icon-58.png" platform="ios" width="58" height="58" />
+    <icon src="res/iOS/Resources/icons/icon-small@3x.png" platform="ios" width="87" height="87" />
     <!-- iPad Spotlight and Settings Icon -->
-    <icon src="res/iOS/Resources/icons/Icon-58.png" gap:platform="ios" width="50" height="50" />
-    <icon src="res/iOS/Resources/icons/Icon-100.png" gap:platform="ios" width="100" height="100" />
+    <icon src="res/iOS/Resources/icons/Icon-58.png" platform="ios" width="50" height="50" />
+    <icon src="res/iOS/Resources/icons/Icon-100.png" platform="ios" width="100" height="100" />
 
-    <gap:splash src="res/iOS/Resources/splash/Default~iphone.png" gap:platform="ios" width="320" height="480" />
-    <gap:splash src="res/iOS/Resources/splash/Default@2x~iphone_640x960.png" gap:platform="ios" width="640" height="960" />
-    <gap:splash src="res/iOS/Resources/splash/Default-Portrait~ipad_768x1024.png" gap:platform="ios" width="768" height="1024" />
-    <gap:splash src="res/iOS/Resources/splash/Default-Portrait@2x~ipad_1536x2048.png" gap:platform="ios" width="1536" height="2048" />
-    <gap:splash src="res/iOS/Resources/splash/Default-568h@2x~iphone_640x1136.png" gap:platform="ios" width="640" height="1136" />
-    <gap:splash src="res/iOS/Resources/splash/Default~iphone.png" gap:platform="ios" width="320" height="568" />
-    <gap:splash src="res/iOS/Resources/splash/Default-750@2x~iphone6-portrait_750x1334.png" gap:platform="ios" width="750" height="1334" />
-    <gap:splash src="res/iOS/Resources/splash/Default-1242@3x~iphone6s-portrait_1242x2208.png" gap:platform="ios" width="1242" height="2208" />
+    <splash src="res/iOS/Resources/splash/Default~iphone.png" platform="ios" width="320" height="480" />
+    <splash src="res/iOS/Resources/splash/Default@2x~iphone_640x960.png" platform="ios" width="640" height="960" />
+    <splash src="res/iOS/Resources/splash/Default-Portrait~ipad_768x1024.png" platform="ios" width="768" height="1024" />
+    <splash src="res/iOS/Resources/splash/Default-Portrait@2x~ipad_1536x2048.png" platform="ios" width="1536" height="2048" />
+    <splash src="res/iOS/Resources/splash/Default-568h@2x~iphone_640x1136.png" platform="ios" width="640" height="1136" />
+    <splash src="res/iOS/Resources/splash/Default~iphone.png" platform="ios" width="320" height="568" />
+    <splash src="res/iOS/Resources/splash/Default-750@2x~iphone6-portrait_750x1334.png" platform="ios" width="750" height="1334" />
+    <splash src="res/iOS/Resources/splash/Default-1242@3x~iphone6s-portrait_1242x2208.png" platform="ios" width="1242" height="2208" />
 
  
 
