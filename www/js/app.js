@@ -6,8 +6,8 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'starter.controllers', 'myservices', 'jagruticontroller', 'starter.config'])
 
-.run(function($ionicPlatform) {
-    $ionicPlatform.ready(function() {
+.run(function ($ionicPlatform) {
+    $ionicPlatform.ready(function () {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
         // for form inputs)
         if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
@@ -28,40 +28,42 @@ angular.module('starter', ['ionic', 'starter.controllers', 'myservices', 'jagrut
 })
 
 
-.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
     //Ionic native scrolling
     // $ionicConfigProvider.scrolling.jsScrolling(false);
 
     $stateProvider
 
-    .state('app', {
+        .state('app', {
         url: "/app",
         abstract: true,
         templateUrl: "templates/menu.html",
         controller: 'AppCtrl'
     })
-        .state('user-login', {
-            url: "/user-login",
-            templateUrl: "templates/user-login.html",
-            controller: 'UserloginCtrl'
-        })
-        .state('user-signup', {
-            url: "/user-signup",
 
-            templateUrl: "templates/user-signup.html",
-            controller: 'UsersignupCtrl'
+    .state('user-login', {
+        url: "/user-login",
+        templateUrl: "templates/user-login.html",
+        controller: 'UserloginCtrl'
+    })
 
-        })
+    .state('user-signup', {
+        url: "/user-signup",
+
+        templateUrl: "templates/user-signup.html",
+        controller: 'UsersignupCtrl'
+
+    })
 
     .state('app.home', {
-        url: "/home",
-        views: {
-            'menuContent': {
-                templateUrl: "templates/home.html",
-                controller: 'HomeCtrl'
+            url: "/home",
+            views: {
+                'menuContent': {
+                    templateUrl: "templates/home.html",
+                    controller: 'HomeCtrl'
+                }
             }
-        }
-    })
+        })
         .state('app.contact', {
             url: "/contact",
             views: {
@@ -139,7 +141,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'myservices', 'jagrut
     $urlRouterProvider.otherwise('/user-login');
 })
 
-.directive('myYoutube', function($sce) {
+.directive('myYoutube', function ($sce) {
     return {
         restrict: 'EA',
         scope: {
@@ -147,9 +149,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'myservices', 'jagrut
         },
         replace: true,
         template: '<iframe style="overflow:hidden;height:100%;width:100%" width="100%" height="100%" src="{{url}}" frameborder="0" allowfullscreen></iframe>',
-        link: function(scope) {
+        link: function (scope) {
             console.log('here');
-            scope.$watch('code', function(newVal) {
+            scope.$watch('code', function (newVal) {
                 if (newVal) {
                     scope.url = $sce.trustAsResourceUrl("http://www.youtube.com/embed/NEkBgE_DSX0");
                 }
@@ -159,8 +161,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'myservices', 'jagrut
 })
 
 .filter('rawHtml', ['$sce',
-    function($sce) {
-        return function(val) {
+    function ($sce) {
+        return function (val) {
             return $sce.trustAsHtml(val);
         };
     }
