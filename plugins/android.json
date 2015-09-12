@@ -142,6 +142,9 @@
         },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.wohlig.selig"
+        },
+        "com.phonegap.plugin.statusbar": {
+            "PACKAGE_NAME": "com.wohlig.seligwordpress"
         }
     },
     "dependent_plugins": {}
